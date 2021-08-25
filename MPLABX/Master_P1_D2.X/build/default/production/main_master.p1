@@ -9,10 +9,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "55
 [; ;./I2C.h: 55: void I2C_Master_Write(unsigned d);
 [v _I2C_Master_Write `(v ~T0 @X0 0 ef1`ui ]
-"228 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"60 ./I2C.h
+"60
 [; ;./I2C.h: 60: unsigned short I2C_Master_Read(unsigned short a);
 [v _I2C_Master_Read `(us ~T0 @X0 0 ef1`us ]
 "49
@@ -22,10 +19,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF1256 ~T0 @X0 0 e ]
 [p i __delay ]
-"166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
-[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
-"3387
+"3387 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "3449
@@ -37,6 +31,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1664
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1664: extern volatile unsigned char TRISE __attribute__((address(0x089)));
 [v _TRISE `Vuc ~T0 @X0 0 e@137 ]
+"166
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"228
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 "290
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 290: extern volatile unsigned char PORTC __attribute__((address(0x007)));
 [v _PORTC `Vuc ~T0 @X0 0 e@7 ]
@@ -419,7 +419,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main_master.c: 26:         I2C_Master_Write(0x61);
 [p x CPD  =  OFF                         ]
 "27
-[; ;main_master.c: 27:         PORTA = I2C_Master_Read(0);
+[; ;main_master.c: 27:         D2 = I2C_Master_Read(0);
 [p x BOREN  =  OFF                       ]
 "28
 [; ;main_master.c: 28:         I2C_Master_Stop();
@@ -436,6 +436,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "34
 [; ;main_master.c: 34: 
 [p x WRT  =  OFF                         ]
+"44
+[; ;main_master.c: 44: 
+[v _D1 `uc ~T0 @X0 1 e ]
+[v _D2 `uc ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "47
 [; ;main_master.c: 47:     PORTB = 0x00;
@@ -460,7 +464,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _I2C_Master_Write (1 -> -> 81 `i `ui ]
 "56
 [; ;main_master.c: 56:     OSCCONbits.SCS = 1;
-[e = _PORTB -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
+[e = _D1 -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
 "57
 [; ;main_master.c: 57: 
 [e ( _I2C_Master_Stop ..  ]
@@ -475,7 +479,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _I2C_Master_Write (1 -> -> 97 `i `ui ]
 "63
 [; ;main_master.c: 63:     TXSTAbits.BRGH = 1;
-[e = _PORTA -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
+[e = _D2 -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
 "64
 [; ;main_master.c: 64:     BAUDCTLbits.BRG16 = 0;
 [e ( _I2C_Master_Stop ..  ]

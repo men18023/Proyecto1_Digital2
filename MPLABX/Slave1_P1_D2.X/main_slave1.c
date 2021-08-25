@@ -46,12 +46,19 @@ void __interrupt() isr(void){
     {
         if (PORTBbits.RB0 == 0)                 // Si oprimo el boton 1
         {
-            PORTDbits.RD0 = 1;    
+            PORTD = 0b00000011;    
+            __delay_ms(500);
+            PORTD = 0b00000110;    
+            __delay_ms(500);
+            PORTD = 0b00001100;    
+            __delay_ms(500);
+            PORTD = 0b00001001;    
+            __delay_ms(500);
             dato1 = 1;
         }
         else if (PORTBbits.RB0 == 1)
         {
-            PORTDbits.RD0 = 0;
+            PORTD = 0;
             dato1 = 0;
         }
         INTCONbits.RBIF = 0;                    // Se limpia la bandera de la interrupcion
@@ -105,7 +112,7 @@ void setup(void){
     ANSELH = 0;
     
     TRISBbits.TRISB0 = 1;
-    TRISDbits.TRISD0 = 0;
+    TRISD = 0;
     
     //limpiar puertos
     PORTA = 0x00;

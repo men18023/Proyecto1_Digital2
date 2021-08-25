@@ -2802,12 +2802,19 @@ void __attribute__((picinterrupt(("")))) isr(void){
     {
         if (PORTBbits.RB0 == 0)
         {
-            PORTDbits.RD0 = 1;
+            PORTD = 0b00000011;
+            _delay((unsigned long)((500)*(4000000/4000.0)));
+            PORTD = 0b00000110;
+            _delay((unsigned long)((500)*(4000000/4000.0)));
+            PORTD = 0b00001100;
+            _delay((unsigned long)((500)*(4000000/4000.0)));
+            PORTD = 0b00001001;
+            _delay((unsigned long)((500)*(4000000/4000.0)));
             dato1 = 1;
         }
         else if (PORTBbits.RB0 == 1)
         {
-            PORTDbits.RD0 = 0;
+            PORTD = 0;
             dato1 = 0;
         }
         INTCONbits.RBIF = 0;
@@ -2861,7 +2868,7 @@ void setup(void){
     ANSELH = 0;
 
     TRISBbits.TRISB0 = 1;
-    TRISDbits.TRISD0 = 0;
+    TRISD = 0;
 
 
     PORTA = 0x00;

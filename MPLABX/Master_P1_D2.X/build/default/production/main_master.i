@@ -2913,7 +2913,7 @@ void I2C_Slave_Init(uint8_t address);
 void setup(void);
 
 
-
+uint8_t D1, D2;
 
 
 void main(void) {
@@ -2925,14 +2925,14 @@ void main(void) {
 
         I2C_Master_Start();
         I2C_Master_Write(0x51);
-        PORTB = I2C_Master_Read(0);
+        D1 = I2C_Master_Read(0);
         I2C_Master_Stop();
         _delay((unsigned long)((200)*(4000000/4000.0)));
 
 
         I2C_Master_Start();
         I2C_Master_Write(0x61);
-        PORTA = I2C_Master_Read(0);
+        D2 = I2C_Master_Read(0);
         I2C_Master_Stop();
         _delay((unsigned long)((200)*(4000000/4000.0)));
     }

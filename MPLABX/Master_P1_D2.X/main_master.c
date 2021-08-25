@@ -41,7 +41,7 @@
 void setup(void);
 
 //------------------------------ Interrupciones --------------------------------
-
+uint8_t D1, D2;
 
 //----------------------------------- Main -------------------------------------
 void main(void) {
@@ -53,14 +53,14 @@ void main(void) {
         //Obtener informacion del primer slave
         I2C_Master_Start();
         I2C_Master_Write(0x51);                 // 51, se escribe el 1 para que lea en el puerto de leds
-        PORTB = I2C_Master_Read(0);             
+        D1 = I2C_Master_Read(0);             
         I2C_Master_Stop();
         __delay_ms(200);
         
         //Obtener informacion del segundo slave
         I2C_Master_Start();
         I2C_Master_Write(0x61);                 // 51, se escribe el 1 para que lea en el puerto de leds
-        PORTA = I2C_Master_Read(0);             
+        D2 = I2C_Master_Read(0);             
         I2C_Master_Stop();
         __delay_ms(200);
     }
