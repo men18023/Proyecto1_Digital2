@@ -11,47 +11,41 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\diego\AppData\Local\Temp\s9o8.o
+$C:\Users\jonam\AppData\Local\Temp\sv1o.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Master_P1_D2.X.production.o
-cinit CODE 0 F F 15 2
-text1 CODE 0 FA7 FA7 21 2
-text2 CODE 0 6BF 6BF 4D 2
-text3 CODE 0 FC8 FC8 38 2
-text4 CODE 0 549 549 68 2
-text5 CODE 0 2A4 2A4 FD 2
-text6 CODE 0 F70 F70 1B 2
-text7 CODE 0 16E 16E 136 2
-text8 CODE 0 F29 F29 9 2
-text9 CODE 0 796 796 3C 2
-text10 CODE 0 752 752 44 2
-text11 CODE 0 475 475 6B 2
-text12 CODE 0 60E 60E 59 2
-text13 CODE 0 4E0 4E0 69 2
-text14 CODE 0 70C 70C 46 2
-text15 CODE 0 3A1 3A1 39 2
-text16 CODE 0 667 667 58 2
-text17 CODE 0 5B1 5B1 5D 2
-text18 CODE 0 F49 F49 D 2
-text19 CODE 0 F56 F56 1A 2
-text20 CODE 0 3DA 3DA 22 2
-text21 CODE 0 F32 F32 A 2
-text22 CODE 0 F20 F20 9 2
-text23 CODE 0 F17 F17 9 2
-text24 CODE 0 7D2 7D2 2E 2
-text25 CODE 0 F3C F3C D 2
-text26 CODE 0 F8B F8B 1C 2
-maintext CODE 0 2D 2D 141 2
+cinit CODE 0 F F 13 2
+text1 CODE 0 14D 14D EA 2
+text2 CODE 0 60D 60D 3C 2
+text3 CODE 0 5C9 5C9 44 2
+text4 CODE 0 536 536 4D 2
+text5 CODE 0 682 682 38 2
+text6 CODE 0 3C0 3C0 68 2
+text7 CODE 0 237 237 B5 2
+text8 CODE 0 2EC 2EC 6B 2
+text9 CODE 0 485 485 59 2
+text10 CODE 0 357 357 69 2
+text11 CODE 0 583 583 46 2
+text12 CODE 0 649 649 39 2
+text13 CODE 0 4DE 4DE 58 2
+text14 CODE 0 428 428 5D 2
+text15 CODE 0 777 777 D 2
+text16 CODE 0 75D 75D 1A 2
+text17 CODE 0 71F 71F 22 2
+text18 CODE 0 791 791 A 2
+text19 CODE 0 79B 79B 9 2
+text20 CODE 0 7A4 7A4 9 2
+text21 CODE 0 6F1 6F1 2E 2
+text22 CODE 0 784 784 D 2
+text23 CODE 0 741 741 1C 2
+maintext CODE 0 22 22 12B 2
 cstackCOMMON COMMON 1 70 70 A 1
-cstackBANK0 BANK0 1 20 20 1D 1
-cstackBANK1 BANK1 1 A0 A0 2B 1
+cstackBANK0 BANK0 1 20 20 41 1
 intentry CODE 0 4 4 8 2
-bssBANK0 BANK0 1 3D 3D A 1
-bssBANK1 BANK1 1 CB CB 1 1
-strings STRING 0 400 400 75 2
-functab ENTRY 0 24 24 9 2
+bssBANK0 BANK0 1 61 61 B 1
+strings STRING 0 6BA 6BA 37 2
 bssCOMMON COMMON 1 7A 7A 2 1
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
@@ -60,28 +54,22 @@ config CONFIG 4 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 47-6F 1
-RAM CC-EF 1
+RAM 6C-6F 1
+RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 47-6F 1
-BANK1 CC-EF 1
+BANK0 6C-6F 1
+BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 3FC-3FF 2
-CONST 800-F16 2
-CONST 1000-1FFF 2
+CONST 7AD-1FFF 2
 ENTRY 3-3 2
-ENTRY 3FC-3FF 2
-ENTRY 800-F16 2
-ENTRY 1000-1FFF 2
+ENTRY 7AD-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 3FC-3FF 2
-CODE 800-F16 2
-CODE 1000-1FFF 2
+CODE 7AD-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -89,13 +77,9 @@ SFR3 180-18F 1
 COMMON 7C-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 3FC-3FF 2
-STRCODE 800-F16 2
-STRCODE 1000-1FFF 2
+STRCODE 7AD-1FFF 2
 STRING 3-3 2
-STRING 3FC-3FF 2
-STRING 800-F16 2
-STRING 1000-1FFF 2
+STRING 7AD-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -110,408 +94,373 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Master_P1_D2.X.production.o
-F cinit CODE >1037:C:\Users\diego\AppData\Local\Temp\s9o8.s
-F cinit CODE >1040:C:\Users\diego\AppData\Local\Temp\s9o8.s
-F cinit CODE >1093:C:\Users\diego\AppData\Local\Temp\s9o8.s
-10 cinit CODE >1094:C:\Users\diego\AppData\Local\Temp\s9o8.s
-11 cinit CODE >1097:C:\Users\diego\AppData\Local\Temp\s9o8.s
-12 cinit CODE >1098:C:\Users\diego\AppData\Local\Temp\s9o8.s
-13 cinit CODE >1099:C:\Users\diego\AppData\Local\Temp\s9o8.s
-14 cinit CODE >1100:C:\Users\diego\AppData\Local\Temp\s9o8.s
-15 cinit CODE >1101:C:\Users\diego\AppData\Local\Temp\s9o8.s
-16 cinit CODE >1102:C:\Users\diego\AppData\Local\Temp\s9o8.s
-17 cinit CODE >1103:C:\Users\diego\AppData\Local\Temp\s9o8.s
-18 cinit CODE >1104:C:\Users\diego\AppData\Local\Temp\s9o8.s
-19 cinit CODE >1105:C:\Users\diego\AppData\Local\Temp\s9o8.s
-1A cinit CODE >1106:C:\Users\diego\AppData\Local\Temp\s9o8.s
-1B cinit CODE >1107:C:\Users\diego\AppData\Local\Temp\s9o8.s
-1C cinit CODE >1108:C:\Users\diego\AppData\Local\Temp\s9o8.s
-1D cinit CODE >1111:C:\Users\diego\AppData\Local\Temp\s9o8.s
-1E cinit CODE >1112:C:\Users\diego\AppData\Local\Temp\s9o8.s
-1F cinit CODE >1113:C:\Users\diego\AppData\Local\Temp\s9o8.s
-20 cinit CODE >1119:C:\Users\diego\AppData\Local\Temp\s9o8.s
-20 cinit CODE >1121:C:\Users\diego\AppData\Local\Temp\s9o8.s
-21 cinit CODE >1122:C:\Users\diego\AppData\Local\Temp\s9o8.s
-24 functab ENTRY >6356:C:\Users\diego\AppData\Local\Temp\s9o8.s
-24 functab ENTRY >6358:C:\Users\diego\AppData\Local\Temp\s9o8.s
-24 functab ENTRY >6359:C:\Users\diego\AppData\Local\Temp\s9o8.s
-24 functab ENTRY >6360:C:\Users\diego\AppData\Local\Temp\s9o8.s
-25 functab ENTRY >6361:C:\Users\diego\AppData\Local\Temp\s9o8.s
-26 functab ENTRY >6362:C:\Users\diego\AppData\Local\Temp\s9o8.s
-27 functab ENTRY >6363:C:\Users\diego\AppData\Local\Temp\s9o8.s
-28 functab ENTRY >6364:C:\Users\diego\AppData\Local\Temp\s9o8.s
-29 functab ENTRY >6366:C:\Users\diego\AppData\Local\Temp\s9o8.s
-29 functab ENTRY >6367:C:\Users\diego\AppData\Local\Temp\s9o8.s
-2A functab ENTRY >6370:C:\Users\diego\AppData\Local\Temp\s9o8.s
-2A functab ENTRY >6371:C:\Users\diego\AppData\Local\Temp\s9o8.s
-4 intentry CODE >56:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F8B text26 CODE >56:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F8B text26 CODE >58:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F8F text26 CODE >60:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F95 text26 CODE >62:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F96 text26 CODE >63:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F98 text26 CODE >64:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F99 text26 CODE >65:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F9D text26 CODE >67:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F9E text26 CODE >68:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F9F text26 CODE >70:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-FA0 text26 CODE >72:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F3C text25 CODE >32:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F3C text25 CODE >34:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F48 text25 CODE >35:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7D2 text24 CODE >74:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7D2 text24 CODE >77:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7D7 text24 CODE >78:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7DA text24 CODE >79:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7DF text24 CODE >80:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7E8 text24 CODE >81:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7ED text24 CODE >82:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7F3 text24 CODE >83:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7F6 text24 CODE >84:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7F7 text24 CODE >85:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7FA text24 CODE >86:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7FA text24 CODE >87:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7FB text24 CODE >88:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-7FF text24 CODE >89:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F17 text23 CODE >39:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F17 text23 CODE >41:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F1C text23 CODE >42:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F1F text23 CODE >43:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F20 text22 CODE >55:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F20 text22 CODE >57:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F25 text22 CODE >58:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F28 text22 CODE >59:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F32 text21 CODE >65:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F32 text21 CODE >67:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F37 text21 CODE >68:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-F3B text21 CODE >69:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-3DA text20 CODE >13:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3DB text20 CODE >14:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3DF text20 CODE >15:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3E3 text20 CODE >16:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3E3 text20 CODE >17:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3E6 text20 CODE >19:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3EA text20 CODE >20:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3EC text20 CODE >21:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3EC text20 CODE >22:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3ED text20 CODE >24:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3F1 text20 CODE >25:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3F3 text20 CODE >26:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3F3 text20 CODE >27:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3F4 text20 CODE >29:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3F8 text20 CODE >30:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3FA text20 CODE >31:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3FA text20 CODE >32:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3FB text20 CODE >33:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-F56 text19 CODE >35:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-F57 text19 CODE >36:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-F5A text19 CODE >37:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-F60 text19 CODE >38:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-F63 text19 CODE >39:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-F6C text19 CODE >40:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-F6F text19 CODE >41:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-F49 text18 CODE >43:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-F49 text18 CODE >44:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-F4F text18 CODE >45:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-F55 text18 CODE >46:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5B1 text17 CODE >65:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5B1 text17 CODE >66:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5B7 text17 CODE >67:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5C0 text17 CODE >68:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5C6 text17 CODE >69:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5CF text17 CODE >70:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5D5 text17 CODE >71:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5DD text17 CODE >72:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5E3 text17 CODE >74:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5E9 text17 CODE >75:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5EF text17 CODE >76:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5F5 text17 CODE >77:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-5FB text17 CODE >78:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-601 text17 CODE >79:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-607 text17 CODE >80:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-60D text17 CODE >81:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-667 text16 CODE >48:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-66A text16 CODE >50:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-66F text16 CODE >51:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-674 text16 CODE >52:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-680 text16 CODE >53:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-685 text16 CODE >54:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-68B text16 CODE >55:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-693 text16 CODE >56:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-69A text16 CODE >57:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-69F text16 CODE >58:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-6AB text16 CODE >59:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-6B0 text16 CODE >60:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-6B6 text16 CODE >61:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-6BE text16 CODE >63:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3A1 text15 CODE >83:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3A2 text15 CODE >85:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3A7 text15 CODE >86:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3AC text15 CODE >87:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3AF text15 CODE >88:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3BD text15 CODE >89:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3C0 text15 CODE >90:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3C5 text15 CODE >91:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3C8 text15 CODE >92:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3CE text15 CODE >93:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3D1 text15 CODE >94:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3D6 text15 CODE >95:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-3D9 text15 CODE >96:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-70C text14 CODE >98:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-70C text14 CODE >100:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-711 text14 CODE >101:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-751 text14 CODE >102:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
-4E0 text13 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-4E0 text13 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-4E3 text13 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-4E7 text13 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-4EC text13 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-4EE text13 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-4F2 text13 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-4F7 text13 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-4FB text13 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-4FD text13 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-503 text13 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-505 text13 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-506 text13 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-50D text13 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-511 text13 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-515 text13 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-51C text13 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-526 text13 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-52C text13 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-52D text13 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-534 text13 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-53A text13 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-53F text13 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-544 text13 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-548 text13 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-60E text12 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-60E text12 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-60F text12 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-613 text12 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-618 text12 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-61A text12 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-61E text12 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-623 text12 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-629 text12 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-62B text12 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-62C text12 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-633 text12 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-637 text12 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-63B text12 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-645 text12 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-64B text12 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-652 text12 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-658 text12 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-65D text12 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-662 text12 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-666 text12 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-475 text11 CODE >237:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-476 text11 CODE >238:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-48E text11 CODE >239:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-4A4 text11 CODE >240:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-4BA text11 CODE >241:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-4D0 text11 CODE >243:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-4D5 text11 CODE >244:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-4DA text11 CODE >245:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-4DF text11 CODE >246:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-752 text10 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-752 text10 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-754 text10 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-75A text10 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-75C text10 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-75D text10 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-764 text10 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-768 text10 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-76C text10 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-773 text10 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-77D text10 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-783 text10 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-784 text10 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-78B text10 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-791 text10 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-795 text10 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
-796 text9 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-796 text9 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-79E text9 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-7A0 text9 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-7A1 text9 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-7A8 text9 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-7AC text9 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-7B0 text9 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-7BA text9 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-7C0 text9 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-7C7 text9 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-7CD text9 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-7D1 text9 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
-F29 text8 CODE >249:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F29 text8 CODE >250:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F2F text8 CODE >251:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F31 text8 CODE >253:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-16E text7 CODE >471:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-171 text7 CODE >553:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-172 text7 CODE >555:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-178 text7 CODE >558:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-19E text7 CODE >565:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-19F text7 CODE >848:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-1BC text7 CODE >1285:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-1CA text7 CODE >1287:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-1CE text7 CODE >1288:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-1D2 text7 CODE >1289:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-1D7 text7 CODE >1331:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-1D9 text7 CODE >1332:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-1F5 text7 CODE >1333:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-1FF text7 CODE >1464:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-205 text7 CODE >1465:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-228 text7 CODE >1498:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-22E text7 CODE >1500:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-22F text7 CODE >1515:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-25F text7 CODE >1550:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-282 text7 CODE >1500:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-28D text7 CODE >553:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-2A1 text7 CODE >1566:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-2A3 text7 CODE >1567:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
-F70 text6 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\printf.c
-F73 text6 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\printf.c
-F74 text6 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\printf.c
-F78 text6 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\printf.c
-F7C text6 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\printf.c
-F8A text6 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\printf.c
-2A4 text5 CODE >198:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-2A4 text5 CODE >199:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-2B2 text5 CODE >200:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-2BA text5 CODE >201:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-2C0 text5 CODE >202:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-2CE text5 CODE >205:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-2D2 text5 CODE >206:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-2E0 text5 CODE >207:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-2E4 text5 CODE >208:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-2F2 text5 CODE >209:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-2F8 text5 CODE >211:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-306 text5 CODE >212:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-30E text5 CODE >213:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-314 text5 CODE >214:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-322 text5 CODE >219:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-326 text5 CODE >220:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-334 text5 CODE >221:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-33A text5 CODE >223:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-348 text5 CODE >224:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-350 text5 CODE >225:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-356 text5 CODE >226:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-364 text5 CODE >227:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-368 text5 CODE >228:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-376 text5 CODE >229:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-37A text5 CODE >230:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-388 text5 CODE >231:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-38C text5 CODE >232:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-39A text5 CODE >233:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-3A0 text5 CODE >234:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-549 text4 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-549 text4 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-553 text4 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-55B text4 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-55D text4 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-55E text4 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-567 text4 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-56B text4 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-56F text4 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-578 text4 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-58A text4 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-598 text4 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-599 text4 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-5A2 text4 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-5A8 text4 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-5B0 text4 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
-FC8 text3 CODE >16:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-FC8 text3 CODE >18:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-FCC text3 CODE >19:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-FCF text3 CODE >20:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-FFC text3 CODE >21:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-FFD text3 CODE >22:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-FFE text3 CODE >23:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-FFF text3 CODE >24:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
-6BF text2 CODE >138:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6BF text2 CODE >140:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6C2 text2 CODE >141:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6C3 text2 CODE >142:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6C4 text2 CODE >143:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6C5 text2 CODE >146:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6C8 text2 CODE >147:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6C9 text2 CODE >150:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6CC text2 CODE >151:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6CD text2 CODE >152:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6CE text2 CODE >153:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6CF text2 CODE >156:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6D2 text2 CODE >157:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6D3 text2 CODE >158:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6D4 text2 CODE >159:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6D5 text2 CODE >160:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6D6 text2 CODE >163:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6D9 text2 CODE >164:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6DB text2 CODE >165:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6DC text2 CODE >168:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6DD text2 CODE >169:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6DE text2 CODE >170:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6E1 text2 CODE >172:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6E5 text2 CODE >173:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6E7 text2 CODE >175:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6EA text2 CODE >176:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6EB text2 CODE >177:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6EC text2 CODE >178:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6EF text2 CODE >180:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6F0 text2 CODE >182:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6F3 text2 CODE >183:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6F4 text2 CODE >186:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6F5 text2 CODE >187:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6F6 text2 CODE >188:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6F9 text2 CODE >189:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6FA text2 CODE >190:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6FB text2 CODE >191:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6FC text2 CODE >194:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-70B text2 CODE >195:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-FA7 text1 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprintf.c
-FAA text1 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprintf.c
-FAE text1 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprintf.c
-FAF text1 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprintf.c
-FB3 text1 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprintf.c
-FC1 text1 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprintf.c
-FC7 text1 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\sprintf.c
-2D maintext CODE >75:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-2D maintext CODE >77:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-32 maintext CODE >78:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-37 maintext CODE >88:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-3D maintext CODE >89:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-41 maintext CODE >90:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-47 maintext CODE >91:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-4F maintext CODE >92:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-57 maintext CODE >94:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-5C maintext CODE >95:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-64 maintext CODE >96:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-6D maintext CODE >97:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-84 maintext CODE >98:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-9B maintext CODE >99:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-A7 maintext CODE >100:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-B0 maintext CODE >101:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-BC maintext CODE >102:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-C5 maintext CODE >104:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-CC maintext CODE >105:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-D8 maintext CODE >106:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-E1 maintext CODE >107:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-E2 maintext CODE >109:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-EE maintext CODE >110:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-F7 maintext CODE >112:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-105 maintext CODE >117:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-10A maintext CODE >118:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-113 maintext CODE >119:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-121 maintext CODE >120:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-126 maintext CODE >121:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-135 maintext CODE >124:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-13A maintext CODE >125:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-143 maintext CODE >126:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-151 maintext CODE >127:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-156 maintext CODE >128:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
-165 maintext CODE >130:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+F cinit CODE >959:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+F cinit CODE >962:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+F cinit CODE >1012:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+10 cinit CODE >1013:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+11 cinit CODE >1016:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+12 cinit CODE >1017:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+13 cinit CODE >1018:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+14 cinit CODE >1019:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+15 cinit CODE >1020:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+16 cinit CODE >1021:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+17 cinit CODE >1022:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+18 cinit CODE >1023:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+19 cinit CODE >1024:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+1A cinit CODE >1025:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+1B cinit CODE >1026:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+1C cinit CODE >1027:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+1D cinit CODE >1028:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+1E cinit CODE >1034:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+1E cinit CODE >1036:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+1F cinit CODE >1037:C:\Users\jonam\AppData\Local\Temp\sv1o.s
+4 intentry CODE >55:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+741 text23 CODE >55:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+741 text23 CODE >57:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+745 text23 CODE >59:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+74B text23 CODE >61:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+74C text23 CODE >62:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+74E text23 CODE >63:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+74F text23 CODE >64:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+753 text23 CODE >66:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+754 text23 CODE >67:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+755 text23 CODE >69:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+756 text23 CODE >71:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+784 text22 CODE >32:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+784 text22 CODE >34:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+790 text22 CODE >35:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+6F1 text21 CODE >74:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+6F1 text21 CODE >77:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+6F6 text21 CODE >78:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+6F9 text21 CODE >79:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+6FE text21 CODE >80:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+707 text21 CODE >81:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+70C text21 CODE >82:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+712 text21 CODE >83:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+715 text21 CODE >84:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+716 text21 CODE >85:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+719 text21 CODE >86:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+719 text21 CODE >87:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+71A text21 CODE >88:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+71E text21 CODE >89:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+7A4 text20 CODE >39:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+7A4 text20 CODE >41:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+7A9 text20 CODE >42:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+7AC text20 CODE >43:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+79B text19 CODE >55:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+79B text19 CODE >57:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+7A0 text19 CODE >58:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+7A3 text19 CODE >59:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+791 text18 CODE >65:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+791 text18 CODE >67:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+796 text18 CODE >68:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+79A text18 CODE >69:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+71F text17 CODE >13:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+720 text17 CODE >14:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+724 text17 CODE >15:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+728 text17 CODE >16:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+728 text17 CODE >17:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+72B text17 CODE >19:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+72F text17 CODE >20:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+731 text17 CODE >21:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+731 text17 CODE >22:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+732 text17 CODE >24:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+736 text17 CODE >25:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+738 text17 CODE >26:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+738 text17 CODE >27:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+739 text17 CODE >29:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+73D text17 CODE >30:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+73F text17 CODE >31:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+73F text17 CODE >32:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+740 text17 CODE >33:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+75D text16 CODE >35:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+75E text16 CODE >36:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+761 text16 CODE >37:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+767 text16 CODE >38:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+76A text16 CODE >39:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+773 text16 CODE >40:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+776 text16 CODE >41:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+777 text15 CODE >43:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+777 text15 CODE >44:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+77D text15 CODE >45:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+783 text15 CODE >46:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+428 text14 CODE >65:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+428 text14 CODE >66:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+42E text14 CODE >67:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+437 text14 CODE >68:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+43D text14 CODE >69:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+446 text14 CODE >70:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+44C text14 CODE >71:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+454 text14 CODE >72:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+45A text14 CODE >74:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+460 text14 CODE >75:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+466 text14 CODE >76:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+46C text14 CODE >77:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+472 text14 CODE >78:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+478 text14 CODE >79:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+47E text14 CODE >80:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+484 text14 CODE >81:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+4DE text13 CODE >48:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+4E1 text13 CODE >50:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+4E6 text13 CODE >51:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+4EB text13 CODE >52:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+4F7 text13 CODE >53:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+4FC text13 CODE >54:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+502 text13 CODE >55:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+50A text13 CODE >56:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+511 text13 CODE >57:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+516 text13 CODE >58:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+522 text13 CODE >59:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+527 text13 CODE >60:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+52D text13 CODE >61:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+535 text13 CODE >63:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+649 text12 CODE >83:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+64A text12 CODE >85:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+64F text12 CODE >86:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+654 text12 CODE >87:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+657 text12 CODE >88:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+665 text12 CODE >89:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+668 text12 CODE >90:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+66D text12 CODE >91:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+670 text12 CODE >92:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+676 text12 CODE >93:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+679 text12 CODE >94:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+67E text12 CODE >95:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+681 text12 CODE >96:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+583 text11 CODE >98:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+583 text11 CODE >100:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+588 text11 CODE >101:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+5C8 text11 CODE >102:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\LCD.c
+357 text10 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+357 text10 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+35A text10 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+35E text10 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+363 text10 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+365 text10 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+369 text10 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+36E text10 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+372 text10 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+374 text10 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+37A text10 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+37C text10 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+37D text10 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+384 text10 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+388 text10 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+38C text10 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+393 text10 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+39D text10 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+3A3 text10 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+3A4 text10 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+3AB text10 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+3B1 text10 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+3B6 text10 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+3BB text10 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+3BF text10 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+485 text9 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+485 text9 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+486 text9 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+48A text9 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+48F text9 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+491 text9 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+495 text9 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+49A text9 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4A0 text9 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4A2 text9 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4A3 text9 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4AA text9 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4AE text9 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4B2 text9 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4BC text9 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4C2 text9 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4C9 text9 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4CF text9 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4D4 text9 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4D9 text9 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+4DD text9 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+2EC text8 CODE >227:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2ED text8 CODE >228:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+305 text8 CODE >229:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+31B text8 CODE >230:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+331 text8 CODE >231:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+347 text8 CODE >233:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+34C text8 CODE >234:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+351 text8 CODE >235:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+356 text8 CODE >236:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+237 text7 CODE >195:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+237 text7 CODE >196:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+242 text7 CODE >197:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+24A text7 CODE >198:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+255 text7 CODE >199:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+259 text7 CODE >200:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+264 text7 CODE >201:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+268 text7 CODE >202:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+273 text7 CODE >205:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+27E text7 CODE >206:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+286 text7 CODE >208:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+291 text7 CODE >209:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+295 text7 CODE >210:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2A0 text7 CODE >213:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2AB text7 CODE >214:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2B3 text7 CODE >216:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2BE text7 CODE >217:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2C2 text7 CODE >218:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2CD text7 CODE >219:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2D1 text7 CODE >220:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2DC text7 CODE >221:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2E0 text7 CODE >222:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2EB text7 CODE >224:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+3C0 text6 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+3C0 text6 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+3CA text6 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+3D2 text6 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+3D4 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+3D5 text6 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+3DE text6 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+3E2 text6 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+3E6 text6 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+3EF text6 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+401 text6 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+40F text6 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+410 text6 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+419 text6 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+41F text6 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+427 text6 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\__lldiv.c
+682 text5 CODE >16:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+682 text5 CODE >18:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+686 text5 CODE >19:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+689 text5 CODE >20:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+6B6 text5 CODE >21:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+6B7 text5 CODE >22:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+6B8 text5 CODE >23:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+6B9 text5 CODE >24:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C.c
+536 text4 CODE >135:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+536 text4 CODE >137:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+539 text4 CODE >138:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+53A text4 CODE >139:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+53B text4 CODE >140:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+53C text4 CODE >143:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+53F text4 CODE >144:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+540 text4 CODE >147:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+543 text4 CODE >148:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+544 text4 CODE >149:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+545 text4 CODE >150:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+546 text4 CODE >153:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+549 text4 CODE >154:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+54A text4 CODE >155:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+54B text4 CODE >156:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+54C text4 CODE >157:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+54D text4 CODE >160:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+550 text4 CODE >161:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+552 text4 CODE >162:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+553 text4 CODE >165:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+554 text4 CODE >166:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+555 text4 CODE >167:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+558 text4 CODE >169:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+55C text4 CODE >170:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+55E text4 CODE >172:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+561 text4 CODE >173:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+562 text4 CODE >174:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+563 text4 CODE >175:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+566 text4 CODE >177:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+567 text4 CODE >179:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+56A text4 CODE >180:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+56B text4 CODE >183:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+56C text4 CODE >184:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+56D text4 CODE >185:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+570 text4 CODE >186:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+571 text4 CODE >187:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+572 text4 CODE >188:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+573 text4 CODE >191:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+582 text4 CODE >192:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+5C9 text3 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5C9 text3 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5CB text3 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5D1 text3 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5D3 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5D4 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5DB text3 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5DF text3 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5E3 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5EA text3 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5F4 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5FA text3 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+5FB text3 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+602 text3 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+608 text3 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+60C text3 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwdiv.c
+60D text2 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+60D text2 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+615 text2 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+617 text2 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+618 text2 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+61F text2 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+623 text2 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+627 text2 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+631 text2 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+637 text2 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+63E text2 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+644 text2 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+648 text2 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\lwmod.c
+14D text1 CODE >505:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+150 text1 CODE >550:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+154 text1 CODE >553:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+155 text1 CODE >555:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+15B text1 CODE >558:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+166 text1 CODE >559:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+167 text1 CODE >565:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+168 text1 CODE >848:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+185 text1 CODE >1285:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+191 text1 CODE >1287:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+195 text1 CODE >1288:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+199 text1 CODE >1289:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+19E text1 CODE >1331:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+1A0 text1 CODE >1332:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+1BC text1 CODE >1333:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+1C6 text1 CODE >1464:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+1CC text1 CODE >1465:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+1D7 text1 CODE >1498:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+1DB text1 CODE >1500:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+1DC text1 CODE >1515:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+20C text1 CODE >1550:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+217 text1 CODE >1500:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+220 text1 CODE >553:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+232 text1 CODE >1564:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+236 text1 CODE >1567:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
+22 maintext CODE >74:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+22 maintext CODE >76:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+27 maintext CODE >77:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+2C maintext CODE >87:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+32 maintext CODE >88:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+36 maintext CODE >89:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+3A maintext CODE >90:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+3E maintext CODE >91:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+42 maintext CODE >93:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+47 maintext CODE >94:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+4F maintext CODE >95:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+58 maintext CODE >96:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+6B maintext CODE >97:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+7E maintext CODE >98:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+8A maintext CODE >99:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+93 maintext CODE >100:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+9F maintext CODE >101:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+A8 maintext CODE >103:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+AF maintext CODE >104:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+B9 maintext CODE >105:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+C2 maintext CODE >106:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+C3 maintext CODE >108:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+CD maintext CODE >109:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+D6 maintext CODE >111:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+E4 maintext CODE >114:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+E9 maintext CODE >115:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+F2 maintext CODE >116:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+100 maintext CODE >117:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+105 maintext CODE >118:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+114 maintext CODE >121:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+119 maintext CODE >122:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+122 maintext CODE >123:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+130 maintext CODE >124:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+135 maintext CODE >125:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+144 maintext CODE >127:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -526,96 +475,87 @@ F7 maintext CODE >112:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\P
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 ___awdiv@counter 20 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-putch@data 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 ___lwmod@counter 25 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-__Hspace_0 1000 0 ABS 0 - -
-__Hspace_1 CC 0 ABS 0 - -
+__Hspace_0 7AD 0 ABS 0 - -
+__Hspace_1 7C 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __size_of_division 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-_Lcd_Init B62 0 CODE 0 text17 dist/default/production\Master_P1_D2.X.production.o
-_Lcd_Port 7B4 0 CODE 0 text20 dist/default/production\Master_P1_D2.X.production.o
+_Lcd_Init 850 0 CODE 0 text14 dist/default/production\Master_P1_D2.X.production.o
+_Lcd_Port E3E 0 CODE 0 text17 dist/default/production\Master_P1_D2.X.production.o
 I2C_Master_Init@c 26 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-_R1 46 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
-_R2 45 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
-__end_of_Lcd_Init C1C 0 CODE 0 text17 dist/default/production\Master_P1_D2.X.production.o
-__end_of_Lcd_Port 7F8 0 CODE 0 text20 dist/default/production\Master_P1_D2.X.production.o
-__Hstrings 5A 0 ABS 0 strings -
-main@buffer2 B4 0 BANK1 1 cstackBANK1 dist/default/production\Master_P1_D2.X.production.o
+_R1 6B 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
+_R2 6A 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
+__end_of_Lcd_Init 90A 0 CODE 0 text14 dist/default/production\Master_P1_D2.X.production.o
+__end_of_Lcd_Port E82 0 CODE 0 text17 dist/default/production\Master_P1_D2.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+main@buffer2 4A 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _RBIF 58 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _TXIF 64 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-_Text 548 0 CODE 0 text5 dist/default/production\Master_P1_D2.X.production.o
+_Text 46E 0 CODE 0 text7 dist/default/production\Master_P1_D2.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\diego\AppData\Local\Temp\s9o8.o
-_cont 42 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
-_main 5A 0 CODE 0 maintext dist/default/production\Master_P1_D2.X.production.o
-_stat 43 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
-_temp 44 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\jonam\AppData\Local\Temp\sv1o.o
+_cont 67 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
+_main 44 0 CODE 0 maintext dist/default/production\Master_P1_D2.X.production.o
+_stat 68 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
+_temp 69 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-_Lcd_Write_Char 742 0 CODE 0 text15 dist/default/production\Master_P1_D2.X.production.o
-start 18 0 CODE 0 init C:\Users\diego\AppData\Local\Temp\s9o8.o
+_Lcd_Write_Char C92 0 CODE 0 text12 dist/default/production\Master_P1_D2.X.production.o
+start 18 0 CODE 0 init C:\Users\jonam\AppData\Local\Temp\sv1o.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__pfunctab 48 0 ENTRY 0 functab dist/default/production\Master_P1_D2.X.production.o
 __size_of_Text 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __size_of___lldiv 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __size_of___lwdiv 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __size_of___lwmod 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 Lcd_Port@a 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-__HbssCOMMON 5A 0 ABS 0 bssCOMMON -
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
 Lcd_Write_Char@temp 74 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 _OPTION_REGbits 81 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-printf@f 34 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 ___awmod@sign 78 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 I2C_Master_Read@a 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-__size_of__doprnt 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-intlevel0 48 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9o8.o
-intlevel1 48 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9o8.o
-intlevel2 48 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9o8.o
-intlevel3 48 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9o8.o
-intlevel4 48 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9o8.o
-intlevel5 48 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9o8.o
-__LbssCOMMON 5A 0 ABS 0 bssCOMMON -
-_division 8EA 0 CODE 0 text11 dist/default/production\Master_P1_D2.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sv1o.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sv1o.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sv1o.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sv1o.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sv1o.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sv1o.o
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+_division 5D8 0 CODE 0 text8 dist/default/production\Master_P1_D2.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__Hfunctab 5A 0 ENTRY 0 functab -
+__Hfunctab 0 0 ENTRY 0 functab -
 I2C_Master_Read@temp 76 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-__end_of_division 9C0 0 CODE 0 text11 dist/default/production\Master_P1_D2.X.production.o
+__end_of_division 6AE 0 CODE 0 text8 dist/default/production\Master_P1_D2.X.production.o
 __size_of_Lcd_Set_Cursor 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 ___awdiv@sign 21 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-__Hclrtext 5A 0 ABS 0 clrtext -
-_decenas 40 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
-__end_of_Lcd_Write_Char 7B4 0 CODE 0 text15 dist/default/production\Master_P1_D2.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext -
+_decenas 7B 0 COMMON 1 bssCOMMON dist/default/production\Master_P1_D2.X.production.o
+__end_of_Lcd_Write_Char D04 0 CODE 0 text12 dist/default/production\Master_P1_D2.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 ___awdiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-_unidades 3F 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
-__doprnt@flag 2B 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-__doprnt@prec 2C 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-main@val CA 0 BANK1 1 cstackBANK1 dist/default/production\Master_P1_D2.X.production.o
-__Lmaintext 5A 0 ABS 0 maintext -
+_unidades 7A 0 COMMON 1 bssCOMMON dist/default/production\Master_P1_D2.X.production.o
+main@val 60 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
 __size_of_sprintf 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-?_printf 70 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 ___awdiv@divisor 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 ___lwmod@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-__end_of___awdiv A92 0 CODE 0 text13 dist/default/production\Master_P1_D2.X.production.o
-__end_of___awmod CCE 0 CODE 0 text12 dist/default/production\Master_P1_D2.X.production.o
-__end_of___lldiv B62 0 CODE 0 text4 dist/default/production\Master_P1_D2.X.production.o
-__end_of___lwdiv F2C 0 CODE 0 text10 dist/default/production\Master_P1_D2.X.production.o
-__end_of___lwmod FA4 0 CODE 0 text9 dist/default/production\Master_P1_D2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\diego\AppData\Local\Temp\s9o8.o
-___stacklo 0 0 ABS 0 - C:\Users\diego\AppData\Local\Temp\s9o8.o
-_dpowers 820 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
+__end_of___awdiv 780 0 CODE 0 text10 dist/default/production\Master_P1_D2.X.production.o
+__end_of___awmod 9BC 0 CODE 0 text9 dist/default/production\Master_P1_D2.X.production.o
+__end_of___lldiv 850 0 CODE 0 text6 dist/default/production\Master_P1_D2.X.production.o
+__end_of___lwdiv C1A 0 CODE 0 text3 dist/default/production\Master_P1_D2.X.production.o
+__end_of___lwmod C92 0 CODE 0 text2 dist/default/production\Master_P1_D2.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\jonam\AppData\Local\Temp\sv1o.o
+___stacklo 0 0 ABS 0 - C:\Users\jonam\AppData\Local\Temp\sv1o.o
+_dpowers D94 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-___lwdiv@quotient 78 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-__size_of_putch 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
+___lwdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__end_of__doprnt 548 0 CODE 0 text7 dist/default/production\Master_P1_D2.X.production.o
 Lcd_Set_Cursor@temp 23 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 ___lwmod@dividend 22 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 ___lldiv@counter 25 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
@@ -623,167 +563,148 @@ start_initialization 1E 0 CODE 0 cinit dist/default/production\Master_P1_D2.X.pr
 _TRISBbits 86 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 ___lldiv@dividend 76 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-_Lcd_Write_String E18 0 CODE 0 text14 dist/default/production\Master_P1_D2.X.production.o
+_Lcd_Write_String B06 0 CODE 0 text11 dist/default/production\Master_P1_D2.X.production.o
 _SPBRGH 9A 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-__pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\Master_P1_D2.X.production.o
 _SSPADD 93 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__end_of_printf 1F16 0 CODE 0 text6 dist/default/production\Master_P1_D2.X.production.o
-_residuo 7A 0 COMMON 1 bssCOMMON dist/default/production\Master_P1_D2.X.production.o
+_residuo 64 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
 __size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\diego\AppData\Local\Temp\s9o8.o
-__Hbank0 5A 0 ABS 0 bank0 -
-__Hbank1 5A 0 ABS 0 bank1 -
-__Hbank2 5A 0 ABS 0 bank2 -
-__Hbank3 5A 0 ABS 0 bank3 -
-__Hcinit 48 0 CODE 0 cinit -
+___int_sp 0 0 STACK 2 stack C:\Users\jonam\AppData\Local\Temp\sv1o.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 44 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
-__stringbase 81E 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
-___lwdiv@counter 77 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
+__stringbase D92 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
+___lwdiv@counter 79 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 I2C_Master_Write@d 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-__Hmaintext 5A 0 ABS 0 maintext -
-__end_of_sprintf 1F90 0 CODE 0 text1 dist/default/production\Master_P1_D2.X.production.o
-__Hcommon 5A 0 ABS 0 common -
+__Hmaintext 0 0 ABS 0 maintext -
+__end_of_sprintf 46E 0 CODE 0 text1 dist/default/production\Master_P1_D2.X.production.o
+__Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
-__Lbank0 5A 0 ABS 0 bank0 -
-__Lbank1 5A 0 ABS 0 bank1 -
-__Lbank2 5A 0 ABS 0 bank2 -
-__Lbank3 5A 0 ABS 0 bank3 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
 __Lcinit 1E 0 CODE 0 cinit -
 __Lstack 0 0 STACK 2 stack -
-__size_of__fptable 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _PORTBbits 6 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _PORTDbits 8 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__Habs1 5A 0 ABS 0 abs1 -
-__Hcode 5A 0 ABS 0 code -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
 __Hinit 18 0 CODE 0 init -
-__Hsfr0 5A 0 ABS 0 sfr0 -
-__Hsfr1 5A 0 ABS 0 sfr1 -
-__Hsfr2 5A 0 ABS 0 sfr2 -
-__Hsfr3 5A 0 ABS 0 sfr3 -
-__Htext 5A 0 ABS 0 text -
-__Labs1 5A 0 ABS 0 abs1 -
-__Lcode 5A 0 ABS 0 code -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
 __Linit 18 0 CODE 0 init -
-__Lsfr0 5A 0 ABS 0 sfr0 -
-__Lsfr1 5A 0 ABS 0 sfr1 -
-__Lsfr2 5A 0 ABS 0 sfr2 -
-__Lsfr3 5A 0 ABS 0 sfr3 -
-__Ltext 5A 0 ABS 0 text -
-__LcstackBANK0 5A 0 ABS 0 cstackBANK0 -
-__LcstackBANK1 5A 0 ABS 0 cstackBANK1 -
-__HcstackCOMMON 5A 0 ABS 0 cstackCOMMON -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _RD3 43 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _RD4 44 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _RD5 45 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _RD6 46 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _RD7 47 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__S0 1000 0 ABS 0 - -
-__S1 CC 0 ABS 0 - -
+__S0 7AD 0 ABS 0 - -
+__S1 7C 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 1F16 0 CODE 0 text26 dist/default/production\Master_P1_D2.X.production.o
+_isr E82 0 CODE 0 text23 dist/default/production\Master_P1_D2.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-_I2C_Master_Start 1E2E 0 CODE 0 text23 dist/default/production\Master_P1_D2.X.production.o
-_I2C_Master_Write 1E64 0 CODE 0 text21 dist/default/production\Master_P1_D2.X.production.o
-__end_of_Lcd_Write_String EA4 0 CODE 0 text14 dist/default/production\Master_P1_D2.X.production.o
-__end_of_isr 1F4E 0 CODE 0 text26 dist/default/production\Master_P1_D2.X.production.o
-__end_of_Lcd_Clear 1EAC 0 CODE 0 text18 dist/default/production\Master_P1_D2.X.production.o
+_I2C_Master_Start F48 0 CODE 0 text20 dist/default/production\Master_P1_D2.X.production.o
+_I2C_Master_Write F22 0 CODE 0 text18 dist/default/production\Master_P1_D2.X.production.o
+sprintf@val 2F 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+__end_of_Lcd_Write_String B92 0 CODE 0 text11 dist/default/production\Master_P1_D2.X.production.o
+__end_of_isr EBA 0 CODE 0 text23 dist/default/production\Master_P1_D2.X.production.o
+__end_of_Lcd_Clear F08 0 CODE 0 text15 dist/default/production\Master_P1_D2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 ___lldiv@divisor 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 __size_of_Lcd_Write_String 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__stringtab 800 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
+__stringtab D74 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
 Lcd_Write_String@a 77 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 Lcd_Write_String@i 23 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\diego\AppData\Local\Temp\s9o8.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\jonam\AppData\Local\Temp\sv1o.o
 __size_of_Lcd_Clear 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__fptable 48 0 ENTRY 0 functab dist/default/production\Master_P1_D2.X.production.o
-__end_of_Lcd_Cmd 1EE0 0 CODE 0 text19 dist/default/production\Master_P1_D2.X.production.o
-__LbssBANK0 5A 0 ABS 0 bssBANK0 -
-__LbssBANK1 5A 0 ABS 0 bssBANK1 -
+__end_of_Lcd_Cmd EEE 0 CODE 0 text16 dist/default/production\Master_P1_D2.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
 ___awmod@counter 77 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 _RCSTAbits 18 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__doprnt@ap 27 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-__doprnt@pb 30 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-__end_of__fptable 5A 0 ENTRY 0 functab dist/default/production\Master_P1_D2.X.production.o
-__ptext10 EA4 0 CODE 0 text10 dist/default/production\Master_P1_D2.X.production.o
-__ptext11 8EA 0 CODE 0 text11 dist/default/production\Master_P1_D2.X.production.o
-__ptext12 C1C 0 CODE 0 text12 dist/default/production\Master_P1_D2.X.production.o
-__ptext13 9C0 0 CODE 0 text13 dist/default/production\Master_P1_D2.X.production.o
-__ptext14 E18 0 CODE 0 text14 dist/default/production\Master_P1_D2.X.production.o
-__ptext15 742 0 CODE 0 text15 dist/default/production\Master_P1_D2.X.production.o
-__ptext16 CCE 0 CODE 0 text16 dist/default/production\Master_P1_D2.X.production.o
-__ptext17 B62 0 CODE 0 text17 dist/default/production\Master_P1_D2.X.production.o
-__ptext18 1E92 0 CODE 0 text18 dist/default/production\Master_P1_D2.X.production.o
-__ptext19 1EAC 0 CODE 0 text19 dist/default/production\Master_P1_D2.X.production.o
-__ptext20 7B4 0 CODE 0 text20 dist/default/production\Master_P1_D2.X.production.o
-__ptext21 1E64 0 CODE 0 text21 dist/default/production\Master_P1_D2.X.production.o
-__ptext22 1E40 0 CODE 0 text22 dist/default/production\Master_P1_D2.X.production.o
-__ptext23 1E2E 0 CODE 0 text23 dist/default/production\Master_P1_D2.X.production.o
-__ptext24 FA4 0 CODE 0 text24 dist/default/production\Master_P1_D2.X.production.o
-__ptext25 1E78 0 CODE 0 text25 dist/default/production\Master_P1_D2.X.production.o
-__ptext26 1F16 0 CODE 0 text26 dist/default/production\Master_P1_D2.X.production.o
-_Lcd_Clear 1E92 0 CODE 0 text18 dist/default/production\Master_P1_D2.X.production.o
+sprintf@flag 2D 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+sprintf@prec 2E 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+__ptext10 6AE 0 CODE 0 text10 dist/default/production\Master_P1_D2.X.production.o
+__ptext11 B06 0 CODE 0 text11 dist/default/production\Master_P1_D2.X.production.o
+__ptext12 C92 0 CODE 0 text12 dist/default/production\Master_P1_D2.X.production.o
+__ptext13 9BC 0 CODE 0 text13 dist/default/production\Master_P1_D2.X.production.o
+__ptext14 850 0 CODE 0 text14 dist/default/production\Master_P1_D2.X.production.o
+__ptext15 EEE 0 CODE 0 text15 dist/default/production\Master_P1_D2.X.production.o
+__ptext16 EBA 0 CODE 0 text16 dist/default/production\Master_P1_D2.X.production.o
+__ptext17 E3E 0 CODE 0 text17 dist/default/production\Master_P1_D2.X.production.o
+__ptext18 F22 0 CODE 0 text18 dist/default/production\Master_P1_D2.X.production.o
+__ptext19 F36 0 CODE 0 text19 dist/default/production\Master_P1_D2.X.production.o
+__ptext20 F48 0 CODE 0 text20 dist/default/production\Master_P1_D2.X.production.o
+__ptext21 DE2 0 CODE 0 text21 dist/default/production\Master_P1_D2.X.production.o
+__ptext22 F08 0 CODE 0 text22 dist/default/production\Master_P1_D2.X.production.o
+__ptext23 E82 0 CODE 0 text23 dist/default/production\Master_P1_D2.X.production.o
+_Lcd_Clear EEE 0 CODE 0 text15 dist/default/production\Master_P1_D2.X.production.o
 __size_of_Lcd_Write_Char 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-___awdiv 9C0 0 CODE 0 text13 dist/default/production\Master_P1_D2.X.production.o
-___awmod C1C 0 CODE 0 text12 dist/default/production\Master_P1_D2.X.production.o
-_Lcd_Set_Cursor CCE 0 CODE 0 text16 dist/default/production\Master_P1_D2.X.production.o
-___lldiv A92 0 CODE 0 text4 dist/default/production\Master_P1_D2.X.production.o
-___lwdiv EA4 0 CODE 0 text10 dist/default/production\Master_P1_D2.X.production.o
-___lwmod F2C 0 CODE 0 text9 dist/default/production\Master_P1_D2.X.production.o
-__pmaintext 5A 0 CODE 0 maintext dist/default/production\Master_P1_D2.X.production.o
-__Lcommon 5A 0 ABS 0 common -
+___awdiv 6AE 0 CODE 0 text10 dist/default/production\Master_P1_D2.X.production.o
+___awmod 90A 0 CODE 0 text9 dist/default/production\Master_P1_D2.X.production.o
+_Lcd_Set_Cursor 9BC 0 CODE 0 text13 dist/default/production\Master_P1_D2.X.production.o
+___lldiv 780 0 CODE 0 text6 dist/default/production\Master_P1_D2.X.production.o
+___lwdiv B92 0 CODE 0 text3 dist/default/production\Master_P1_D2.X.production.o
+___lwmod C1A 0 CODE 0 text2 dist/default/production\Master_P1_D2.X.production.o
+__pmaintext 44 0 CODE 0 maintext dist/default/production\Master_P1_D2.X.production.o
+__Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_printf 1EE0 0 CODE 0 text6 dist/default/production\Master_P1_D2.X.production.o
-__doprnt@c 2F 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-__doprnt@f 26 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-main@val1 C9 0 BANK1 1 cstackBANK1 dist/default/production\Master_P1_D2.X.production.o
-main@val2 C8 0 BANK1 1 cstackBANK1 dist/default/production\Master_P1_D2.X.production.o
+main@val1 5F 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+main@val2 5E 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 ___lwdiv@divisor 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-__doprnt 2DC 0 CODE 0 text7 dist/default/production\Master_P1_D2.X.production.o
 ?_I2C_Master_Read 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-__end_of_I2C_Master_Init 2000 0 CODE 0 text3 dist/default/production\Master_P1_D2.X.production.o
-__end_of_I2C_Master_Read 1000 0 CODE 0 text24 dist/default/production\Master_P1_D2.X.production.o
-__end_of_I2C_Master_Stop 1E52 0 CODE 0 text22 dist/default/production\Master_P1_D2.X.production.o
-__end_of_I2C_Master_Wait 1E92 0 CODE 0 text25 dist/default/production\Master_P1_D2.X.production.o
-__end_of__stringtab 820 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
-main@buffer A0 0 BANK1 1 cstackBANK1 dist/default/production\Master_P1_D2.X.production.o
-__end_of_I2C_Master_Start 1E40 0 CODE 0 text23 dist/default/production\Master_P1_D2.X.production.o
+__end_of_I2C_Master_Init D74 0 CODE 0 text5 dist/default/production\Master_P1_D2.X.production.o
+__end_of_I2C_Master_Read E3E 0 CODE 0 text21 dist/default/production\Master_P1_D2.X.production.o
+__end_of_I2C_Master_Stop F48 0 CODE 0 text19 dist/default/production\Master_P1_D2.X.production.o
+__end_of_I2C_Master_Wait F22 0 CODE 0 text22 dist/default/production\Master_P1_D2.X.production.o
+__end_of__stringtab D94 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
+main@buffer 36 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+__end_of_I2C_Master_Start F5A 0 CODE 0 text20 dist/default/production\Master_P1_D2.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__end_of_I2C_Master_Write 1E78 0 CODE 0 text21 dist/default/production\Master_P1_D2.X.production.o
+__end_of_I2C_Master_Write F36 0 CODE 0 text18 dist/default/production\Master_P1_D2.X.production.o
 __pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\Master_P1_D2.X.production.o
-__HcstackBANK0 5A 0 ABS 0 cstackBANK0 -
-__HcstackBANK1 5A 0 ABS 0 cstackBANK1 -
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __Lend_init 18 0 CODE 0 end_init -
-__LcstackCOMMON 5A 0 ABS 0 cstackCOMMON -
-printf@ap 33 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-printf@pb 35 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __size_of_I2C_Master_Start 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __size_of_I2C_Master_Write 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-end_of_initialization 40 0 CODE 0 cinit dist/default/production\Master_P1_D2.X.production.o
-__end_of_Lcd_Set_Cursor D7E 0 CODE 0 text16 dist/default/production\Master_P1_D2.X.production.o
+end_of_initialization 3C 0 CODE 0 cinit dist/default/production\Master_P1_D2.X.production.o
+__end_of_Lcd_Set_Cursor A6C 0 CODE 0 text13 dist/default/production\Master_P1_D2.X.production.o
 __Hintentry 18 0 CODE 0 intentry -
 division@valor 79 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 Lcd_Set_Cursor@a 20 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 Lcd_Set_Cursor@b 76 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 Lcd_Set_Cursor@y 22 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 Lcd_Set_Cursor@z 21 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-__size_of_printf 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-fptable 48 0 ENTRY 0 functab dist/default/production\Master_P1_D2.X.production.o
-fptotal 2 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__Lstrings 5A 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
 ___awdiv@quotient 22 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 ?___awdiv 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 ?___awmod 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
@@ -792,37 +713,33 @@ ___lwdiv@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D
 ?___lwdiv 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 ?___lwmod 20 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 __Hreset_vec 6 0 CODE 0 reset_vec -
-__HbssBANK0 5A 0 ABS 0 bssBANK0 -
-__HbssBANK1 5A 0 ABS 0 bssBANK1 -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
 ___awmod@dividend 74 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-__doprnt@val 2D 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__ptext1 1F4E 0 CODE 0 text1 dist/default/production\Master_P1_D2.X.production.o
-__ptext2 D7E 0 CODE 0 text2 dist/default/production\Master_P1_D2.X.production.o
-__ptext3 1F90 0 CODE 0 text3 dist/default/production\Master_P1_D2.X.production.o
-__ptext4 A92 0 CODE 0 text4 dist/default/production\Master_P1_D2.X.production.o
-__ptext5 548 0 CODE 0 text5 dist/default/production\Master_P1_D2.X.production.o
-__ptext6 1EE0 0 CODE 0 text6 dist/default/production\Master_P1_D2.X.production.o
-__ptext7 2DC 0 CODE 0 text7 dist/default/production\Master_P1_D2.X.production.o
-__ptext8 1E52 0 CODE 0 text8 dist/default/production\Master_P1_D2.X.production.o
-__ptext9 F2C 0 CODE 0 text9 dist/default/production\Master_P1_D2.X.production.o
-_sprintf 1F4E 0 CODE 0 text1 dist/default/production\Master_P1_D2.X.production.o
-?__doprnt 26 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+__ptext1 29A 0 CODE 0 text1 dist/default/production\Master_P1_D2.X.production.o
+__ptext2 C1A 0 CODE 0 text2 dist/default/production\Master_P1_D2.X.production.o
+__ptext3 B92 0 CODE 0 text3 dist/default/production\Master_P1_D2.X.production.o
+__ptext4 A6C 0 CODE 0 text4 dist/default/production\Master_P1_D2.X.production.o
+__ptext5 D04 0 CODE 0 text5 dist/default/production\Master_P1_D2.X.production.o
+__ptext6 780 0 CODE 0 text6 dist/default/production\Master_P1_D2.X.production.o
+__ptext7 46E 0 CODE 0 text7 dist/default/production\Master_P1_D2.X.production.o
+__ptext8 5D8 0 CODE 0 text8 dist/default/production\Master_P1_D2.X.production.o
+__ptext9 90A 0 CODE 0 text9 dist/default/production\Master_P1_D2.X.production.o
+_sprintf 29A 0 CODE 0 text1 dist/default/production\Master_P1_D2.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-_I2C_Master_Init 1F90 0 CODE 0 text3 dist/default/production\Master_P1_D2.X.production.o
-_I2C_Master_Read FA4 0 CODE 0 text24 dist/default/production\Master_P1_D2.X.production.o
-_I2C_Master_Stop 1E40 0 CODE 0 text22 dist/default/production\Master_P1_D2.X.production.o
-_I2C_Master_Wait 1E78 0 CODE 0 text25 dist/default/production\Master_P1_D2.X.production.o
-sprintf@ap 37 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-sprintf@pb 38 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-sprintf@wh 36 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+_I2C_Master_Init D04 0 CODE 0 text5 dist/default/production\Master_P1_D2.X.production.o
+_I2C_Master_Read DE2 0 CODE 0 text21 dist/default/production\Master_P1_D2.X.production.o
+_I2C_Master_Stop F36 0 CODE 0 text19 dist/default/production\Master_P1_D2.X.production.o
+_I2C_Master_Wait F08 0 CODE 0 text22 dist/default/production\Master_P1_D2.X.production.o
+sprintf@ap 2C 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+sprintf@sp 31 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of__initialization 40 0 CODE 0 cinit dist/default/production\Master_P1_D2.X.production.o
+__end_of__initialization 3C 0 CODE 0 cinit dist/default/production\Master_P1_D2.X.production.o
 ___awmod@divisor 72 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-__Lfunctab 48 0 ENTRY 0 functab -
+__Lfunctab 0 0 ENTRY 0 functab -
 Lcd_Cmd@a 75 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
-__Lclrtext 5A 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
 ___lldiv@quotient 21 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 _TXSTAbits 98 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
@@ -831,12 +748,13 @@ _SSPSTAT 94 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __size_of_Lcd_Init 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __size_of_Lcd_Port 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-sprintf@f 31 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
-__end_of_Text 742 0 CODE 0 text5 dist/default/production\Master_P1_D2.X.production.o
-__end_of_main 2DC 0 CODE 0 maintext dist/default/production\Master_P1_D2.X.production.o
+sprintf@c 32 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+sprintf@f 26 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+__end_of_Text 5D8 0 CODE 0 text7 dist/default/production\Master_P1_D2.X.production.o
+__end_of_main 29A 0 CODE 0 maintext dist/default/production\Master_P1_D2.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__end_of_dpowers 834 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
-?_sprintf 31 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
+__end_of_dpowers DA8 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
+?_sprintf 26 0 BANK0 1 cstackBANK0 dist/default/production\Master_P1_D2.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
@@ -848,29 +766,25 @@ _SSPIF 63 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _TRISA 85 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 _TXREG 19 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-__end_of_putch 1E64 0 CODE 0 text8 dist/default/production\Master_P1_D2.X.production.o
-__end_of_setup E18 0 CODE 0 text2 dist/default/production\Master_P1_D2.X.production.o
-__Hram 5A 0 ABS 0 ram -
-__Lram 5A 0 ABS 0 ram -
+__end_of_setup B06 0 CODE 0 text4 dist/default/production\Master_P1_D2.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\Master_P1_D2.X.production.o
 _IOCBbits 96 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-_putch 1E52 0 CODE 0 text8 dist/default/production\Master_P1_D2.X.production.o
-_setup D7E 0 CODE 0 text2 dist/default/production\Master_P1_D2.X.production.o
+_setup A6C 0 CODE 0 text4 dist/default/production\Master_P1_D2.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\Master_P1_D2.X.production.o
-_Lcd_Cmd 1EAC 0 CODE 0 text19 dist/default/production\Master_P1_D2.X.production.o
+_Lcd_Cmd EBA 0 CODE 0 text16 dist/default/production\Master_P1_D2.X.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-_centenas 41 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
+_centenas 65 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\Master_P1_D2.X.production.o
-__pbssBANK0 3D 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
-__pbssBANK1 CB 0 BANK1 1 bssBANK1 dist/default/production\Master_P1_D2.X.production.o
-__pstrings 800 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
+__pbssBANK0 61 0 BANK0 1 bssBANK0 dist/default/production\Master_P1_D2.X.production.o
+__pstrings D74 0 STRING 0 strings dist/default/production\Master_P1_D2.X.production.o
 Lcd_Write_Char@a 76 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 Lcd_Write_Char@y 75 0 COMMON 1 cstackCOMMON dist/default/production\Master_P1_D2.X.production.o
 __size_of_I2C_Master_Init 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __size_of_I2C_Master_Read 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __size_of_I2C_Master_Stop 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
 __size_of_I2C_Master_Wait 0 0 ABS 0 - dist/default/production\Master_P1_D2.X.production.o
-fpbase 52 0 ENTRY 0 functab dist/default/production\Master_P1_D2.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -896,26 +810,12 @@ fpbase 52 0 ENTRY 0 functab dist/default/production\Master_P1_D2.X.production.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text1 0 FA7 1F4E 21 2
-text3 0 FC8 1F90 38 2
-text6 0 F70 1EE0 1B 2
-text8 0 F29 1E52 9 2
-text11 0 475 8EA 38B 2
-text18 0 F49 1E92 D 2
-text19 0 F56 1EAC 1A 2
-text21 0 F32 1E64 A 2
-text22 0 F20 1E40 9 2
-text23 0 F17 1E2E 9 2
-text25 0 F3C 1E78 D 2
-text26 0 F8B 1F16 1C 2
-maintext 0 2D 5A 3CF 2
+text21 0 6F1 DE2 BC 2
 cstackCOMMON 1 70 70 C 1
-cstackBANK0 1 20 20 27 1
-cstackBANK1 1 A0 A0 2C 1
-intentry 0 4 8 20 2
+cstackBANK0 1 20 20 4C 1
+intentry 0 4 8 6B6 2
 reset_vec 0 0 0 3 2
-strings 0 400 800 75 2
-functab 0 24 48 9 2
+strings 0 6BA D74 37 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

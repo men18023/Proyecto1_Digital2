@@ -193,35 +193,34 @@ void setup(void){
 
 // Función para escribir en el UART
 void Text(void){
-    __delay_ms(250);                           //Tiempos para el despliegue de los caracteres
+    __delay_ms(50);                           //Tiempos para el despliegue de los caracteres
      division(cont);
-    printf("Valor del contador:\r");
-    __delay_ms(250);
+    __delay_ms(50);
     TXREG = decenas;
-    __delay_ms(250);
+    __delay_ms(50);
     TXREG = unidades;
-    __delay_ms(250);
-    printf("\r");
+    __delay_ms(50);
+    //printf("\r");
     
-    __delay_ms(250);                           //Tiempos para el despliegue de los caracteres
-     division(stat);
-    printf("Valor del agua:\r");
-    __delay_ms(250);
+    __delay_ms(50);                           //Tiempos para el despliegue de los caracteres
+    division(stat);
+    //printf("Valor del agua:\r");
+    __delay_ms(50);
     TXREG = unidades;
-    __delay_ms(250);
-    printf("\r");
+    __delay_ms(50);
+    //printf("\r");
     
-    __delay_ms(250);                           //Tiempos para el despliegue de los caracteres
+    __delay_ms(50);                           //Tiempos para el despliegue de los caracteres
      division(temp);
-    printf("Valor del temperatura:\r");
-    __delay_ms(250);
+    //printf("Valor del temperatura:\r");
+    __delay_ms(50);
     TXREG = centenas;
-    __delay_ms(250);
+    __delay_ms(50);
     TXREG = decenas;
-    __delay_ms(250);
+    __delay_ms(50);
     TXREG = unidades;
-    __delay_ms(250);
-    printf("\r");
+    __delay_ms(50);
+    //printf("\r");
 }
 
 // Función para despliegue de valores

@@ -2944,7 +2944,6 @@ void Text(void);
 char division (char valor);
 
 
-
 void __attribute__((picinterrupt(("")))) isr(void){
 
     if (RBIF == 1)
@@ -3002,8 +3001,6 @@ void main(void) {
         Lcd_Write_String("OFF");
         }
         _delay((unsigned long)((2000)*(4000000/4000.0)));
-
-
 
 
         I2C_Master_Start();
@@ -3088,41 +3085,34 @@ void setup(void){
 
 
 void Text(void){
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+    _delay((unsigned long)((50)*(4000000/4000.0)));
      division(cont);
-    printf("Valor del contador:\r");
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-
-
+    _delay((unsigned long)((50)*(4000000/4000.0)));
     TXREG = decenas;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+    _delay((unsigned long)((50)*(4000000/4000.0)));
     TXREG = unidades;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-    printf("\r");
-
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-     division(stat);
-    printf("Valor del agua:\r");
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+    _delay((unsigned long)((50)*(4000000/4000.0)));
 
 
+    _delay((unsigned long)((50)*(4000000/4000.0)));
+    division(stat);
 
-
+    _delay((unsigned long)((50)*(4000000/4000.0)));
     TXREG = unidades;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-    printf("\r");
+    _delay((unsigned long)((50)*(4000000/4000.0)));
 
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+
+    _delay((unsigned long)((50)*(4000000/4000.0)));
      division(temp);
-    printf("Valor del temperatura:\r");
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+
+    _delay((unsigned long)((50)*(4000000/4000.0)));
     TXREG = centenas;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+    _delay((unsigned long)((50)*(4000000/4000.0)));
     TXREG = decenas;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+    _delay((unsigned long)((50)*(4000000/4000.0)));
     TXREG = unidades;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-    printf("\r");
+    _delay((unsigned long)((50)*(4000000/4000.0)));
+
 }
 
 
