@@ -34,36 +34,13 @@
 
 //--------------------------------- Variables ----------------------------------
 uint8_t z;
-uint8_t dato1;
+uint8_t dato1 = 10;
 
 //-------------------------------- Prototipos ----------------------------------
 void setup(void);
 
 //------------------------------ Interrupciones --------------------------------
-void __interrupt() isr(void){  
-    // Interrupcion del Puerto B
-    if (RBIF == 1)                              // Verificar bandera de la interrupcion del puerto b
-    {
-        if (PORTBbits.RB0 == 0)                 // Si oprimo el boton 1
-        {
-            PORTD = 0b00000011;    
-            __delay_ms(500);
-            PORTD = 0b00000110;    
-            __delay_ms(500);
-            PORTD = 0b00001100;    
-            __delay_ms(500);
-            PORTD = 0b00001001;    
-            __delay_ms(500);
-            dato1 = 1;
-        }
-        else if (PORTBbits.RB0 == 1)
-        {
-            PORTD = 0;
-            dato1 = 0;
-        }
-        INTCONbits.RBIF = 0;                    // Se limpia la bandera de la interrupcion
-    }
-    
+void __interrupt() isr(void){
     // Interrupción I2C
     if(PIR1bits.SSPIF == 1){ 
 
@@ -95,7 +72,31 @@ void __interrupt() isr(void){
        
         PIR1bits.SSPIF = 0;    
     }
+
+    // Interrupcion del Puerto B
+    if (RBIF == 1)                              // Verificar bandera de la interrupcion del puerto b
+    {
+        if (PORTBbits.RB0 == 0)                 // Si oprimo el boton 1
+        {
+            PORTD = 0b00000011;    
+            __delay_ms(500);
+            PORTD = 0b00000110;    
+            __delay_ms(500);
+            PORTD = 0b00001100;    
+            __delay_ms(500);
+            PORTD = 0b00001001;    
+            __delay_ms(500);
+            dato1 = dato1 - 1;
+        }
+        else if (PORTBbits.RB0 == 1)
+        {
+            PORTD = 0;
+        }
+        INTCONbits.RBIF = 0;                    // Se limpia la bandera de la interrupcion
+    }
 }
+    
+    
 //----------------------------------- Main -------------------------------------
 void main(void) {
     setup();
@@ -113,6 +114,7 @@ void setup(void){
     
     TRISBbits.TRISB0 = 1;
     TRISD = 0;
+    TRISA = 0;
     
     //limpiar puertos
     PORTA = 0x00;

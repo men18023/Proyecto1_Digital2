@@ -2887,6 +2887,27 @@ unsigned short I2C_Master_Read(unsigned short a);
 void I2C_Slave_Init(uint8_t address);
 # 17 "main_master.c" 2
 
+# 1 "./LCD.h" 1
+# 47 "./LCD.h"
+void Lcd_Port(char a);
+
+void Lcd_Cmd(char a);
+
+void Lcd_Clear(void);
+
+void Lcd_Set_Cursor(char a, char b);
+
+void Lcd_Init(void);
+
+void Lcd_Write_Char(char a);
+
+void Lcd_Write_String(char *a);
+
+void Lcd_Shift_Right(void);
+
+void Lcd_Shift_Left(void);
+# 18 "main_master.c" 2
+
 
 
 
@@ -2910,29 +2931,86 @@ void I2C_Slave_Init(uint8_t address);
 
 
 
+
+
+uint8_t R1, R2;
+char temp, stat, cont;
+
+
 void setup(void);
 
 
-uint8_t D1, D2;
+void __attribute__((picinterrupt(("")))) isr(void){
+
+    if (RBIF == 1)
+    {
+        if (PORTBbits.RB0 == 0)
+        {
+            PORTDbits.RD0 = 1;
+            stat = 1;
+        }
+        else if (PORTBbits.RB0 == 1)
+        {
+            PORTDbits.RD0 = 0;
+            stat = 0;
+        }
+        INTCONbits.RBIF = 0;
+    }
+}
 
 
 void main(void) {
 
     setup();
+    Lcd_Init();
+    char buffer[20];
+    char buffer1[20];
+    char buffer2[20];
+    char val2;
+    char val1;
+    char val;
 
     while(1)
     {
+        temp = R2;
+        cont = R1;
+        val = cont;
+        val1 = stat;
+        val2 = temp;
+
+        Lcd_Clear();
+        Lcd_Set_Cursor(1,1);
+        Lcd_Write_String("CONT: STAT: TEMP:");
+        sprintf(buffer, "%d ", val);
+        sprintf(buffer2, "%d ", val2);
+        Lcd_Set_Cursor(2,2);
+        Lcd_Write_String(buffer);
+        Lcd_Set_Cursor(2,14);
+        Lcd_Write_String(buffer2);
+
+        if (val1==1){
+            Lcd_Set_Cursor(2,8);
+        Lcd_Write_String("ON");
+        }
+        else{
+            Lcd_Set_Cursor(2,8);
+        Lcd_Write_String("OFF");
+        }
+        _delay((unsigned long)((2000)*(4000000/4000.0)));
+
+
+
 
         I2C_Master_Start();
         I2C_Master_Write(0x51);
-        D1 = I2C_Master_Read(0);
+        R1 = I2C_Master_Read(0);
         I2C_Master_Stop();
         _delay((unsigned long)((200)*(4000000/4000.0)));
 
 
         I2C_Master_Start();
         I2C_Master_Write(0x61);
-        D2 = I2C_Master_Read(0);
+        R2 = I2C_Master_Read(0);
         I2C_Master_Stop();
         _delay((unsigned long)((200)*(4000000/4000.0)));
     }
@@ -2943,12 +3021,20 @@ void main(void) {
 
 void setup(void){
 
+    OSCCONbits.IRCF0 = 0;
+    OSCCONbits.IRCF1 = 1;
+    OSCCONbits.IRCF2 = 1;
+    OSCCONbits.SCS = 1;
+
+
     ANSEL = 0;
     ANSELH = 0;
 
 
-    TRISD = 0;
-    TRISE = 0;
+    TRISBbits.TRISB0 = 1;
+    TRISCbits.TRISC0 = 0;
+    TRISD = 0x00;
+    TRISA = 0x00;
 
 
     PORTA = 0x00;
@@ -2958,13 +3044,9 @@ void setup(void){
     PORTE = 0x00;
 
 
-    OSCCONbits.IRCF0 = 0;
-    OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF2 = 1;
-    OSCCONbits.SCS = 1;
-
-
-    I2C_Master_Init(100000);
+    OPTION_REGbits.nRBPU = 0;
+    WPUB = 0b00000001;
+    IOCBbits.IOCB0 = 1;
 
 
     TXSTAbits.SYNC = 0;
@@ -2992,6 +3074,8 @@ void setup(void){
     INTCONbits.RBIF = 1;
     INTCONbits.RBIE = 1;
 
+
+    I2C_Master_Init(100000);
 }
 
 

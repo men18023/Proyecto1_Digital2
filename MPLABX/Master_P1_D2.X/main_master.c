@@ -15,6 +15,7 @@
 
 // Librerias propias
 #include "I2C.h"
+#include "LCD.h"
 
 //-------------------------- Bits de configuraciÓn -----------------------------
 // CONFIG1
@@ -33,34 +34,91 @@
 #pragma config BOR4V = BOR40V                   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma config WRT = OFF                        // Flash Program Memory Self Write Enable bits (Write protection off)
 
-
+#define RS RD2
+#define EN RD3
+#define D4 RD4
+#define D5 RB5
+#define D6 RD6
+#define D7 RD7
 //--------------------------------- Variables ----------------------------------
-
+uint8_t R1, R2;
+char temp, stat, cont;
 
 //-------------------------------- Prototipos ----------------------------------
 void setup(void);
 
 //------------------------------ Interrupciones --------------------------------
-uint8_t D1, D2;
+void __interrupt() isr(void){  
+    // Interrupcion del Puerto B
+    if (RBIF == 1)                              // Verificar bandera de la interrupcion del puerto b
+    {
+        if (PORTBbits.RB0 == 0)                 // Si oprimo el boton 1
+        {
+            PORTDbits.RD0 = 1;    
+            stat = 1;
+        }
+        else if (PORTBbits.RB0 == 1)
+        {
+            PORTDbits.RD0 = 0;
+            stat = 0;
+        }
+        INTCONbits.RBIF = 0;                    // Se limpia la bandera de la interrupcion
+    }
+}
 
 //----------------------------------- Main -------------------------------------
 void main(void) {
     
     setup();                                    // Configuración principal
-
+    Lcd_Init();                                 // LCD esta apagada
+    char buffer[20];                            // Se guarda el voltaje en un string
+    char buffer1[20];
+    char buffer2[20];
+    char val2;
+    char val1;
+    char val;                                   // Valor que deseo almacenar en un str
+    
     while(1)  
     {
+        temp = R2;
+        cont = R1;
+        val = cont; 
+        val1 = stat;
+        val2 = temp;
+        
+        Lcd_Clear();
+        Lcd_Set_Cursor(1,1);
+        Lcd_Write_String("CONT: STAT: TEMP:");
+        sprintf(buffer, "%d ", val); 
+        sprintf(buffer2, "%d ", val2); 
+        Lcd_Set_Cursor(2,2);
+        Lcd_Write_String(buffer);
+        Lcd_Set_Cursor(2,14);
+        Lcd_Write_String(buffer2);
+    
+        if (val1==1){
+            Lcd_Set_Cursor(2,8);
+        Lcd_Write_String("ON");
+        }
+        else{
+            Lcd_Set_Cursor(2,8);
+        Lcd_Write_String("OFF");
+        }
+        __delay_ms(2000);
+
+        
+        
         //Obtener informacion del primer slave
         I2C_Master_Start();
-        I2C_Master_Write(0x51);                 // 51, se escribe el 1 para que lea en el puerto de leds
-        D1 = I2C_Master_Read(0);             
+        I2C_Master_Write(0x51);
+        R1 = I2C_Master_Read(0);
         I2C_Master_Stop();
         __delay_ms(200);
         
         //Obtener informacion del segundo slave
         I2C_Master_Start();
         I2C_Master_Write(0x61);                 // 51, se escribe el 1 para que lea en el puerto de leds
-        D2 = I2C_Master_Read(0);             
+        R2 = I2C_Master_Read(0);             
         I2C_Master_Stop();
         __delay_ms(200);
     }
@@ -70,13 +128,21 @@ void main(void) {
 //--------------------------------- Funciones ----------------------------------
 // Configuración principal
 void setup(void){
+    // Configuración reloj interno
+    OSCCONbits.IRCF0 = 0;                       // 4mhz
+    OSCCONbits.IRCF1 = 1;
+    OSCCONbits.IRCF2 = 1;
+    OSCCONbits.SCS = 1;  
+    
     // Puertos digitales
     ANSEL = 0;
     ANSELH = 0;
     
     // Inputs y outputs de los puertos
-    TRISD = 0;
-    TRISE = 0;
+    TRISBbits.TRISB0 = 1;
+    TRISCbits.TRISC0 = 0;
+    TRISD = 0x00;
+    TRISA = 0x00;
         
     // Se limpian los puertos
     PORTA = 0x00;
@@ -85,14 +151,10 @@ void setup(void){
     PORTD = 0x00;
     PORTE = 0x00;
     
-    // Configuración reloj interno
-    OSCCONbits.IRCF0 = 0;                       // 4mhz
-    OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF2 = 1;
-    OSCCONbits.SCS = 1;  
-    
-    // I2C configuracion Maestro
-    I2C_Master_Init(100000);                    // Inicia comuncación I2C
+    // Configuracion de pull-up interno
+    OPTION_REGbits.nRBPU = 0;
+    WPUB = 0b00000001;
+    IOCBbits.IOCB0 = 1;
 
     // Configuraciones TX y RX
     TXSTAbits.SYNC = 0;
@@ -118,8 +180,10 @@ void setup(void){
     PIE1bits.RCIE = 0;      
     PIE1bits.TXIE = 0;      
     INTCONbits.RBIF = 1;    
-    INTCONbits.RBIE = 1;    
+    INTCONbits.RBIE = 1; 
 
+    // I2C configuracion Maestro
+    I2C_Master_Init(100000);                    // Inicia comuncación I2C
 }
 
 // Funcion de stdio.h

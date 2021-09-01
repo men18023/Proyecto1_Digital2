@@ -1,3 +1,4 @@
 build/default/production/main_slave2.p1:  \
 main_slave2.c  \
-I2C.h 
+I2C.h  \
+ADC.h 

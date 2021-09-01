@@ -13,6 +13,7 @@
 
 // Librerias propias
 #include "I2C.h"
+#include "ADC.h" 
 
 
 //-------------------------- Bits de configuraciÓn -----------------------------
@@ -34,28 +35,22 @@
 
 //--------------------------------- Variables ----------------------------------
 uint8_t z;
-uint8_t dato2;
+//uint8_t dato2;
 
 //-------------------------------- Prototipos ----------------------------------
 void setup(void);
 
 //------------------------------ Interrupciones --------------------------------
 void __interrupt() isr(void){  
-    // Interrupcion del Puerto B
-    if (RBIF == 1)                              // Verificar bandera de la interrupcion del puerto b
-    {
-        if (PORTBbits.RB0 == 0)                 // Si oprimo el boton 1
-        {
-            PORTDbits.RD0 = 1; 
-            dato2 = 1;
+    //interrupcion del ADC
+    if (ADIF){
+        if(ADCON0bits.CHS == 0){
+            PORTD = ADRESH;
+//            dato2 = PORTD;
         }
-        else if (PORTBbits.RB0 == 1)
-        {
-            PORTDbits.RD0 = 0;
-            dato2 = 0;
-        }
-        INTCONbits.RBIF = 0;                    // Se limpia la bandera de la interrupcion
+        
     }
+    ADIF = 0;
     
     // Interrupción I2C
     if(PIR1bits.SSPIF == 1){ 
@@ -74,13 +69,13 @@ void __interrupt() isr(void){
             PIR1bits.SSPIF = 0;                 // Limpia bandera de interrupción recepción/transmisión SSP
             SSPCONbits.CKP = 1;                 // Habilita entrada de pulsos de reloj SCL
             while(!SSPSTATbits.BF);             // Espera a que la recepción se complete
-            dato2 = SSPBUF;                      // Guardar en el PORTD el valor del buffer de recepción
+            PORTD = SSPBUF;                      // Guardar en el PORTD el valor del buffer de recepción
             __delay_us(250);
             
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;
             BF = 0;
-            SSPBUF = dato2;
+            SSPBUF = PORTD;
             SSPCONbits.CKP = 1;
             __delay_us(250);
             while(SSPSTATbits.BF);
@@ -94,18 +89,22 @@ void main(void) {
     setup();
 
     while(1){
-        
+        if (ADCON0bits.GO == 0){                // Ee apaga 
+            __delay_us(100);                // Se enciende
+            ADCON0bits.GO = 1;
+        }
              
     }
     return;
 }
 //--------------------------------- Funciones ----------------------------------
 void setup(void){
-    ANSEL = 0;
+    ANSEL = 0b00000011;
     ANSELH = 0;
     
-    TRISBbits.TRISB0 = 1;
-    TRISDbits.TRISD0 = 0;
+    TRISAbits.TRISA0 = 1;
+    TRISAbits.TRISA1 = 1;
+    TRISD = 0;
     
     //limpiar puertos
     PORTA = 0x00;
@@ -120,16 +119,16 @@ void setup(void){
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1; 
     
-    // Configuracion de pull-up interno
-    OPTION_REGbits.nRBPU = 0;
-    WPUB = 0b00000001;
-    IOCBbits.IOCB0 = 1;
+    
+    
+    // Configuracion de ADC
+    config_ADC(1);
     
     //configuracion de interrupciones                       
     INTCONbits.GIE = 1;                         
     INTCONbits.PEIE = 1; 
-    INTCONbits.RBIF = 1;    
-    INTCONbits.RBIE = 1;   
+    PIE1bits.ADIE = 1;                      // Habilita de la int del ADC
+    PIR1bits.ADIF = 0;                      // Limpia la interrupcion del ADC
     
     // I2C configuracion esclavo
     I2C_Slave_Init(0x60);   

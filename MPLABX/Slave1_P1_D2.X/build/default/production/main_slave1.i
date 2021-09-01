@@ -2790,36 +2790,13 @@ void I2C_Slave_Init(uint8_t address);
 
 
 uint8_t z;
-uint8_t dato1;
+uint8_t dato1 = 10;
 
 
 void setup(void);
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
-
-    if (RBIF == 1)
-    {
-        if (PORTBbits.RB0 == 0)
-        {
-            PORTD = 0b00000011;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
-            PORTD = 0b00000110;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
-            PORTD = 0b00001100;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
-            PORTD = 0b00001001;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
-            dato1 = 1;
-        }
-        else if (PORTBbits.RB0 == 1)
-        {
-            PORTD = 0;
-            dato1 = 0;
-        }
-        INTCONbits.RBIF = 0;
-    }
-
 
     if(PIR1bits.SSPIF == 1){
 
@@ -2851,7 +2828,31 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
         PIR1bits.SSPIF = 0;
     }
+
+
+    if (RBIF == 1)
+    {
+        if (PORTBbits.RB0 == 0)
+        {
+            PORTD = 0b00000011;
+            _delay((unsigned long)((500)*(4000000/4000.0)));
+            PORTD = 0b00000110;
+            _delay((unsigned long)((500)*(4000000/4000.0)));
+            PORTD = 0b00001100;
+            _delay((unsigned long)((500)*(4000000/4000.0)));
+            PORTD = 0b00001001;
+            _delay((unsigned long)((500)*(4000000/4000.0)));
+            dato1 = dato1 - 1;
+        }
+        else if (PORTBbits.RB0 == 1)
+        {
+            PORTD = 0;
+        }
+        INTCONbits.RBIF = 0;
+    }
 }
+
+
 
 void main(void) {
     setup();
@@ -2869,6 +2870,7 @@ void setup(void){
 
     TRISBbits.TRISB0 = 1;
     TRISD = 0;
+    TRISA = 0;
 
 
     PORTA = 0x00;
