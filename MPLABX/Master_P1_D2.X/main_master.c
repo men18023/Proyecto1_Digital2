@@ -43,9 +43,13 @@
 //--------------------------------- Variables ----------------------------------
 uint8_t R1, R2;
 char temp, stat, cont;
+char valor, centenas, residuo, decenas, unidades;
+char cen, dec, uni;
 
 //-------------------------------- Prototipos ----------------------------------
 void setup(void);
+void Text(void);
+char division (char valor);
 
 //------------------------------ Interrupciones --------------------------------
 void __interrupt() isr(void){  
@@ -105,8 +109,6 @@ void main(void) {
         Lcd_Write_String("OFF");
         }
         __delay_ms(2000);
-
-        
         
         //Obtener informacion del primer slave
         I2C_Master_Start();
@@ -121,6 +123,9 @@ void main(void) {
         R2 = I2C_Master_Read(0);             
         I2C_Master_Stop();
         __delay_ms(200);
+        
+        Text();
+
     }
     return;
 }
@@ -185,6 +190,51 @@ void setup(void){
     // I2C configuracion Maestro
     I2C_Master_Init(100000);                    // Inicia comuncación I2C
 }
+
+// Función para escribir en el UART
+void Text(void){
+    __delay_ms(250);                           //Tiempos para el despliegue de los caracteres
+     division(cont);
+    printf("Valor del contador:\r");
+    __delay_ms(250);
+    TXREG = decenas;
+    __delay_ms(250);
+    TXREG = unidades;
+    __delay_ms(250);
+    printf("\r");
+    
+    __delay_ms(250);                           //Tiempos para el despliegue de los caracteres
+     division(stat);
+    printf("Valor del agua:\r");
+    __delay_ms(250);
+    TXREG = unidades;
+    __delay_ms(250);
+    printf("\r");
+    
+    __delay_ms(250);                           //Tiempos para el despliegue de los caracteres
+     division(temp);
+    printf("Valor del temperatura:\r");
+    __delay_ms(250);
+    TXREG = centenas;
+    __delay_ms(250);
+    TXREG = decenas;
+    __delay_ms(250);
+    TXREG = unidades;
+    __delay_ms(250);
+    printf("\r");
+}
+
+// Función para despliegue de valores
+char division (char valor){
+    centenas = valor/100;
+    residuo = valor%100; 
+    decenas = residuo/10; 
+    unidades = residuo%10; 
+    // Se le suma 47 para que entregue el valor requerido
+    centenas = centenas + 48;
+    decenas = decenas + 48;
+    unidades = unidades + 48;
+} 
 
 // Funcion de stdio.h
 void putch(char data){      
