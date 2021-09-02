@@ -202,7 +202,7 @@ void Text(void){
     __delay_ms(50);
     //printf("\r");
     
-    __delay_ms(50);                           //Tiempos para el despliegue de los caracteres
+                               //Tiempos para el despliegue de los caracteres
     division(stat);
     //printf("Valor del agua:\r");
     __delay_ms(50);
@@ -210,7 +210,7 @@ void Text(void){
     __delay_ms(50);
     //printf("\r");
     
-    __delay_ms(50);                           //Tiempos para el despliegue de los caracteres
+                               //Tiempos para el despliegue de los caracteres
      division(temp);
     //printf("Valor del temperatura:\r");
     __delay_ms(50);

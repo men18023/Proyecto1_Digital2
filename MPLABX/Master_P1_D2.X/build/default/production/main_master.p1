@@ -921,9 +921,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "202
 [; ;main_master.c: 202: void putch(char data){
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"205
-[; ;main_master.c: 205:     return;
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "206
 [; ;main_master.c: 206: }
 [e ( _division (1 _stat ]
@@ -932,8 +929,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "209
 [e = _TXREG -> _unidades `uc ]
 "210
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"213
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "214
 [e ( _division (1 _temp ]

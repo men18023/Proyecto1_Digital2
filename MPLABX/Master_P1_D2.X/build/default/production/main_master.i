@@ -3094,7 +3094,7 @@ void Text(void){
     _delay((unsigned long)((50)*(4000000/4000.0)));
 
 
-    _delay((unsigned long)((50)*(4000000/4000.0)));
+
     division(stat);
 
     _delay((unsigned long)((50)*(4000000/4000.0)));
@@ -3102,7 +3102,7 @@ void Text(void){
     _delay((unsigned long)((50)*(4000000/4000.0)));
 
 
-    _delay((unsigned long)((50)*(4000000/4000.0)));
+
      division(temp);
 
     _delay((unsigned long)((50)*(4000000/4000.0)));
