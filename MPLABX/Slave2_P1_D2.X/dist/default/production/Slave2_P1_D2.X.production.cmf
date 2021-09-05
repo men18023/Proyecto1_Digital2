@@ -22,7 +22,7 @@ cstackCOMMON COMMON 1 70 70 7 1
 intentry CODE 0 4 4 8 2
 bssCOMMON COMMON 1 77 77 1 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\diego\AppData\Local\Temp\s9gg.o
+$C:\Users\diego\AppData\Local\Temp\s40.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -72,12 +72,12 @@ STRING 146-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Slave2_P1_D2.X.production.o
-F cinit CODE >808:C:\Users\diego\AppData\Local\Temp\s9gg.s
-F cinit CODE >811:C:\Users\diego\AppData\Local\Temp\s9gg.s
-F cinit CODE >822:C:\Users\diego\AppData\Local\Temp\s9gg.s
-10 cinit CODE >828:C:\Users\diego\AppData\Local\Temp\s9gg.s
-10 cinit CODE >830:C:\Users\diego\AppData\Local\Temp\s9gg.s
-11 cinit CODE >831:C:\Users\diego\AppData\Local\Temp\s9gg.s
+F cinit CODE >808:C:\Users\diego\AppData\Local\Temp\s40.s
+F cinit CODE >811:C:\Users\diego\AppData\Local\Temp\s40.s
+F cinit CODE >822:C:\Users\diego\AppData\Local\Temp\s40.s
+10 cinit CODE >828:C:\Users\diego\AppData\Local\Temp\s40.s
+10 cinit CODE >830:C:\Users\diego\AppData\Local\Temp\s40.s
+11 cinit CODE >831:C:\Users\diego\AppData\Local\Temp\s40.s
 4 intentry CODE >44:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
 14 text4 CODE >44:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
 14 text4 CODE >46:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
@@ -211,20 +211,20 @@ _BF 4A0 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _ADIF 66 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\diego\AppData\Local\Temp\s9gg.o
+___sp 0 0 STACK 2 stack C:\Users\diego\AppData\Local\Temp\s40.o
 _main 260 0 CODE 0 maintext dist/default/production\Slave2_P1_D2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
-start 18 0 CODE 0 init C:\Users\diego\AppData\Local\Temp\s9gg.o
+start 18 0 CODE 0 init C:\Users\diego\AppData\Local\Temp\s40.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __size_of_config_ADC 0 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9gg.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9gg.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9gg.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9gg.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9gg.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s9gg.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
@@ -234,8 +234,8 @@ _ADRESH 1E 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\diego\AppData\Local\Temp\s9gg.o
-___stacklo 0 0 ABS 0 - C:\Users\diego\AppData\Local\Temp\s9gg.o
+___stackhi 0 0 ABS 0 - C:\Users\diego\AppData\Local\Temp\s40.o
+___stacklo 0 0 ABS 0 - C:\Users\diego\AppData\Local\Temp\s40.o
 _I2C_Slave_Init 22C 0 CODE 0 text3 dist/default/production\Slave2_P1_D2.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\Slave2_P1_D2.X.production.o
@@ -246,7 +246,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\diego\AppData\Local\Temp\s9gg.o
+___int_sp 0 0 STACK 2 stack C:\Users\diego\AppData\Local\Temp\s40.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -290,7 +290,7 @@ _isr 28 0 CODE 0 text4 dist/default/production\Slave2_P1_D2.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __end_of_isr 10A 0 CODE 0 text4 dist/default/production\Slave2_P1_D2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\diego\AppData\Local\Temp\s9gg.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\diego\AppData\Local\Temp\s40.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __pmaintext 260 0 CODE 0 maintext dist/default/production\Slave2_P1_D2.X.production.o
 __Lcommon 0 0 ABS 0 common -

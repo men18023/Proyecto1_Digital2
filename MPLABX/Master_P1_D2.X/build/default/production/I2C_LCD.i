@@ -1,4 +1,4 @@
-# 1 "I2C.c"
+# 1 "I2C_LCD.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,15 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "I2C.c" 2
-# 12 "I2C.c"
-# 1 "./I2C.h" 1
-# 18 "./I2C.h"
+# 1 "I2C_LCD.c" 2
+
+
+
+
+
+
+
+
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2490,272 +2495,217 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 18 "./I2C.h" 2
+# 9 "I2C_LCD.c" 2
 
+# 1 "./I2C_LCD.h" 1
+# 45 "./I2C_LCD.h"
+void I2C_Master_Init();
+void I2C_Master_Wait();
+void I2C_Master_Start();
+void I2C_Master_RepeatedStart();
+void I2C_Master_Stop();
+void I2C_ACK();
+void I2C_NACK();
+unsigned char I2C_Master_Write(unsigned char data);
+unsigned char I2C_Read_Byte(void);
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int8_t;
 
 
+void LCD_Init(unsigned char I2C_Add);
+void IO_Expander_Write(unsigned char Data);
+void LCD_Write_4Bit(unsigned char Nibble);
+void LCD_CMD(unsigned char CMD);
+void LCD_Set_Cursor(unsigned char ROW, unsigned char COL);
+void LCD_Write_Char(char);
+void LCD_Write_String(char*);
+void Backlight();
+void noBacklight();
+void LCD_SR();
+void LCD_SL();
+void LCD_Clear();
+# 10 "I2C_LCD.c" 2
 
 
+unsigned char RS, i2c_add, BackLight_State = 0x08;
 
 
-typedef signed int int16_t;
 
-
-
-
-
-
-
-typedef __int24 int24_t;
-
-
-
-
-
-
-
-typedef signed long int int32_t;
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint8_t;
-
-
-
-
-
-typedef unsigned int uint16_t;
-
-
-
-
-
-
-typedef __uint24 uint24_t;
-
-
-
-
-
-
-typedef unsigned long int uint32_t;
-# 88 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_least8_t;
-
-
-
-
-
-
-
-typedef signed int int_least16_t;
-# 109 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_least24_t;
-# 118 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef signed long int int_least32_t;
-# 136 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_least8_t;
-
-
-
-
-
-
-typedef unsigned int uint_least16_t;
-# 154 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_least24_t;
-
-
-
-
-
-
-
-typedef unsigned long int uint_least32_t;
-# 181 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_fast8_t;
-
-
-
-
-
-
-typedef signed int int_fast16_t;
-# 200 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_fast24_t;
-
-
-
-
-
-
-
-typedef signed long int int_fast32_t;
-# 224 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_fast8_t;
-
-
-
-
-
-typedef unsigned int uint_fast16_t;
-# 240 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_fast24_t;
-
-
-
-
-
-
-typedef unsigned long int uint_fast32_t;
-# 268 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef int32_t intmax_t;
-# 282 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
-typedef uint32_t uintmax_t;
-
-
-
-
-
-
-typedef int16_t intptr_t;
-
-
-
-
-typedef uint16_t uintptr_t;
-# 20 "./I2C.h" 2
-# 29 "./I2C.h"
-void I2C_Master_Init(const unsigned long c);
-
-
-
-
-
-
-
-void I2C_Master_Wait(void);
-
-
-
-void I2C_Master_Start(void);
-
-
-
-void I2C_Master_RepeatedStart(void);
-
-
-
-void I2C_Master_Stop(void);
-
-
-
-
-
-void I2C_Master_Write(unsigned d);
-
-
-
-
-unsigned short I2C_Master_Read(unsigned short a);
-
-
-
-void I2C_Slave_Init(uint8_t address);
-# 12 "I2C.c" 2
-
-
-
-
-void I2C_Master_Init(const unsigned long c)
+void I2C_Master_Init()
 {
-    SSPCON = 0b00101000;
-    SSPCON2 = 0;
-    SSPADD = (8000000/(4*c))-1;
-    SSPSTAT = 0;
-    TRISCbits.TRISC3 = 1;
-    TRISCbits.TRISC4 = 1;
+  SSPCON = 0x28;
+  SSPCON2 = 0x00;
+  SSPSTAT = 0x00;
+  SSPADD = ((8000000/4)/9600) - 1;
+  TRISC3 = 1;
+  TRISC4 = 1;
 }
-
-
-
-
-
-
 
 void I2C_Master_Wait()
 {
     while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
 }
 
-
-
 void I2C_Master_Start()
 {
     I2C_Master_Wait();
-    SSPCON2bits.SEN = 1;
+    SEN = 1;
 }
-
-
 
 void I2C_Master_RepeatedStart()
 {
     I2C_Master_Wait();
-    SSPCON2bits.RSEN = 1;
+    RSEN = 1;
 }
-
-
 
 void I2C_Master_Stop()
 {
     I2C_Master_Wait();
-    SSPCON2bits.PEN = 1;
+    PEN = 1;
+}
+
+void I2C_ACK(void)
+{
+ ACKDT = 0;
+ I2C_Master_Wait();
+    ACKEN = 1;
+}
+
+void I2C_NACK(void)
+{
+ ACKDT = 1;
+    I2C_Master_Wait();
+ ACKEN = 1;
+}
+
+unsigned char I2C_Master_Write(unsigned char data)
+{
+    I2C_Master_Wait();
+    SSPBUF = data;
+    while(!SSPIF);
+ SSPIF = 0;
+    return ACKSTAT;
+}
+
+unsigned char I2C_Read_Byte(void)
+{
+
+ I2C_Master_Wait();
+    RCEN = 1;
+ while(!SSPIF);
+ SSPIF = 0;
+    I2C_Master_Wait();
+    return SSPBUF;
 }
 
 
 
 
 
-void I2C_Master_Write(unsigned d)
+void LCD_Init(unsigned char I2C_Add)
 {
-    I2C_Master_Wait();
-    SSPBUF = d;
+  i2c_add = I2C_Add;
+  IO_Expander_Write(0x00);
+  _delay((unsigned long)((30)*(8000000/4000.0)));
+  LCD_CMD(0x03);
+  _delay((unsigned long)((5)*(8000000/4000.0)));
+  LCD_CMD(0x03);
+  _delay((unsigned long)((5)*(8000000/4000.0)));
+  LCD_CMD(0x03);
+  _delay((unsigned long)((5)*(8000000/4000.0)));
+  LCD_CMD(0x02);
+  _delay((unsigned long)((5)*(8000000/4000.0)));
+  LCD_CMD(0x20 | (2 << 2));
+  _delay((unsigned long)((50)*(8000000/4000.0)));
+  LCD_CMD(0x0C);
+  _delay((unsigned long)((50)*(8000000/4000.0)));
+  LCD_CMD(0x01);
+  _delay((unsigned long)((50)*(8000000/4000.0)));
+  LCD_CMD(0x04 | 0x02);
+  _delay((unsigned long)((50)*(8000000/4000.0)));
 }
 
-
-
-
-unsigned short I2C_Master_Read(unsigned short a)
+void IO_Expander_Write(unsigned char Data)
 {
-    unsigned short temp;
-    I2C_Master_Wait();
-    SSPCON2bits.RCEN = 1;
-    I2C_Master_Wait();
-    temp = SSPBUF;
-    I2C_Master_Wait();
-    if(a == 1){
-        SSPCON2bits.ACKDT = 0;
-    }else{
-        SSPCON2bits.ACKDT = 1;
-    }
-    SSPCON2bits.ACKEN = 1;
-    return temp;
+  I2C_Master_Start();
+  I2C_Master_Write(i2c_add);
+  I2C_Master_Write(Data | BackLight_State);
+  I2C_Master_Stop();
 }
 
-
-
-void I2C_Slave_Init(uint8_t address)
+void LCD_Write_4Bit(unsigned char Nibble)
 {
-    SSPADD = address;
-    SSPCON = 0x36;
-    SSPSTAT = 0x80;
-    SSPCON2 = 0x01;
-    TRISC3 = 1;
-    TRISC4 = 1;
-    GIE = 1;
-    PEIE = 1;
-    SSPIF = 0;
-    SSPIE = 1;
+
+  Nibble |= RS;
+  IO_Expander_Write(Nibble | 0x04);
+  IO_Expander_Write(Nibble & 0xFB);
+  _delay((unsigned long)((50)*(8000000/4000000.0)));
+}
+
+void LCD_CMD(unsigned char CMD)
+{
+  RS = 0;
+  LCD_Write_4Bit(CMD & 0xF0);
+  LCD_Write_4Bit((CMD << 4) & 0xF0);
+}
+
+void LCD_Write_Char(char Data)
+{
+  RS = 1;
+  LCD_Write_4Bit(Data & 0xF0);
+  LCD_Write_4Bit((Data << 4) & 0xF0);
+}
+
+void LCD_Write_String(char* Str)
+{
+    for(int i=0; Str[i]!='\0'; i++)
+       LCD_Write_Char(Str[i]);
+}
+
+void LCD_Set_Cursor(unsigned char ROW, unsigned char COL)
+{
+  switch(ROW)
+  {
+    case 2:
+      LCD_CMD(0xC0 + COL-1);
+      break;
+    case 3:
+      LCD_CMD(0x94 + COL-1);
+      break;
+    case 4:
+      LCD_CMD(0xD4 + COL-1);
+      break;
+
+    default:
+      LCD_CMD(0x80 + COL-1);
+  }
+}
+
+void Backlight()
+{
+  BackLight_State = 0x08;
+  IO_Expander_Write(0);
+}
+
+void noBacklight()
+{
+  BackLight_State = 0x00;
+  IO_Expander_Write(0);
+}
+
+void LCD_SL()
+{
+  LCD_CMD(0x18);
+  _delay((unsigned long)((40)*(8000000/4000000.0)));
+}
+
+void LCD_SR()
+{
+  LCD_CMD(0x1C);
+  _delay((unsigned long)((40)*(8000000/4000000.0)));
+}
+
+void LCD_Clear()
+{
+  LCD_CMD(0x01);
+  _delay((unsigned long)((40)*(8000000/4000000.0)));
 }

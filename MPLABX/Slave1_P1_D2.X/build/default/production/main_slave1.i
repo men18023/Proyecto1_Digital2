@@ -2789,14 +2789,33 @@ void I2C_Slave_Init(uint8_t address);
 #pragma config WRT = OFF
 
 
+char val;
 uint8_t z;
-uint8_t dato1 = 10;
+uint8_t dato1 = 0;
 
 
 void setup(void);
+void bitb1(void);
+void bitb2(void);
+void bitb3(void);
 
 
 void __attribute__((picinterrupt(("")))) isr(void){
+if (ADCON0bits.CHS == 0)
+        {
+            val = ADRESH;
+
+            if (val <= 85){
+                bitb3();
+                 }
+            if (val >= 86){
+                bitb1();
+                 }
+
+
+
+    PIR1bits.ADIF = 0;
+}
 
     if(PIR1bits.SSPIF == 1){
 
@@ -2828,36 +2847,24 @@ void __attribute__((picinterrupt(("")))) isr(void){
 
         PIR1bits.SSPIF = 0;
     }
-
-
-    if (RBIF == 1)
-    {
-        if (PORTBbits.RB0 == 0)
-        {
-            PORTD = 0b00000011;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
-            PORTD = 0b00000110;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
-            PORTD = 0b00001100;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
-            PORTD = 0b00001001;
-            _delay((unsigned long)((500)*(4000000/4000.0)));
-            dato1 = dato1 - 1;
-        }
-        else if (PORTBbits.RB0 == 1)
-        {
-            PORTD = 0;
-        }
-        INTCONbits.RBIF = 0;
-    }
 }
-
-
 
 void main(void) {
     setup();
 
     while(1){
+
+        if (ADCON0bits.GO == 0){
+            _delay((unsigned long)((50)*(4000000/4000.0)));
+            ADCON0bits.GO = 1;
+        }
+        if ((val >= 86)&&(val <=88)){
+                dato1 = dato1 + 1;
+
+                 }
+
+
+
 
 
     }
@@ -2865,12 +2872,13 @@ void main(void) {
 }
 
 void setup(void){
-    ANSEL = 0;
+    ANSEL = 0b00000001;
     ANSELH = 0;
 
-    TRISBbits.TRISB0 = 1;
-    TRISD = 0;
-    TRISA = 0;
+    TRISA = 0b00000001;
+    TRISD = 0x00;
+    TRISC = 0x00;
+
 
 
     PORTA = 0x00;
@@ -2886,17 +2894,47 @@ void setup(void){
     OSCCONbits.SCS = 1;
 
 
-    OPTION_REGbits.nRBPU = 0;
-    WPUB = 0b00000001;
-    IOCBbits.IOCB0 = 1;
+    I2C_Slave_Init(0x50);
+
+
+    ADCON1bits.ADFM = 0;
+    ADCON1bits.VCFG0 = 0;
+    ADCON1bits.VCFG1 = 0;
+
+    ADCON0bits.ADCS = 0b01;
+    ADCON0bits.ADON = 1;
+    ADCON0bits.CHS = 0;
+    _delay((unsigned long)((50)*(4000000/4000000.0)));
+
 
 
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
-    INTCONbits.RBIF = 1;
-    INTCONbits.RBIE = 1;
-
-
-    I2C_Slave_Init(0x50);
-
+    PIE1bits.ADIE = 1;
+    PIR1bits.ADIF = 0;
 }
+
+
+ void bitb1 (void)
+    {
+        PORTDbits.RD1 = 1;
+        _delay((unsigned long)((1)*(4000000/4000.0)));
+        PORTDbits.RD1 = 0;
+        _delay((unsigned long)((19)*(4000000/4000.0)));
+    }
+
+ void bitb2 (void)
+    {
+        PORTDbits.RD1 = 1;
+        _delay((unsigned long)((1.5)*(4000000/4000.0)));
+        PORTDbits.RD1 = 0;
+        _delay((unsigned long)((18.5)*(4000000/4000.0)));
+    }
+
+ void bitb3 (void)
+    {
+        PORTDbits.RD1 = 1;
+        _delay((unsigned long)((2)*(4000000/4000.0)));
+        PORTDbits.RD1 = 0;
+        _delay((unsigned long)((18)*(4000000/4000.0)));
+    }

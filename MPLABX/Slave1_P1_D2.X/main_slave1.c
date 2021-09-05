@@ -33,15 +33,34 @@
 #pragma config WRT = OFF                        // Flash Program Memory Self Write Enable bits (Write protection off)
 
 //--------------------------------- Variables ----------------------------------
+char val;
 uint8_t z;
-uint8_t dato1 = 10;
+uint8_t dato1 = 0;
 
 //-------------------------------- Prototipos ----------------------------------
 void setup(void);
+void bitb1(void);                       // Funciones para el funcionamiento -
+void bitb2(void); 
+void bitb3(void);
 
 //------------------------------ Interrupciones --------------------------------
 void __interrupt() isr(void){
-    // Interrupción I2C
+if (ADCON0bits.CHS == 0)
+        {
+            val = ADRESH;
+//            PORTC = val;
+            if (val <= 85){
+                bitb3();
+                 }
+            if (val >= 86){
+                bitb1();
+                 }
+//            if (val >= 171){
+//                bitb3();
+//        }
+    PIR1bits.ADIF = 0;
+}
+// Interrupción I2C
     if(PIR1bits.SSPIF == 1){ 
 
         SSPCONbits.CKP = 0;
@@ -72,49 +91,38 @@ void __interrupt() isr(void){
        
         PIR1bits.SSPIF = 0;    
     }
-
-    // Interrupcion del Puerto B
-    if (RBIF == 1)                              // Verificar bandera de la interrupcion del puerto b
-    {
-        if (PORTBbits.RB0 == 0)                 // Si oprimo el boton 1
-        {
-            PORTD = 0b00000011;    
-            __delay_ms(500);
-            PORTD = 0b00000110;    
-            __delay_ms(500);
-            PORTD = 0b00001100;    
-            __delay_ms(500);
-            PORTD = 0b00001001;    
-            __delay_ms(500);
-            dato1 = dato1 - 1;
-        }
-        else if (PORTBbits.RB0 == 1)
-        {
-            PORTD = 0;
-        }
-        INTCONbits.RBIF = 0;                    // Se limpia la bandera de la interrupcion
-    }
 }
-    
-    
 //----------------------------------- Main -------------------------------------
 void main(void) {
     setup();
-
+    
     while(1){
-        
-             
+//        PORTD = val;
+        if (ADCON0bits.GO == 0){
+            __delay_ms(50);
+            ADCON0bits.GO = 1;
+        }
+        if ((val >= 86)&&(val <=88)){
+                dato1 = dato1 + 1;
+//                __delay_ms(3000);
+                 }
+//        if (val >= 155){
+//                dato1 = dato1 - 1;
+//                __delay_ms(3000);
+//                 }
+         
     }
     return;
 }
 //--------------------------------- Funciones ----------------------------------
 void setup(void){
-    ANSEL = 0;
+    ANSEL = 0b00000001;
     ANSELH = 0;
     
-    TRISBbits.TRISB0 = 1;
-    TRISD = 0;
-    TRISA = 0;
+    TRISA = 0b00000001;
+    TRISD = 0x00;
+    TRISC = 0x00;
+    
     
     //limpiar puertos
     PORTA = 0x00;
@@ -129,18 +137,48 @@ void setup(void){
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1; 
     
-    // Configuracion de pull-up interno
-    OPTION_REGbits.nRBPU = 0;
-    WPUB = 0b00000001;
-    IOCBbits.IOCB0 = 1;
+    // I2C configuracion esclavo
+    I2C_Slave_Init(0x50);  
+    
+    // Configuracion del ADC    
+    ADCON1bits.ADFM = 0;                    // Justificado a la izquierda
+    ADCON1bits.VCFG0 = 0;                   // Vref en VSS y VDD 
+    ADCON1bits.VCFG1 = 0;   
+    
+    ADCON0bits.ADCS = 0b01;                 // Se configura el oscilador interno FOSC/32
+    ADCON0bits.ADON = 1;                    // Activar el ADC
+    ADCON0bits.CHS = 0;                     // Canal 0
+    __delay_us(50);
+    
     
     //configuracion de interrupciones                       
     INTCONbits.GIE = 1;                         
-    INTCONbits.PEIE = 1; 
-    INTCONbits.RBIF = 1;    
-    INTCONbits.RBIE = 1;   
-    
-    // I2C configuracion esclavo
-    I2C_Slave_Init(0x50);   
-    
+    INTCONbits.PEIE = 1;   
+    PIE1bits.ADIE = 1;                      // Activar la interrupcion del ADC
+    PIR1bits.ADIF = 0;                      // Bandera del ADC
 }
+
+//
+ void bitb1 (void)
+    {
+        PORTDbits.RD1 = 1;                  // Prende el bit
+        __delay_ms(1);                      // Espera un tiempo
+        PORTDbits.RD1 = 0;                  // Apaga el bit
+        __delay_ms(19);                     // Espera un tiempo
+    }
+    
+ void bitb2 (void)
+    {
+        PORTDbits.RD1 = 1;                  // Prende el bit
+        __delay_ms(1.5);                    // Espera un tiempo
+        PORTDbits.RD1 = 0;                  // Apaga el bit
+        __delay_ms(18.5);                   // Espera un tiempo
+    }
+
+ void bitb3 (void)
+    {
+        PORTDbits.RD1 = 1;                  // Prende el bit
+        __delay_ms(2);                      // Espera un tiempo
+        PORTDbits.RD1 = 0;                  // Apaga el bit
+        __delay_ms(18);                     // Espera un tiempo
+    }

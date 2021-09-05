@@ -2844,68 +2844,33 @@ extern char * ftoa(float f, int * status);
 
 
 
-# 1 "./I2C.h" 1
-# 20 "./I2C.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 20 "./I2C.h" 2
-# 29 "./I2C.h"
-void I2C_Master_Init(const unsigned long c);
+
+# 1 "./I2C_LCD.h" 1
+# 45 "./I2C_LCD.h"
+void I2C_Master_Init();
+void I2C_Master_Wait();
+void I2C_Master_Start();
+void I2C_Master_RepeatedStart();
+void I2C_Master_Stop();
+void I2C_ACK();
+void I2C_NACK();
+unsigned char I2C_Master_Write(unsigned char data);
+unsigned char I2C_Read_Byte(void);
 
 
 
-
-
-
-
-void I2C_Master_Wait(void);
-
-
-
-void I2C_Master_Start(void);
-
-
-
-void I2C_Master_RepeatedStart(void);
-
-
-
-void I2C_Master_Stop(void);
-
-
-
-
-
-void I2C_Master_Write(unsigned d);
-
-
-
-
-unsigned short I2C_Master_Read(unsigned short a);
-
-
-
-void I2C_Slave_Init(uint8_t address);
-# 17 "main_master.c" 2
-
-# 1 "./LCD.h" 1
-# 47 "./LCD.h"
-void Lcd_Port(char a);
-
-void Lcd_Cmd(char a);
-
-void Lcd_Clear(void);
-
-void Lcd_Set_Cursor(char a, char b);
-
-void Lcd_Init(void);
-
-void Lcd_Write_Char(char a);
-
-void Lcd_Write_String(char *a);
-
-void Lcd_Shift_Right(void);
-
-void Lcd_Shift_Left(void);
+void LCD_Init(unsigned char I2C_Add);
+void IO_Expander_Write(unsigned char Data);
+void LCD_Write_4Bit(unsigned char Nibble);
+void LCD_CMD(unsigned char CMD);
+void LCD_Set_Cursor(unsigned char ROW, unsigned char COL);
+void LCD_Write_Char(char);
+void LCD_Write_String(char*);
+void Backlight();
+void noBacklight();
+void LCD_SR();
+void LCD_SL();
+void LCD_Clear();
 # 18 "main_master.c" 2
 
 
@@ -2927,14 +2892,8 @@ void Lcd_Shift_Left(void);
 #pragma config WRT = OFF
 
 
-
-
-
-
-
-
 uint8_t R1, R2;
-char temp, stat, cont;
+char temp, stat, cont, pr;
 char valor, centenas, residuo, decenas, unidades;
 char cen, dec, uni;
 
@@ -2944,19 +2903,19 @@ void Text(void);
 char division (char valor);
 
 
-
 void __attribute__((picinterrupt(("")))) isr(void){
 
     if (RBIF == 1)
     {
         if (PORTBbits.RB0 == 0)
         {
-            PORTDbits.RD0 = 1;
             stat = 1;
+            PORTDbits.RD1 = 1;
+
         }
         else if (PORTBbits.RB0 == 1)
         {
-            PORTDbits.RD0 = 0;
+            PORTDbits.RD1 = 0;
             stat = 0;
         }
         INTCONbits.RBIF = 0;
@@ -2967,57 +2926,57 @@ void __attribute__((picinterrupt(("")))) isr(void){
 void main(void) {
 
     setup();
-    Lcd_Init();
     char buffer[20];
     char buffer1[20];
     char buffer2[20];
     char val2;
     char val1;
     char val;
+    LCD_Init(0x4E);
+
+
 
     while(1)
     {
         temp = R2;
-        cont = R1;
-        val = cont;
+        cont = 10;
+        val = cont - R1;
+        pr = val;
         val1 = stat;
         val2 = temp;
 
-        Lcd_Clear();
-        Lcd_Set_Cursor(1,1);
-        Lcd_Write_String("CONT: STAT: TEMP:");
+        LCD_Set_Cursor(1, 1);
+        LCD_Write_String("CONT: ENC: TEMP:");
+        _delay((unsigned long)((1000)*(8000000/4000.0)));
+        LCD_Set_Cursor(2, 2);
         sprintf(buffer, "%d ", val);
         sprintf(buffer2, "%d ", val2);
-        Lcd_Set_Cursor(2,2);
-        Lcd_Write_String(buffer);
-        Lcd_Set_Cursor(2,14);
-        Lcd_Write_String(buffer2);
+        LCD_Set_Cursor(2,2);
+        LCD_Write_String(buffer);
+        LCD_Set_Cursor(2,13);
+        LCD_Write_String(buffer2);
 
         if (val1==1){
-            Lcd_Set_Cursor(2,8);
-        Lcd_Write_String("ON");
+            LCD_Set_Cursor(2,7);
+            LCD_Write_String("ON  ");
         }
         else{
-            Lcd_Set_Cursor(2,8);
-        Lcd_Write_String("OFF");
+            LCD_Set_Cursor(2,7);
+            LCD_Write_String("OFF");
         }
-        _delay((unsigned long)((2000)*(4000000/4000.0)));
-
-
-
 
         I2C_Master_Start();
         I2C_Master_Write(0x51);
-        R1 = I2C_Master_Read(0);
+        R1 = I2C_Read_Byte();
         I2C_Master_Stop();
-        _delay((unsigned long)((200)*(4000000/4000.0)));
+        _delay((unsigned long)((100)*(8000000/4000.0)));
 
 
         I2C_Master_Start();
         I2C_Master_Write(0x61);
-        R2 = I2C_Master_Read(0);
+        R2 = I2C_Read_Byte();
         I2C_Master_Stop();
-        _delay((unsigned long)((200)*(4000000/4000.0)));
+        _delay((unsigned long)((100)*(8000000/4000.0)));
 
         Text();
 
@@ -3040,6 +2999,7 @@ void setup(void){
 
 
     TRISBbits.TRISB0 = 1;
+    TRISBbits.TRISB1 = 1;
     TRISCbits.TRISC0 = 0;
     TRISD = 0x00;
     TRISA = 0x00;
@@ -3053,8 +3013,9 @@ void setup(void){
 
 
     OPTION_REGbits.nRBPU = 0;
-    WPUB = 0b00000001;
+    WPUB = 0b00000011;
     IOCBbits.IOCB0 = 1;
+    IOCBbits.IOCB1 = 1;
 
 
     TXSTAbits.SYNC = 0;
@@ -3088,41 +3049,34 @@ void setup(void){
 
 
 void Text(void){
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-     division(cont);
-    printf("Valor del contador:\r");
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-
-
+    _delay((unsigned long)((50)*(8000000/4000.0)));
+     division(pr);
+    _delay((unsigned long)((50)*(8000000/4000.0)));
     TXREG = decenas;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+    _delay((unsigned long)((50)*(8000000/4000.0)));
     TXREG = unidades;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-    printf("\r");
-
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-     division(stat);
-    printf("Valor del agua:\r");
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+    _delay((unsigned long)((50)*(8000000/4000.0)));
 
 
 
+    division(stat);
 
+    _delay((unsigned long)((50)*(8000000/4000.0)));
     TXREG = unidades;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-    printf("\r");
+    _delay((unsigned long)((50)*(8000000/4000.0)));
 
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+
+
      division(temp);
-    printf("Valor del temperatura:\r");
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+
+    _delay((unsigned long)((50)*(8000000/4000.0)));
     TXREG = centenas;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+    _delay((unsigned long)((50)*(8000000/4000.0)));
     TXREG = decenas;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
+    _delay((unsigned long)((50)*(8000000/4000.0)));
     TXREG = unidades;
-    _delay((unsigned long)((250)*(4000000/4000.0)));
-    printf("\r");
+    _delay((unsigned long)((50)*(8000000/4000.0)));
+
 }
 
 

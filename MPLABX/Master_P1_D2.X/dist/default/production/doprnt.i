@@ -311,16 +311,14 @@ const static unsigned int dpowers[] = {1, 10, 100, 1000, 10000,
         };
 # 463 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
 int
-
-
-
-
-
-
-
-_doprnt(struct __prbuf * pb, register const char * f, register va_list ap)
+# 505 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
+sprintf(char * sp, const char * f, ...)
 {
-# 512 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
+ va_list ap;
+
+
+
+
  char c;
 # 521 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
  signed char prec;
@@ -339,7 +337,7 @@ _doprnt(struct __prbuf * pb, register const char * f, register va_list ap)
  const char * cp;
 
 
-
+ *ap = __va_start();
 
 
  while((c = *f++)) {
@@ -347,7 +345,7 @@ _doprnt(struct __prbuf * pb, register const char * f, register va_list ap)
   if(c != '%')
 
   {
-   do { if(pb->func) (pb->func((char)(c))); else ((*pb->ptr++ = (char)(c))); } while(0);
+   ((*sp++ = (c)));
    continue;
   }
 
@@ -393,7 +391,7 @@ _doprnt(struct __prbuf * pb, register const char * f, register va_list ap)
   {
 # 1464 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
    if(flag & 0x03)
-    do { if(pb->func) (pb->func((char)('-'))); else ((*pb->ptr++ = (char)('-'))); } while(0);
+    ((*sp++ = ('-')));
 # 1495 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
   }
 
@@ -409,7 +407,7 @@ _doprnt(struct __prbuf * pb, register const char * f, register va_list ap)
     c = (val / dpowers[(unsigned char)prec]) % 10 + '0';
 # 1549 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\sources\\c90\\common\\doprnt.c"
    }
-   do { if(pb->func) (pb->func((char)(c))); else ((*pb->ptr++ = (char)(c))); } while(0);
+   ((*sp++ = (c)));
   }
 
 
@@ -423,7 +421,7 @@ _doprnt(struct __prbuf * pb, register const char * f, register va_list ap)
 alldone:
 
 
-
+ *sp = 0;
 
  return 0;
 }

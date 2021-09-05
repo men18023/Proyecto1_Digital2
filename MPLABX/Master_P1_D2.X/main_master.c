@@ -6,7 +6,7 @@
  */
 
 //------------------------------- LIBRERIAS ------------------------------------
-#define _XTAL_FREQ 4000000
+//#define _XTAL_FREQ 4000000
 #include <xc.h>
 #include <stdint.h>
 #include <stdio.h>  // Para usar printf
@@ -14,8 +14,8 @@
 #include <stdlib.h>
 
 // Librerias propias
-#include "I2C.h"
-#include "LCD.h"
+//#include "I2C.h"
+#include "I2C_LCD.h"
 
 //-------------------------- Bits de configuraciÓn -----------------------------
 // CONFIG1
@@ -34,15 +34,9 @@
 #pragma config BOR4V = BOR40V                   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma config WRT = OFF                        // Flash Program Memory Self Write Enable bits (Write protection off)
 
-#define RS RD2
-#define EN RD3
-#define D4 RD4
-#define D5 RB5
-#define D6 RD6
-#define D7 RD7
 //--------------------------------- Variables ----------------------------------
 uint8_t R1, R2;
-char temp, stat, cont;
+char temp, stat, cont, pr;
 char valor, centenas, residuo, decenas, unidades;
 char cen, dec, uni;
 
@@ -58,12 +52,13 @@ void __interrupt() isr(void){
     {
         if (PORTBbits.RB0 == 0)                 // Si oprimo el boton 1
         {
-            PORTDbits.RD0 = 1;    
             stat = 1;
+            PORTDbits.RD1 = 1;    
+            
         }
         else if (PORTBbits.RB0 == 1)
         {
-            PORTDbits.RD0 = 0;
+            PORTDbits.RD1 = 0;
             stat = 0;
         }
         INTCONbits.RBIF = 0;                    // Se limpia la bandera de la interrupcion
@@ -73,56 +68,58 @@ void __interrupt() isr(void){
 //----------------------------------- Main -------------------------------------
 void main(void) {
     
-    setup();                                    // Configuración principal
-    Lcd_Init();                                 // LCD esta apagada
+    setup();                                    // Configuración principal                                 // LCD esta apagada
     char buffer[20];                            // Se guarda el voltaje en un string
     char buffer1[20];
     char buffer2[20];
     char val2;
     char val1;
     char val;                                   // Valor que deseo almacenar en un str
+    LCD_Init(0x4E);    // Initialize LCD module with I2C address = 0x4E
+ 
+
     
     while(1)  
     {
         temp = R2;
-        cont = R1;
-        val = cont; 
+        cont = 10;
+        val = cont - R1; 
+        pr = val;
         val1 = stat;
         val2 = temp;
         
-        Lcd_Clear();
-        Lcd_Set_Cursor(1,1);
-        Lcd_Write_String("CONT: STAT: TEMP:");
+        LCD_Set_Cursor(1, 1);
+        LCD_Write_String("CONT: ENC: TEMP:");
+        __delay_ms(1000);
+        LCD_Set_Cursor(2, 2);
         sprintf(buffer, "%d ", val); 
         sprintf(buffer2, "%d ", val2); 
-        Lcd_Set_Cursor(2,2);
-        Lcd_Write_String(buffer);
-        Lcd_Set_Cursor(2,14);
-        Lcd_Write_String(buffer2);
-    
+        LCD_Set_Cursor(2,2);
+        LCD_Write_String(buffer);
+        LCD_Set_Cursor(2,13);
+        LCD_Write_String(buffer2);
+        
         if (val1==1){
-            Lcd_Set_Cursor(2,8);
-        Lcd_Write_String("ON");
+            LCD_Set_Cursor(2,7);
+            LCD_Write_String("ON  ");
         }
         else{
-            Lcd_Set_Cursor(2,8);
-        Lcd_Write_String("OFF");
+            LCD_Set_Cursor(2,7);
+            LCD_Write_String("OFF");
         }
-        __delay_ms(2000);
-        
-        //Obtener informacion del primer slave
+//        //Obtener informacion del primer slave
         I2C_Master_Start();
         I2C_Master_Write(0x51);
-        R1 = I2C_Master_Read(0);
+        R1 = I2C_Read_Byte();
         I2C_Master_Stop();
-        __delay_ms(200);
+        __delay_ms(100);
         
         //Obtener informacion del segundo slave
         I2C_Master_Start();
         I2C_Master_Write(0x61);                 // 51, se escribe el 1 para que lea en el puerto de leds
-        R2 = I2C_Master_Read(0);             
+        R2 = I2C_Read_Byte();             
         I2C_Master_Stop();
-        __delay_ms(200);
+        __delay_ms(100);
         
         Text();
 
@@ -145,6 +142,7 @@ void setup(void){
     
     // Inputs y outputs de los puertos
     TRISBbits.TRISB0 = 1;
+    TRISBbits.TRISB1 = 1;
     TRISCbits.TRISC0 = 0;
     TRISD = 0x00;
     TRISA = 0x00;
@@ -158,8 +156,9 @@ void setup(void){
     
     // Configuracion de pull-up interno
     OPTION_REGbits.nRBPU = 0;
-    WPUB = 0b00000001;
+    WPUB = 0b00000011;
     IOCBbits.IOCB0 = 1;
+    IOCBbits.IOCB1 = 1;
 
     // Configuraciones TX y RX
     TXSTAbits.SYNC = 0;
@@ -193,35 +192,34 @@ void setup(void){
 
 // Función para escribir en el UART
 void Text(void){
-    __delay_ms(250);                           //Tiempos para el despliegue de los caracteres
-     division(cont);
-    printf("Valor del contador:\r");
-    __delay_ms(250);
+    __delay_ms(50);                           //Tiempos para el despliegue de los caracteres
+     division(pr);
+    __delay_ms(50);
     TXREG = decenas;
-    __delay_ms(250);
+    __delay_ms(50);
     TXREG = unidades;
-    __delay_ms(250);
-    printf("\r");
+    __delay_ms(50);
+    //printf("\r");
     
-    __delay_ms(250);                           //Tiempos para el despliegue de los caracteres
-     division(stat);
-    printf("Valor del agua:\r");
-    __delay_ms(250);
+                               //Tiempos para el despliegue de los caracteres
+    division(stat);
+    //printf("Valor del agua:\r");
+    __delay_ms(50);
     TXREG = unidades;
-    __delay_ms(250);
-    printf("\r");
+    __delay_ms(50);
+    //printf("\r");
     
-    __delay_ms(250);                           //Tiempos para el despliegue de los caracteres
+                               //Tiempos para el despliegue de los caracteres
      division(temp);
-    printf("Valor del temperatura:\r");
-    __delay_ms(250);
+    //printf("Valor del temperatura:\r");
+    __delay_ms(50);
     TXREG = centenas;
-    __delay_ms(250);
+    __delay_ms(50);
     TXREG = decenas;
-    __delay_ms(250);
+    __delay_ms(50);
     TXREG = unidades;
-    __delay_ms(250);
-    printf("\r");
+    __delay_ms(50);
+    //printf("\r");
 }
 
 // Función para despliegue de valores
