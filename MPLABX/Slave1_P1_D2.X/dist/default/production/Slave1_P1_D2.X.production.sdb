@@ -17,11 +17,7 @@
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
 "93
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
-<<<<<<< HEAD
-"47 C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Slave1_P1_D2.X\main_slave1.c
-=======
-"43 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave1_P1_D2.X\main_slave1.c
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
+"47 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave1_P1_D2.X\main_slave1.c
 [v _isr isr `II(v  1 e 1 0 ]
 "96
 [v _main main `(v  1 e 1 0 ]
@@ -255,13 +251,8 @@
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4460
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
-<<<<<<< HEAD
-"36 C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Slave1_P1_D2.X\main_slave1.c
-[v _val val `uc  1 e 1 0 ]
-=======
 "36 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave1_P1_D2.X\main_slave1.c
-[v _z z `uc  1 e 1 0 ]
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
+[v _val val `uc  1 e 1 0 ]
 "37
 [v _z z `uc  1 e 1 0 ]
 "38
@@ -285,11 +276,7 @@
 [v I2C_Slave_Init@address address `uc  1 a 1 5 ]
 "105
 } 0
-<<<<<<< HEAD
-"47 C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Slave1_P1_D2.X\main_slave1.c
-=======
-"43 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave1_P1_D2.X\main_slave1.c
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
+"47 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave1_P1_D2.X\main_slave1.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
 "94

@@ -2964,11 +2964,6 @@ void main(void) {
             LCD_Set_Cursor(2,7);
             LCD_Write_String("OFF");
         }
-<<<<<<< HEAD
-=======
-        _delay((unsigned long)((2000)*(4000000/4000.0)));
-
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 
         I2C_Master_Start();
         I2C_Master_Write(0x51);
@@ -3054,43 +3049,27 @@ void setup(void){
 
 
 void Text(void){
-<<<<<<< HEAD
     _delay((unsigned long)((50)*(8000000/4000.0)));
-     division(pr);
+    division(pr);
+
     _delay((unsigned long)((50)*(8000000/4000.0)));
     TXREG = decenas;
     _delay((unsigned long)((50)*(8000000/4000.0)));
     TXREG = unidades;
     _delay((unsigned long)((50)*(8000000/4000.0)));
-=======
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-     division(cont);
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = decenas;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = unidades;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 
 
 
     division(stat);
 
-<<<<<<< HEAD
     _delay((unsigned long)((50)*(8000000/4000.0)));
     TXREG = unidades;
     _delay((unsigned long)((50)*(8000000/4000.0)));
-=======
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = unidades;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 
 
 
      division(temp);
 
-<<<<<<< HEAD
     _delay((unsigned long)((50)*(8000000/4000.0)));
     TXREG = centenas;
     _delay((unsigned long)((50)*(8000000/4000.0)));
@@ -3098,15 +3077,6 @@ void Text(void){
     _delay((unsigned long)((50)*(8000000/4000.0)));
     TXREG = unidades;
     _delay((unsigned long)((50)*(8000000/4000.0)));
-=======
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = centenas;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = decenas;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
-    TXREG = unidades;
-    _delay((unsigned long)((50)*(4000000/4000.0)));
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 
 }
 

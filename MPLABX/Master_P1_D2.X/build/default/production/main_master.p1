@@ -42,13 +42,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 482: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
 [p mainexit ]
-<<<<<<< HEAD
 "44 main_master.c
 [; ;main_master.c: 44: 
-=======
-"50 main_master.c
-[; ;main_master.c: 50:         temp = R2;
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [v _setup `(v ~T0 @X0 0 ef ]
 "57 ./I2C_LCD.h
 [; ;./I2C_LCD.h: 57: void LCD_Init(unsigned char I2C_Add);
@@ -75,17 +70,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./I2C_LCD.h: 53: unsigned char I2C_Read_Byte(void);
 [v _I2C_Read_Byte `(uc ~T0 @X0 0 ef ]
 "49
-<<<<<<< HEAD
 [; ;./I2C_LCD.h: 49: void I2C_Master_Stop();
 [v _I2C_Master_Stop `(v ~T0 @X0 0 e? ]
 "45 main_master.c
 [; ;main_master.c: 45:     while(1)
-=======
-[; ;./I2C.h: 49: void I2C_Master_Stop(void);
-[v _I2C_Master_Stop `(v ~T0 @X0 0 ef ]
-"51 main_master.c
-[; ;main_master.c: 51:         cont = R1;
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [v _Text `(v ~T0 @X0 0 ef ]
 "1868 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1868:     struct {
@@ -265,19 +253,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1718
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1718: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
 [v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
-<<<<<<< HEAD
 "45 ./I2C_LCD.h
 [; ;./I2C_LCD.h: 45: void I2C_Master_Init();
 [v _I2C_Master_Init `(v ~T0 @X0 0 e? ]
 "46 main_master.c
 [; ;main_master.c: 46:     {
-=======
-"29 ./I2C.h
-[; ;./I2C.h: 29: void I2C_Master_Init(const unsigned long c);
-[v _I2C_Master_Init `(v ~T0 @X0 0 ef1`Cul ]
-"52 main_master.c
-[; ;main_master.c: 52:         val = cont;
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [v _division `(uc ~T0 @X0 0 ef1`uc ]
 "1133 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1133: extern volatile unsigned char TXREG __attribute__((address(0x019)));
@@ -520,33 +500,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 "22 main_master.c
-<<<<<<< HEAD
 [; ;main_master.c: 22:         else if (PORTBbits.RB0 == 1)
-=======
-[; ;main_master.c: 22:         if (PORTBbits.RB0 == 0)
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [p x FOSC  =  INTRC_NOCLKOUT             ]
 "23
 [; ;main_master.c: 23:         {
 [p x WDTE  =  OFF                        ]
 "24
-<<<<<<< HEAD
 [; ;main_master.c: 24:             PORTDbits.RD1 = 0;
 [p x PWRTE  =  OFF                       ]
 "25
 [; ;main_master.c: 25:             stat = 0;
-=======
-[; ;main_master.c: 24:             PORTDbits.RD0 = 1;
-[p x PWRTE  =  OFF                       ]
-"25
-[; ;main_master.c: 25:             stat = 1;
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [p x MCLRE  =  OFF                       ]
 "26
 [; ;main_master.c: 26:         }
 [p x CP  =  OFF                          ]
 "27
-<<<<<<< HEAD
 [; ;main_master.c: 27:         INTCONbits.RBIF = 0;
 [p x CPD  =  OFF                         ]
 "28
@@ -579,67 +547,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _pr `uc ~T0 @X0 1 e ]
 "40
 [; ;main_master.c: 40:     char val;
-=======
-[; ;main_master.c: 27:         else if (PORTBbits.RB0 == 1)
-[p x CPD  =  OFF                         ]
-"28
-[; ;main_master.c: 28:         {
-[p x BOREN  =  OFF                       ]
-"29
-[; ;main_master.c: 29:             PORTDbits.RD0 = 0;
-[p x IESO  =  OFF                        ]
-"30
-[; ;main_master.c: 30:             stat = 0;
-[p x FCMEN  =  OFF                       ]
-"31
-[; ;main_master.c: 31:         }
-[p x LVP  =  OFF                         ]
-"34
-[; ;main_master.c: 34: }
-[p x BOR4V  =  BOR40V                    ]
-"35
-[; ;main_master.c: 35: 
-[p x WRT  =  OFF                         ]
-"44
-[; ;main_master.c: 44:     char val2;
-[v _R1 `uc ~T0 @X0 1 e ]
-[v _R2 `uc ~T0 @X0 1 e ]
-"45
-[; ;main_master.c: 45:     char val1;
-[v _temp `uc ~T0 @X0 1 e ]
-[v _stat `uc ~T0 @X0 1 e ]
-[v _cont `uc ~T0 @X0 1 e ]
-"46
-[; ;main_master.c: 46:     char val;
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [v _valor `uc ~T0 @X0 1 e ]
 [v _centenas `uc ~T0 @X0 1 e ]
 [v _residuo `uc ~T0 @X0 1 e ]
 [v _decenas `uc ~T0 @X0 1 e ]
 [v _unidades `uc ~T0 @X0 1 e ]
-<<<<<<< HEAD
 "41
 [; ;main_master.c: 41:     LCD_Init(0x4E);
-=======
-"47
-[; ;main_master.c: 47: 
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [v _cen `uc ~T0 @X0 1 e ]
 [v _dec `uc ~T0 @X0 1 e ]
 [v _uni `uc ~T0 @X0 1 e ]
 [v $root$_isr `(v ~T0 @X0 0 e ]
-<<<<<<< HEAD
 "49
 [; ;main_master.c: 49:         val = cont - R1;
-=======
-"55
-[; ;main_master.c: 55: 
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [v _isr `(v ~T1 @X0 1 ef ]
 {
 [e :U _isr ]
 [f ]
-<<<<<<< HEAD
 "51
 [; ;main_master.c: 51:         val1 = stat;
 [e $ ! == -> _RBIF `i -> 1 `i 144  ]
@@ -694,67 +618,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v $root$_main `(v ~T0 @X0 0 e ]
 "69
 [; ;main_master.c: 69:         else{
-=======
-"57
-[; ;main_master.c: 57:         Lcd_Set_Cursor(1,1);
-[e $ ! == -> _RBIF `i -> 1 `i 144  ]
-"58
-[; ;main_master.c: 58:         Lcd_Write_String("CONT: STAT: TEMP:");
-{
-"59
-[; ;main_master.c: 59:         sprintf(buffer, "%d ", val);
-[e $ ! == -> . . _PORTBbits 0 0 `i -> 0 `i 145  ]
-"60
-[; ;main_master.c: 60:         sprintf(buffer2, "%d ", val2);
-{
-"61
-[; ;main_master.c: 61:         Lcd_Set_Cursor(2,2);
-[e = . . _PORTDbits 0 0 -> -> 1 `i `uc ]
-"62
-[; ;main_master.c: 62:         Lcd_Write_String(buffer);
-[e = _stat -> -> 1 `i `uc ]
-"63
-[; ;main_master.c: 63:         Lcd_Set_Cursor(2,14);
-}
-[e $U 146  ]
-"64
-[; ;main_master.c: 64:         Lcd_Write_String(buffer2);
-[e :U 145 ]
-[e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 147  ]
-"65
-[; ;main_master.c: 65: 
-{
-"66
-[; ;main_master.c: 66:         if (val1==1){
-[e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"67
-[; ;main_master.c: 67:             Lcd_Set_Cursor(2,8);
-[e = _stat -> -> 0 `i `uc ]
-"68
-[; ;main_master.c: 68:         Lcd_Write_String("ON");
-}
-[e :U 147 ]
-[e :U 146 ]
-"69
-[; ;main_master.c: 69:         }
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"70
-[; ;main_master.c: 70:         else{
-}
-[e :U 144 ]
-"71
-[; ;main_master.c: 71:             Lcd_Set_Cursor(2,8);
-[e :UE 143 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"74
-[; ;main_master.c: 74:         _delay((unsigned long)((2000)*(4000000/4000.0)));
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-<<<<<<< HEAD
 "71
 [; ;main_master.c: 71:             LCD_Write_String("OFF");
 [e ( _setup ..  ]
@@ -896,151 +763,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _Text ..  ]
 "126
 [; ;main_master.c: 126: 
-=======
-"76
-[; ;main_master.c: 76: 
-[e ( _setup ..  ]
-"77
-[; ;main_master.c: 77:         I2C_Master_Start();
-[e ( _Lcd_Init ..  ]
-"78
-[; ;main_master.c: 78:         I2C_Master_Write(0x51);
-[v _buffer `uc ~T0 @X0 -> 20 `i a ]
-"79
-[; ;main_master.c: 79:         R1 = I2C_Master_Read(0);
-[v _buffer1 `uc ~T0 @X0 -> 20 `i a ]
-"80
-[; ;main_master.c: 80:         I2C_Master_Stop();
-[v _buffer2 `uc ~T0 @X0 -> 20 `i a ]
-"81
-[; ;main_master.c: 81:         _delay((unsigned long)((200)*(4000000/4000.0)));
-[v _val2 `uc ~T0 @X0 1 a ]
-"82
-[; ;main_master.c: 82: 
-[v _val1 `uc ~T0 @X0 1 a ]
-"83
-[; ;main_master.c: 83: 
-[v _val `uc ~T0 @X0 1 a ]
-"85
-[; ;main_master.c: 85:         I2C_Master_Write(0x61);
-[e :U 150 ]
-"86
-[; ;main_master.c: 86:         R2 = I2C_Master_Read(0);
-{
-"87
-[; ;main_master.c: 87:         I2C_Master_Stop();
-[e = _temp -> _R2 `uc ]
-"88
-[; ;main_master.c: 88:         _delay((unsigned long)((200)*(4000000/4000.0)));
-[e = _cont -> _R1 `uc ]
-"89
-[; ;main_master.c: 89: 
-[e = _val _cont ]
-"90
-[; ;main_master.c: 90:         Text();
-[e = _val1 _stat ]
-"91
-[; ;main_master.c: 91: 
-[e = _val2 _temp ]
-"93
-[; ;main_master.c: 93:     return;
-[e ( _Lcd_Clear ..  ]
-"94
-[; ;main_master.c: 94: }
-[e ( _Lcd_Set_Cursor (2 , -> -> 1 `i `uc -> -> 1 `i `uc ]
-"95
-[; ;main_master.c: 95: 
-[e ( _Lcd_Write_String (1 :s 1C ]
-"96
-[; ;main_master.c: 96: 
-[e ( _sprintf (1 , (. , &U _buffer :s 2C -> _val `i ]
-"97
-[; ;main_master.c: 97: 
-[e ( _sprintf (1 , (. , &U _buffer2 :s 3C -> _val2 `i ]
-"98
-[; ;main_master.c: 98: void setup(void){
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 2 `i `uc ]
-"99
-[; ;main_master.c: 99: 
-[e ( _Lcd_Write_String (1 &U _buffer ]
-"100
-[; ;main_master.c: 100:     OSCCONbits.IRCF0 = 0;
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 14 `i `uc ]
-"101
-[; ;main_master.c: 101:     OSCCONbits.IRCF1 = 1;
-[e ( _Lcd_Write_String (1 &U _buffer2 ]
-"103
-[; ;main_master.c: 103:     OSCCONbits.SCS = 1;
-[e $ ! == -> _val1 `i -> 1 `i 152  ]
-{
-"104
-[; ;main_master.c: 104: 
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 8 `i `uc ]
-"105
-[; ;main_master.c: 105: 
-[e ( _Lcd_Write_String (1 :s 4C ]
-"106
-[; ;main_master.c: 106:     ANSEL = 0;
-}
-[e $U 153  ]
-"107
-[; ;main_master.c: 107:     ANSELH = 0;
-[e :U 152 ]
-{
-"108
-[; ;main_master.c: 108: 
-[e ( _Lcd_Set_Cursor (2 , -> -> 2 `i `uc -> -> 8 `i `uc ]
-"109
-[; ;main_master.c: 109: 
-[e ( _Lcd_Write_String (1 :s 5C ]
-"110
-[; ;main_master.c: 110:     TRISBbits.TRISB0 = 1;
-}
-[e :U 153 ]
-"111
-[; ;main_master.c: 111:     TRISCbits.TRISC0 = 0;
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"114
-[; ;main_master.c: 114: 
-[e ( _I2C_Master_Start ..  ]
-"115
-[; ;main_master.c: 115: 
-[e ( _I2C_Master_Write (1 -> -> 81 `i `ui ]
-"116
-[; ;main_master.c: 116:     PORTA = 0x00;
-[e = _R1 -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
-"117
-[; ;main_master.c: 117:     PORTB = 0x00;
-[e ( _I2C_Master_Stop ..  ]
-"118
-[; ;main_master.c: 118:     PORTC = 0x00;
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"121
-[; ;main_master.c: 121: 
-[e ( _I2C_Master_Start ..  ]
-"122
-[; ;main_master.c: 122: 
-[e ( _I2C_Master_Write (1 -> -> 97 `i `ui ]
-"123
-[; ;main_master.c: 123:     OPTION_REGbits.nRBPU = 0;
-[e = _R2 -> ( _I2C_Master_Read (1 -> -> 0 `i `us `uc ]
-"124
-[; ;main_master.c: 124:     WPUB = 0b00000001;
-[e ( _I2C_Master_Stop ..  ]
-"125
-[; ;main_master.c: 125:     IOCBbits.IOCB0 = 1;
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"127
-[; ;main_master.c: 127: 
-[e ( _Text ..  ]
-"129
-[; ;main_master.c: 129:     TXSTAbits.BRGH = 1;
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 }
 [e :U 149 ]
 [e $U 150  ]
 [e :U 151 ]
-<<<<<<< HEAD
 "127
 [; ;main_master.c: 127:     TXSTAbits.SYNC = 0;
 [e $UE 148  ]
@@ -1050,22 +776,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 "132
 [; ;main_master.c: 132:     SPBRGH = 1;
-=======
-"130
-[; ;main_master.c: 130:     BAUDCTLbits.BRG16 = 0;
-[e $UE 148  ]
-"131
-[; ;main_master.c: 131: 
-[e :UE 148 ]
-}
-"135
-[; ;main_master.c: 135:     RCSTAbits.SPEN = 1;
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-<<<<<<< HEAD
 "134
 [; ;main_master.c: 134:     RCSTAbits.SPEN = 1;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
@@ -1118,328 +832,136 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main_master.c: 158:     _delay((unsigned long)((50)*(8000000/4000.0)));
 [e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
 "159
-[; ;main_master.c: 159:      division(pr);
+[; ;main_master.c: 159:     division(pr);
 [e = _WPUB -> -> 3 `i `uc ]
 "160
-[; ;main_master.c: 160:     _delay((unsigned long)((50)*(8000000/4000.0)));
+[; ;main_master.c: 160: 
 [e = . . _IOCBbits 1 0 -> -> 1 `i `uc ]
 "161
-[; ;main_master.c: 161:     TXREG = decenas;
+[; ;main_master.c: 161:     _delay((unsigned long)((50)*(8000000/4000.0)));
 [e = . . _IOCBbits 1 1 -> -> 1 `i `uc ]
 "164
-[; ;main_master.c: 164:     _delay((unsigned long)((50)*(8000000/4000.0)));
+[; ;main_master.c: 164:     TXREG = unidades;
 [e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
 "165
-[; ;main_master.c: 165: 
+[; ;main_master.c: 165:     _delay((unsigned long)((50)*(8000000/4000.0)));
 [e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
 "166
 [; ;main_master.c: 166: 
 [e = . . _BAUDCTLbits 0 3 -> -> 0 `i `uc ]
 "168
-[; ;main_master.c: 168:     division(stat);
+[; ;main_master.c: 168: 
 [e = _SPBRG -> -> 25 `i `uc ]
 "169
-[; ;main_master.c: 169: 
+[; ;main_master.c: 169:     division(stat);
 [e = _SPBRGH -> -> 1 `i `uc ]
 "171
-[; ;main_master.c: 171:     TXREG = unidades;
+[; ;main_master.c: 171:     _delay((unsigned long)((50)*(8000000/4000.0)));
 [e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
 "172
-[; ;main_master.c: 172:     _delay((unsigned long)((50)*(8000000/4000.0)));
+[; ;main_master.c: 172:     TXREG = unidades;
 [e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
 "173
-[; ;main_master.c: 173: 
+[; ;main_master.c: 173:     _delay((unsigned long)((50)*(8000000/4000.0)));
 [e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
 "174
 [; ;main_master.c: 174: 
 [e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
 "176
-[; ;main_master.c: 176:      division(temp);
+[; ;main_master.c: 176: 
 [e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
 "178
-[; ;main_master.c: 178:     _delay((unsigned long)((50)*(8000000/4000.0)));
+[; ;main_master.c: 178: 
 [e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
 "179
-[; ;main_master.c: 179:     TXREG = centenas;
+[; ;main_master.c: 179:     _delay((unsigned long)((50)*(8000000/4000.0)));
 [e = . . _PIR1bits 0 4 -> -> 0 `i `uc ]
 "182
-[; ;main_master.c: 182:     _delay((unsigned long)((50)*(8000000/4000.0)));
+[; ;main_master.c: 182:     TXREG = decenas;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "183
-[; ;main_master.c: 183:     TXREG = unidades;
+[; ;main_master.c: 183:     _delay((unsigned long)((50)*(8000000/4000.0)));
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "184
-[; ;main_master.c: 184:     _delay((unsigned long)((50)*(8000000/4000.0)));
+[; ;main_master.c: 184:     TXREG = unidades;
 [e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
 "185
-[; ;main_master.c: 185: 
+[; ;main_master.c: 185:     _delay((unsigned long)((50)*(8000000/4000.0)));
 [e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
 "186
-[; ;main_master.c: 186: }
+[; ;main_master.c: 186: 
 [e = . . _INTCONbits 0 0 -> -> 1 `i `uc ]
 "187
-[; ;main_master.c: 187: 
+[; ;main_master.c: 187: }
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
 "190
-[; ;main_master.c: 190:     centenas = valor/100;
+[; ;main_master.c: 190: char division (char valor){
 [e ( _I2C_Master_Init -> 100000 `l ]
 "191
-[; ;main_master.c: 191:     residuo = valor%100;
+[; ;main_master.c: 191:     centenas = valor/100;
 [e :UE 154 ]
 }
 "194
-[; ;main_master.c: 194: 
-=======
-"137
-[; ;main_master.c: 137:     RCSTAbits.CREN = 1;
-[e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
-"138
-[; ;main_master.c: 138:     TXSTAbits.TX9 = 0;
-[e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"139
-[; ;main_master.c: 139: 
-[e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"140
-[; ;main_master.c: 140:     TXSTAbits.TXEN = 1;
-[e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
-"143
-[; ;main_master.c: 143:     PIR1bits.TXIF = 0;
-[e = _ANSEL -> -> 0 `i `uc ]
-"144
-[; ;main_master.c: 144: 
-[e = _ANSELH -> -> 0 `i `uc ]
-"147
-[; ;main_master.c: 147:     INTCONbits.PEIE = 1;
-[e = . . _TRISBbits 0 0 -> -> 1 `i `uc ]
-"148
-[; ;main_master.c: 148:     PIE1bits.RCIE = 0;
-[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
-"149
-[; ;main_master.c: 149:     PIE1bits.TXIE = 0;
-[e = _TRISD -> -> 0 `i `uc ]
-"150
-[; ;main_master.c: 150:     INTCONbits.RBIF = 1;
-[e = _TRISA -> -> 0 `i `uc ]
-"153
-[; ;main_master.c: 153: 
-[e = _PORTA -> -> 0 `i `uc ]
-"154
-[; ;main_master.c: 154:     I2C_Master_Init(100000);
-[e = _PORTB -> -> 0 `i `uc ]
-"155
-[; ;main_master.c: 155: }
-[e = _PORTC -> -> 0 `i `uc ]
-"156
-[; ;main_master.c: 156: 
-[e = _PORTD -> -> 0 `i `uc ]
-"157
-[; ;main_master.c: 157: 
-[e = _PORTE -> -> 0 `i `uc ]
-"160
-[; ;main_master.c: 160:      division(cont);
-[e = . . _OPTION_REGbits 0 5 -> -> 0 `i `uc ]
-"161
-[; ;main_master.c: 161:     _delay((unsigned long)((50)*(4000000/4000.0)));
-[e = _WPUB -> -> 1 `i `uc ]
-"162
-[; ;main_master.c: 162:     TXREG = decenas;
-[e = . . _IOCBbits 1 0 -> -> 1 `i `uc ]
-"165
-[; ;main_master.c: 165:     _delay((unsigned long)((50)*(4000000/4000.0)));
-[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
-"166
-[; ;main_master.c: 166: 
-[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
-"167
-[; ;main_master.c: 167: 
-[e = . . _BAUDCTLbits 0 3 -> -> 0 `i `uc ]
-"169
-[; ;main_master.c: 169:     division(stat);
-[e = _SPBRG -> -> 25 `i `uc ]
-"170
-[; ;main_master.c: 170: 
-[e = _SPBRGH -> -> 1 `i `uc ]
-"172
-[; ;main_master.c: 172:     TXREG = unidades;
-[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-"173
-[; ;main_master.c: 173:     _delay((unsigned long)((50)*(4000000/4000.0)));
-[e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
-"174
-[; ;main_master.c: 174: 
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"175
-[; ;main_master.c: 175: 
-[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
-"177
-[; ;main_master.c: 177:      division(temp);
-[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-"179
-[; ;main_master.c: 179:     _delay((unsigned long)((50)*(4000000/4000.0)));
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-"180
-[; ;main_master.c: 180:     TXREG = centenas;
-[e = . . _PIR1bits 0 4 -> -> 0 `i `uc ]
-"183
-[; ;main_master.c: 183:     _delay((unsigned long)((50)*(4000000/4000.0)));
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"184
-[; ;main_master.c: 184:     TXREG = unidades;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"185
-[; ;main_master.c: 185:     _delay((unsigned long)((50)*(4000000/4000.0)));
-[e = . . _PIE1bits 0 5 -> -> 0 `i `uc ]
-"186
-[; ;main_master.c: 186: 
-[e = . . _PIE1bits 0 4 -> -> 0 `i `uc ]
-"187
-[; ;main_master.c: 187: }
-[e = . . _INTCONbits 0 0 -> -> 1 `i `uc ]
-"188
-[; ;main_master.c: 188: 
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"191
-[; ;main_master.c: 191:     centenas = valor/100;
-[e ( _I2C_Master_Init (1 -> -> 100000 `l `ul ]
-"192
-[; ;main_master.c: 192:     residuo = valor%100;
-[e :UE 154 ]
-}
-"195
-[; ;main_master.c: 195: 
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
+[; ;main_master.c: 194:     unidades = residuo%10;
 [v _Text `(v ~T0 @X0 1 ef ]
 {
 [e :U _Text ]
 [f ]
-<<<<<<< HEAD
 "195
-[; ;main_master.c: 195:     centenas = centenas + 48;
+[; ;main_master.c: 195: 
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"196
-[; ;main_master.c: 196:     decenas = decenas + 48;
-[e ( _division (1 _pr ]
-"197
-[; ;main_master.c: 197:     unidades = unidades + 48;
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"198
-[; ;main_master.c: 198: }
-[e = _TXREG -> _decenas `uc ]
-"199
-[; ;main_master.c: 199: 
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"200
-[; ;main_master.c: 200: 
-[e = _TXREG -> _unidades `uc ]
-"201
-[; ;main_master.c: 201: void putch(char data){
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"205
-[; ;main_master.c: 205: }
-[e ( _division (1 _stat ]
-"207
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"208
-[e = _TXREG -> _unidades `uc ]
-"209
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"213
-[e ( _division (1 _temp ]
-"215
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"216
-[e = _TXREG -> _centenas `uc ]
-"217
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"218
-[e = _TXREG -> _decenas `uc ]
-"219
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"220
-[e = _TXREG -> _unidades `uc ]
-"221
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"223
-[e :UE 155 ]
-}
-"226
-=======
 "196
 [; ;main_master.c: 196:     centenas = centenas + 48;
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"197
-[; ;main_master.c: 197:     decenas = decenas + 48;
-[e ( _division (1 _cont ]
+[e ( _division (1 _pr ]
 "198
 [; ;main_master.c: 198:     unidades = unidades + 48;
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "199
 [; ;main_master.c: 199: }
 [e = _TXREG -> _decenas `uc ]
 "200
 [; ;main_master.c: 200: 
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "201
 [; ;main_master.c: 201: 
 [e = _TXREG -> _unidades `uc ]
 "202
 [; ;main_master.c: 202: void putch(char data){
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "206
 [; ;main_master.c: 206: }
 [e ( _division (1 _stat ]
 "208
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "209
 [e = _TXREG -> _unidades `uc ]
 "210
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "214
 [e ( _division (1 _temp ]
 "216
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "217
 [e = _TXREG -> _centenas `uc ]
 "218
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "219
 [e = _TXREG -> _decenas `uc ]
 "220
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "221
 [e = _TXREG -> _unidades `uc ]
 "222
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "224
 [e :UE 155 ]
 }
 "227
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [v _division `(uc ~T0 @X0 1 ef1`uc ]
 {
 [e :U _division ]
 [v _valor `uc ~T0 @X0 1 r1 ]
 [f ]
-<<<<<<< HEAD
-"227
-[e = _centenas -> / -> _valor `i -> 100 `i `uc ]
-"228
-[e = _residuo -> % -> _valor `i -> 100 `i `uc ]
-"229
-[e = _decenas -> / -> _residuo `i -> 10 `i `uc ]
-"230
-[e = _unidades -> % -> _residuo `i -> 10 `i `uc ]
-"232
-[e = _centenas -> + -> _centenas `i -> 48 `i `uc ]
-"233
-[e = _decenas -> + -> _decenas `i -> 48 `i `uc ]
-"234
-[e = _unidades -> + -> _unidades `i -> 48 `i `uc ]
-"235
-[e :UE 156 ]
-}
-"238
-=======
 "228
 [e = _centenas -> / -> _valor `i -> 100 `i `uc ]
 "229
@@ -1458,35 +980,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 156 ]
 }
 "239
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [v _putch `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _putch ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-<<<<<<< HEAD
-"239
-=======
 "240
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [e $U 158  ]
 [e :U 159 ]
 [e :U 158 ]
 [e $ == -> _TXIF `i -> 0 `i 159  ]
 [e :U 160 ]
-<<<<<<< HEAD
-"240
-[e = _TXREG -> _data `uc ]
-"241
-[e $UE 157  ]
-"242
-=======
 "241
 [e = _TXREG -> _data `uc ]
 "242
 [e $UE 157  ]
 "243
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 [e :UE 157 ]
 }
 [p f _sprintf 8388736 ]
@@ -1494,7 +1003,4 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 1C 67 79 78 84 58 32 69 78 67 58 32 84 69 77 80 58 0 ]
 [a 2C 37 100 32 0 ]
 [a 3C 37 100 32 0 ]
-<<<<<<< HEAD
 [a 4C 79 78 32 32 0 ]
-=======
->>>>>>> ee3433aee75a6372795226411431135e95dac23c

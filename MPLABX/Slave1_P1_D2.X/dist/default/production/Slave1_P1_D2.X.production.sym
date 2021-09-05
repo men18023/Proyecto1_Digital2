@@ -160,8 +160,7 @@ intentry 8 29B CODE 8 0
 cstackCOMMON 70 7B COMMON 70 1
 %locals
 dist/default/production\Slave1_P1_D2.X.production.o
-<<<<<<< HEAD
-C:\Users\diego\AppData\Local\Temp\s8c0.s
+C:\Users\jonam\AppData\Local\Temp\sks4.s
 657 F 0 CODE 0
 660 F 0 CODE 0
 677 F 0 CODE 0
@@ -170,17 +169,6 @@ C:\Users\diego\AppData\Local\Temp\s8c0.s
 685 12 0 CODE 0
 687 12 0 CODE 0
 688 13 0 CODE 0
-=======
-C:\Users\jonam\AppData\Local\Temp\shno.s
-662 F 0 CODE 0
-665 F 0 CODE 0
-685 F 0 CODE 0
-686 14 0 CODE 0
-690 15 0 CODE 0
-696 16 0 CODE 0
-698 16 0 CODE 0
-699 17 0 CODE 0
->>>>>>> ee3433aee75a6372795226411431135e95dac23c
 main_slave1.c
 96 D9 0 CODE 0
 97 D9 0 CODE 0
