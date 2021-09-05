@@ -22,7 +22,11 @@ cstackCOMMON COMMON 1 70 70 7 1
 intentry CODE 0 4 4 8 2
 bssCOMMON COMMON 1 77 77 1 1
 config CONFIG 4 2007 2007 2 2
+<<<<<<< HEAD
 $C:\Users\diego\AppData\Local\Temp\s40.o
+=======
+$C:\Users\jonam\AppData\Local\Temp\sqe8.o
+>>>>>>> ee3433aee75a6372795226411431135e95dac23c
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -72,6 +76,7 @@ STRING 146-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Slave2_P1_D2.X.production.o
+<<<<<<< HEAD
 F cinit CODE >808:C:\Users\diego\AppData\Local\Temp\s40.s
 F cinit CODE >811:C:\Users\diego\AppData\Local\Temp\s40.s
 F cinit CODE >822:C:\Users\diego\AppData\Local\Temp\s40.s
@@ -187,6 +192,123 @@ FF text1 CODE >119:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proy
 135 maintext CODE >92:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
 13B maintext CODE >93:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
 13F maintext CODE >94:C:\Users\diego\OneDrive\Escritorio\UVG\DIGITAL\DIGITAL 2\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+=======
+F cinit CODE >808:C:\Users\jonam\AppData\Local\Temp\sqe8.s
+F cinit CODE >811:C:\Users\jonam\AppData\Local\Temp\sqe8.s
+F cinit CODE >822:C:\Users\jonam\AppData\Local\Temp\sqe8.s
+10 cinit CODE >828:C:\Users\jonam\AppData\Local\Temp\sqe8.s
+10 cinit CODE >830:C:\Users\jonam\AppData\Local\Temp\sqe8.s
+11 cinit CODE >831:C:\Users\jonam\AppData\Local\Temp\sqe8.s
+4 intentry CODE >44:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+14 text4 CODE >44:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+14 text4 CODE >46:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+1A text4 CODE >47:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+23 text4 CODE >48:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+25 text4 CODE >53:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+26 text4 CODE >56:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+2A text4 CODE >58:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+2B text4 CODE >60:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+33 text4 CODE >61:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+37 text4 CODE >62:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+38 text4 CODE >63:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+39 text4 CODE >64:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+3A text4 CODE >67:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+44 text4 CODE >68:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+4A text4 CODE >69:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+4B text4 CODE >70:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+4C text4 CODE >71:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+52 text4 CODE >72:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+56 text4 CODE >73:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+5A text4 CODE >75:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+63 text4 CODE >76:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+69 text4 CODE >77:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+6C text4 CODE >78:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+70 text4 CODE >79:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+71 text4 CODE >80:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+75 text4 CODE >81:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+7B text4 CODE >82:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+7B text4 CODE >84:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+7E text4 CODE >86:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+116 text3 CODE >93:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+117 text3 CODE >95:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+11B text3 CODE >96:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+11F text3 CODE >97:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+123 text3 CODE >98:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+125 text3 CODE >99:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+126 text3 CODE >100:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+127 text3 CODE >101:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+128 text3 CODE >102:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+129 text3 CODE >103:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+12C text3 CODE >104:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+12F text3 CODE >105:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\I2C.c
+85 text2 CODE >14:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+86 text2 CODE >15:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+87 text2 CODE >17:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+8B text2 CODE >18:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+8F text2 CODE >20:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+92 text2 CODE >21:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+93 text2 CODE >22:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+94 text2 CODE >23:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+97 text2 CODE >24:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+98 text2 CODE >25:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+99 text2 CODE >26:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+9A text2 CODE >28:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+9E text2 CODE >29:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+A2 text2 CODE >31:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+A5 text2 CODE >32:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+A6 text2 CODE >33:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+A7 text2 CODE >34:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+AA text2 CODE >35:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+AB text2 CODE >36:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+AC text2 CODE >37:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+AD text2 CODE >39:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+B1 text2 CODE >40:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+B5 text2 CODE >42:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+B8 text2 CODE >43:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+B9 text2 CODE >44:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+BA text2 CODE >45:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+BD text2 CODE >46:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+BE text2 CODE >47:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+BF text2 CODE >48:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+C0 text2 CODE >50:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+C4 text2 CODE >51:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+C8 text2 CODE >53:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+CB text2 CODE >54:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+CC text2 CODE >55:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+CD text2 CODE >56:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+D0 text2 CODE >57:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+D1 text2 CODE >58:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+D2 text2 CODE >59:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+D3 text2 CODE >60:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+E9 text2 CODE >62:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
+EA text1 CODE >101:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+EA text1 CODE >102:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+EE text1 CODE >103:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+EF text1 CODE >105:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+F2 text1 CODE >106:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+F3 text1 CODE >107:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+F4 text1 CODE >110:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+F7 text1 CODE >111:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+F8 text1 CODE >112:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+F9 text1 CODE >113:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+FA text1 CODE >114:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+FB text1 CODE >117:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+FE text1 CODE >118:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+FF text1 CODE >119:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+100 text1 CODE >120:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+101 text1 CODE >125:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+107 text1 CODE >128:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+108 text1 CODE >129:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+109 text1 CODE >130:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+10C text1 CODE >131:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+10F text1 CODE >134:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+115 text1 CODE >136:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+130 maintext CODE >88:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+130 maintext CODE >89:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+135 maintext CODE >92:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+13B maintext CODE >93:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+13F maintext CODE >94:C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+>>>>>>> ee3433aee75a6372795226411431135e95dac23c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -211,20 +333,36 @@ _BF 4A0 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _ADIF 66 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
+<<<<<<< HEAD
 ___sp 0 0 STACK 2 stack C:\Users\diego\AppData\Local\Temp\s40.o
 _main 260 0 CODE 0 maintext dist/default/production\Slave2_P1_D2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 start 18 0 CODE 0 init C:\Users\diego\AppData\Local\Temp\s40.o
+=======
+___sp 0 0 STACK 2 stack C:\Users\jonam\AppData\Local\Temp\sqe8.o
+_main 260 0 CODE 0 maintext dist/default/production\Slave2_P1_D2.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
+start 18 0 CODE 0 init C:\Users\jonam\AppData\Local\Temp\sqe8.o
+>>>>>>> ee3433aee75a6372795226411431135e95dac23c
 __size_of_main 0 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __size_of_config_ADC 0 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
+<<<<<<< HEAD
 intlevel0 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
 intlevel1 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
 intlevel2 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
 intlevel3 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
 intlevel4 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
 intlevel5 0 0 ENTRY 0 functab C:\Users\diego\AppData\Local\Temp\s40.o
+=======
+intlevel0 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sqe8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sqe8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sqe8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sqe8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sqe8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\jonam\AppData\Local\Temp\sqe8.o
+>>>>>>> ee3433aee75a6372795226411431135e95dac23c
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
@@ -234,8 +372,13 @@ _ADRESH 1E 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
+<<<<<<< HEAD
 ___stackhi 0 0 ABS 0 - C:\Users\diego\AppData\Local\Temp\s40.o
 ___stacklo 0 0 ABS 0 - C:\Users\diego\AppData\Local\Temp\s40.o
+=======
+___stackhi 0 0 ABS 0 - C:\Users\jonam\AppData\Local\Temp\sqe8.o
+___stacklo 0 0 ABS 0 - C:\Users\jonam\AppData\Local\Temp\sqe8.o
+>>>>>>> ee3433aee75a6372795226411431135e95dac23c
 _I2C_Slave_Init 22C 0 CODE 0 text3 dist/default/production\Slave2_P1_D2.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\Slave2_P1_D2.X.production.o
@@ -246,7 +389,11 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
+<<<<<<< HEAD
 ___int_sp 0 0 STACK 2 stack C:\Users\diego\AppData\Local\Temp\s40.o
+=======
+___int_sp 0 0 STACK 2 stack C:\Users\jonam\AppData\Local\Temp\sqe8.o
+>>>>>>> ee3433aee75a6372795226411431135e95dac23c
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -290,7 +437,11 @@ _isr 28 0 CODE 0 text4 dist/default/production\Slave2_P1_D2.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __end_of_isr 10A 0 CODE 0 text4 dist/default/production\Slave2_P1_D2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
+<<<<<<< HEAD
 reset_vec 0 0 CODE 0 reset_vec C:\Users\diego\AppData\Local\Temp\s40.o
+=======
+reset_vec 0 0 CODE 0 reset_vec C:\Users\jonam\AppData\Local\Temp\sqe8.o
+>>>>>>> ee3433aee75a6372795226411431135e95dac23c
 _PIE1bits 8C 0 ABS 0 - dist/default/production\Slave2_P1_D2.X.production.o
 __pmaintext 260 0 CODE 0 maintext dist/default/production\Slave2_P1_D2.X.production.o
 __Lcommon 0 0 ABS 0 common -

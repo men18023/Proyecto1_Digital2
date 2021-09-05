@@ -193,7 +193,11 @@ void setup(void){
 // Función para escribir en el UART
 void Text(void){
     __delay_ms(50);                           //Tiempos para el despliegue de los caracteres
+<<<<<<< HEAD
      division(pr);
+=======
+     division(cont);
+>>>>>>> ee3433aee75a6372795226411431135e95dac23c
     __delay_ms(50);
     TXREG = decenas;
     __delay_ms(50);
