@@ -3,10 +3,10 @@ from time import sleep
 import serial
 import time
 
-ser = serial.Serial('COM2', baudrate = 9600)
+ser = serial.Serial('COM3', baudrate = 9600)
 #time.sleep(1)
 
-ADAFRUIT_IO_KEY = "aio_eOca78chnTouwu1xftAi31ei9Yc9"
+ADAFRUIT_IO_KEY = "aio_HUGK88sOYbrJZcAB3E5eRCFn0sFY"
 ADAFRUIT_IO_USERNAME = "men18023"
 aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
 
@@ -34,4 +34,5 @@ while 1:
 	aio.send_data(Sensor02_feed.key, data2)
 	Sensor03_feed = aio.feeds('s3p1')
 	aio.send_data(Sensor03_feed.key, data3)
+	time.sleep(2)
 	
