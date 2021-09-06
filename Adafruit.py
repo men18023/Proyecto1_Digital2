@@ -13,26 +13,21 @@ aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
 while 1:
 	ser.close()
 	ser.open()
-	data1 = ser.readline(2).decode('ascii')
-	data2 = ser.readline(1).decode('ascii')
-	data3 = ser.readline(3).decode('ascii')
-	data4 = str(data1)
-	#print(data2)
-	val = data4.split(',')
+	#Lecturas del serial
+	data1 = ser.readline(2).decode('ascii')  #lectura de primeros dos digitos para contador
+	data2 = ser.readline(1).decode('ascii')  #lectura de un digito para el on/off
+	data3 = ser.readline(3).decode('ascii')  #lectura de 3 digitos finales para temperatura
+	#Prints de los valores obtenidos del serial
 	print(data1)
 	print(data2)
 	print(data3)
-	#print(val)
-	#data3 = ser.readline(3).decode("ascii")
-	#space = ser.readline(2)
-	#data3 = ser.readline().decode("ascii")
-	#print(space)
 	print("-----")
-	Sensor01_feed = aio.feeds('s1p1')
+	#Comunicación con la herramienta de Adafruit_IO
+	Sensor01_feed = aio.feeds('s1p1')       #feed del contador
 	aio.send_data(Sensor01_feed.key, data1)
 	Sensor02_feed = aio.feeds('s2p1')
-	aio.send_data(Sensor02_feed.key, data2)
+	aio.send_data(Sensor02_feed.key, data2) #feed del on/off
 	Sensor03_feed = aio.feeds('s3p1')
-	aio.send_data(Sensor03_feed.key, data3)
-	time.sleep(2)
+	aio.send_data(Sensor03_feed.key, data3) #feed de temperatura
+	time.sleep(2)   #pausa del while
 	

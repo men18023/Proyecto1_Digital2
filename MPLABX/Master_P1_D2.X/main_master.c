@@ -14,8 +14,7 @@
 #include <stdlib.h>
 
 // Librerias propias
-//#include "I2C.h"
-#include "I2C_LCD.h"
+#include "I2C_LCD.h"  //libreria para I2C y LCD con I2C
 
 //-------------------------- Bits de configuraciÓn -----------------------------
 // CONFIG1
@@ -41,64 +40,63 @@ char valor, centenas, residuo, decenas, unidades;
 char cen, dec, uni;
 
 //-------------------------------- Prototipos ----------------------------------
-void setup(void);
-void Text(void);
-char division (char valor);
+void setup(void); //configuraciones generales
+void Text(void);  //para comunicación UART
+char division (char valor); //para convertir valores para UART
 
 //------------------------------ Interrupciones --------------------------------
 void __interrupt() isr(void){  
     // Interrupcion del Puerto B
-    if (RBIF == 1)                              // Verificar bandera de la interrupcion del puerto b
+    if (RBIF == 1)      // Verificar bandera de la interrupcion del puerto b
     {
-        if (PORTBbits.RB0 == 0)                 // Si oprimo el boton 1
+        if (PORTBbits.RB0 == 0)     // Si oprimo el boton 1
         {
-            stat = 1;
+            stat = 1;        //variable de ON/OFF para LCD
             PORTDbits.RD1 = 1;    
             
         }
-        else if (PORTBbits.RB0 == 1)
+        else if (PORTBbits.RB0 == 1) // Si suelto el boton 1
         {
             PORTDbits.RD1 = 0;
             stat = 0;
         }
-        INTCONbits.RBIF = 0;                    // Se limpia la bandera de la interrupcion
+        INTCONbits.RBIF = 0;     // Se limpia la bandera de la interrupcion
     }
 }
 
 //----------------------------------- Main -------------------------------------
 void main(void) {
     
-    setup();                                    // Configuración principal                                 // LCD esta apagada
-    char buffer[20];                            // Se guarda el voltaje en un string
+    setup();    // Configuración principal                                 // LCD esta apagada
+    char buffer[20];   // Se guarda el voltaje en un string
     char buffer1[20];
     char buffer2[20];
     char val2;
     char val1;
-    char val;                                   // Valor que deseo almacenar en un str
+    char val;       // Valor que deseo almacenar en un str
     LCD_Init(0x4E);    // Initialize LCD module with I2C address = 0x4E
  
 
-    
     while(1)  
-    {
+    {   //valores obtenidos de I2C a variables para mostrar en LCD
         temp = R2;
         cont = 10;
         val = cont - R1; 
         pr = val;
         val1 = stat;
         val2 = temp;
-        
+        //Escritura en el LCD
         LCD_Set_Cursor(1, 1);
-        LCD_Write_String("CONT: ENC: TEMP:");
+        LCD_Write_String("CONT: ENC: TEMP:"); //Titulos
         __delay_ms(1000);
         LCD_Set_Cursor(2, 2);
-        sprintf(buffer, "%d ", val); 
-        sprintf(buffer2, "%d ", val2); 
+        sprintf(buffer, "%d ", val);  //valor del contador
+        sprintf(buffer2, "%d ", val2); //valor de temperatura
         LCD_Set_Cursor(2,2);
         LCD_Write_String(buffer);
         LCD_Set_Cursor(2,13);
         LCD_Write_String(buffer2);
-        
+        //control del ON/OFF en el LCD
         if (val1==1){
             LCD_Set_Cursor(2,7);
             LCD_Write_String("ON  ");
@@ -107,16 +105,16 @@ void main(void) {
             LCD_Set_Cursor(2,7);
             LCD_Write_String("OFF");
         }
-//        //Obtener informacion del primer slave
+//           //Obtener informacion del primer slave
         I2C_Master_Start();
-        I2C_Master_Write(0x51);
+        I2C_Master_Write(0x51);  //lectura del slave 1
         R1 = I2C_Read_Byte();
         I2C_Master_Stop();
         __delay_ms(100);
         
         //Obtener informacion del segundo slave
         I2C_Master_Start();
-        I2C_Master_Write(0x61);                 // 51, se escribe el 1 para que lea en el puerto de leds
+        I2C_Master_Write(0x61);  //lectura del slave 2
         R2 = I2C_Read_Byte();             
         I2C_Master_Stop();
         __delay_ms(100);
@@ -131,7 +129,7 @@ void main(void) {
 // Configuración principal
 void setup(void){
     // Configuración reloj interno
-    OSCCONbits.IRCF0 = 0;                       // 4mhz
+    OSCCONbits.IRCF0 = 0;   // 4mhz
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1;  
@@ -192,31 +190,31 @@ void setup(void){
 
 // Función para escribir en el UART
 void Text(void){
-    __delay_ms(50);                           //Tiempos para el despliegue de los caracteres
+    __delay_ms(50);     //Tiempos para el despliegue de los caracteres
     division(pr);
     //division(cont);
     __delay_ms(50);
-    TXREG = decenas;
+    TXREG = decenas;    //solo mostrar dos digitos
     __delay_ms(50);
     TXREG = unidades;
     __delay_ms(50);
     //printf("\r");
     
-                               //Tiempos para el despliegue de los caracteres
+                   //Tiempos para el despliegue de los caracteres
     division(stat);
     //printf("Valor del agua:\r");
     __delay_ms(50);
-    TXREG = unidades;
+    TXREG = unidades;    //solo mostrar 1 digito
     __delay_ms(50);
     //printf("\r");
     
-                               //Tiempos para el despliegue de los caracteres
+                   //Tiempos para el despliegue de los caracteres
      division(temp);
     //printf("Valor del temperatura:\r");
     __delay_ms(50);
     TXREG = centenas;
     __delay_ms(50);
-    TXREG = decenas;
+    TXREG = decenas;    //mostrar los tres digitos
     __delay_ms(50);
     TXREG = unidades;
     __delay_ms(50);

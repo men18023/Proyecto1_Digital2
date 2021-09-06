@@ -2844,7 +2844,6 @@ extern char * ftoa(float f, int * status);
 
 
 
-
 # 1 "./I2C_LCD.h" 1
 # 45 "./I2C_LCD.h"
 void I2C_Master_Init();
@@ -2871,7 +2870,7 @@ void noBacklight();
 void LCD_SR();
 void LCD_SL();
 void LCD_Clear();
-# 18 "main_master.c" 2
+# 17 "main_master.c" 2
 
 
 
@@ -2933,7 +2932,6 @@ void main(void) {
     char val1;
     char val;
     LCD_Init(0x4E);
-
 
 
     while(1)

@@ -536,26 +536,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == -> . . _PIR1bits 0 3 `i -> 1 `i 143  ]
 {
 "66
-[; ;main_slave1.c: 66:         if (ADCON0bits.GO == 0){
+[; ;main_slave1.c: 66:             _delay((unsigned long)((50)*(4000000/4000.0)));
 [e = . . _SSPCONbits 0 1 -> -> 0 `i `uc ]
 "68
-[; ;main_slave1.c: 68:             ADCON0bits.GO = 1;
+[; ;main_slave1.c: 68:         }
 [e $ ! || != -> . . _SSPCONbits 0 3 `i -> 0 `i != -> . . _SSPCONbits 0 4 `i -> 0 `i 144  ]
 {
 "69
-[; ;main_slave1.c: 69:         }
+[; ;main_slave1.c: 69:         if ((val >= 86)&&(val <=88)){
 [e = _z _SSPBUF ]
 "70
-[; ;main_slave1.c: 70:         if ((val >= 86)&&(val <=88)){
+[; ;main_slave1.c: 70:                 dato1 = dato1 + 1;
 [e = . . _SSPCONbits 0 3 -> -> 0 `i `uc ]
 "71
-[; ;main_slave1.c: 71:                 dato1 = dato1 + 1;
+[; ;main_slave1.c: 71:                  }
 [e = . . _SSPCONbits 0 4 -> -> 0 `i `uc ]
 "72
-[; ;main_slave1.c: 72: 
+[; ;main_slave1.c: 72:           }
 [e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
 "73
-[; ;main_slave1.c: 73:                  }
+[; ;main_slave1.c: 73:     return;
 }
 [e :U 144 ]
 "75
@@ -563,58 +563,58 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! && ! != -> . . _SSPSTATbits 0 5 `i -> 0 `i ! != -> . . _SSPSTATbits 0 2 `i -> 0 `i 145  ]
 {
 "76
-[; ;main_slave1.c: 76: 
+[; ;main_slave1.c: 76: void setup(void){
 [e = _z _SSPBUF ]
 "77
-[; ;main_slave1.c: 77: 
+[; ;main_slave1.c: 77:     ANSEL = 0b00000001;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "78
-[; ;main_slave1.c: 78: 
+[; ;main_slave1.c: 78:     ANSELH = 0;
 [e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
 "79
-[; ;main_slave1.c: 79:     }
+[; ;main_slave1.c: 79: 
 [e $U 146  ]
 [e :U 147 ]
 [e :U 146 ]
 [e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 147  ]
 [e :U 148 ]
 "80
-[; ;main_slave1.c: 80:     return;
+[; ;main_slave1.c: 80:     TRISA = 0b00000001;
 [e = _dato1 _SSPBUF ]
 "81
-[; ;main_slave1.c: 81: }
+[; ;main_slave1.c: 81:     TRISD = 0x00;
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
 "83
-[; ;main_slave1.c: 83: void setup(void){
+[; ;main_slave1.c: 83: 
 }
 [e $U 149  ]
 [e :U 145 ]
 [e $ ! && ! != -> . . _SSPSTATbits 0 5 `i -> 0 `i != -> . . _SSPSTATbits 0 2 `i -> 0 `i 150  ]
 {
 "84
-[; ;main_slave1.c: 84:     ANSEL = 0b00000001;
+[; ;main_slave1.c: 84: 
 [e = _z _SSPBUF ]
 "85
-[; ;main_slave1.c: 85:     ANSELH = 0;
+[; ;main_slave1.c: 85: 
 [e = _BF -> -> 0 `i `b ]
 "86
-[; ;main_slave1.c: 86: 
+[; ;main_slave1.c: 86:     PORTA = 0x00;
 [e = _SSPBUF _dato1 ]
 "87
-[; ;main_slave1.c: 87:     TRISA = 0b00000001;
+[; ;main_slave1.c: 87:     PORTB = 0x00;
 [e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
 "88
-[; ;main_slave1.c: 88:     TRISD = 0x00;
+[; ;main_slave1.c: 88:     PORTC = 0x00;
 [e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
 "89
-[; ;main_slave1.c: 89:     TRISC = 0x00;
+[; ;main_slave1.c: 89:     PORTD = 0x00;
 [e $U 151  ]
 [e :U 152 ]
 [e :U 151 ]
 [e $ != -> . . _SSPSTATbits 0 0 `i -> 0 `i 152  ]
 [e :U 153 ]
 "90
-[; ;main_slave1.c: 90: 
+[; ;main_slave1.c: 90:     PORTE = 0x00;
 }
 [e :U 150 ]
 [e :U 149 ]
@@ -622,194 +622,194 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main_slave1.c: 92: 
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "93
-[; ;main_slave1.c: 93:     PORTA = 0x00;
+[; ;main_slave1.c: 93:     OSCCONbits.IRCF0 = 0;
 }
 [e :U 143 ]
 "94
-[; ;main_slave1.c: 94:     PORTB = 0x00;
+[; ;main_slave1.c: 94:     OSCCONbits.IRCF1 = 1;
 [e :UE 139 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
 "96
-[; ;main_slave1.c: 96:     PORTD = 0x00;
+[; ;main_slave1.c: 96:     OSCCONbits.SCS = 1;
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
 "97
-[; ;main_slave1.c: 97:     PORTE = 0x00;
+[; ;main_slave1.c: 97: 
 [e ( _setup ..  ]
 "99
-[; ;main_slave1.c: 99: 
+[; ;main_slave1.c: 99:     I2C_Slave_Init(0x50);
 [e :U 156 ]
 {
-"101
-[; ;main_slave1.c: 101:     OSCCONbits.IRCF1 = 1;
+"100
+[; ;main_slave1.c: 100: 
 [e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 158  ]
 {
-"102
-[; ;main_slave1.c: 102:     OSCCONbits.IRCF2 = 1;
+"101
+[; ;main_slave1.c: 101: 
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"103
-[; ;main_slave1.c: 103:     OSCCONbits.SCS = 1;
+"102
+[; ;main_slave1.c: 102:     ADCON1bits.ADFM = 0;
 [e = . . _ADCON0bits 1 1 -> -> 1 `i `uc ]
-"104
-[; ;main_slave1.c: 104: 
+"103
+[; ;main_slave1.c: 103:     ADCON1bits.VCFG0 = 0;
 }
 [e :U 158 ]
-"105
-[; ;main_slave1.c: 105: 
+"104
+[; ;main_slave1.c: 104:     ADCON1bits.VCFG1 = 0;
 [e $ ! && >= -> _val `i -> 86 `i <= -> _val `i -> 88 `i 159  ]
 {
-"106
-[; ;main_slave1.c: 106:     I2C_Slave_Init(0x50);
+"105
+[; ;main_slave1.c: 105: 
 [e = _dato1 -> + -> _dato1 `i -> 1 `i `uc ]
-"108
-[; ;main_slave1.c: 108: 
+"106
+[; ;main_slave1.c: 106:     ADCON0bits.ADCS = 0b01;
 }
 [e :U 159 ]
-"114
-[; ;main_slave1.c: 114:     ADCON0bits.ADON = 1;
+"107
+[; ;main_slave1.c: 107:     ADCON0bits.ADON = 1;
 }
 [e :U 155 ]
 [e $U 156  ]
 [e :U 157 ]
-"115
-[; ;main_slave1.c: 115:     ADCON0bits.CHS = 0;
+"108
+[; ;main_slave1.c: 108:     ADCON0bits.CHS = 0;
 [e $UE 154  ]
-"116
-[; ;main_slave1.c: 116:     _delay((unsigned long)((50)*(4000000/4000000.0)));
+"109
+[; ;main_slave1.c: 109:     _delay((unsigned long)((50)*(4000000/4000000.0)));
 [e :UE 154 ]
 }
-"118
-[; ;main_slave1.c: 118: 
+"111
+[; ;main_slave1.c: 111: 
 [v _setup `(v ~T0 @X0 1 ef ]
 {
 [e :U _setup ]
 [f ]
-"119
-[; ;main_slave1.c: 119: 
+"112
+[; ;main_slave1.c: 112: 
 [e = _ANSEL -> -> 1 `i `uc ]
-"120
-[; ;main_slave1.c: 120:     INTCONbits.GIE = 1;
+"113
+[; ;main_slave1.c: 113:     INTCONbits.GIE = 1;
 [e = _ANSELH -> -> 0 `i `uc ]
-"122
-[; ;main_slave1.c: 122:     PIE1bits.ADIE = 1;
+"115
+[; ;main_slave1.c: 115:     PIE1bits.ADIE = 1;
 [e = _TRISA -> -> 1 `i `uc ]
-"123
-[; ;main_slave1.c: 123:     PIR1bits.ADIF = 0;
+"116
+[; ;main_slave1.c: 116:     PIR1bits.ADIF = 0;
 [e = _TRISD -> -> 0 `i `uc ]
-"124
-[; ;main_slave1.c: 124: }
+"117
+[; ;main_slave1.c: 117: }
 [e = _TRISC -> -> 0 `i `uc ]
-"128
-[; ;main_slave1.c: 128:     {
+"121
+[; ;main_slave1.c: 121:     {
 [e = _PORTA -> -> 0 `i `uc ]
-"129
-[; ;main_slave1.c: 129:         PORTDbits.RD1 = 1;
+"122
+[; ;main_slave1.c: 122:         PORTDbits.RD1 = 1;
 [e = _PORTB -> -> 0 `i `uc ]
-"130
-[; ;main_slave1.c: 130:         _delay((unsigned long)((1)*(4000000/4000.0)));
+"123
+[; ;main_slave1.c: 123:         _delay((unsigned long)((1)*(4000000/4000.0)));
 [e = _PORTC -> -> 0 `i `uc ]
-"131
-[; ;main_slave1.c: 131:         PORTDbits.RD1 = 0;
+"124
+[; ;main_slave1.c: 124:         PORTDbits.RD1 = 0;
 [e = _PORTD -> -> 0 `i `uc ]
-"132
-[; ;main_slave1.c: 132:         _delay((unsigned long)((19)*(4000000/4000.0)));
+"125
+[; ;main_slave1.c: 125:         _delay((unsigned long)((19)*(4000000/4000.0)));
 [e = _PORTE -> -> 0 `i `uc ]
-"135
-[; ;main_slave1.c: 135:  void bitb2 (void)
+"128
+[; ;main_slave1.c: 128:  void bitb2 (void)
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
-"136
-[; ;main_slave1.c: 136:     {
+"129
+[; ;main_slave1.c: 129:     {
 [e = . . _OSCCONbits 1 2 -> -> 1 `i `uc ]
-"137
-[; ;main_slave1.c: 137:         PORTDbits.RD1 = 1;
+"130
+[; ;main_slave1.c: 130:         PORTDbits.RD1 = 1;
 [e = . . _OSCCONbits 1 3 -> -> 1 `i `uc ]
-"138
-[; ;main_slave1.c: 138:         _delay((unsigned long)((1.5)*(4000000/4000.0)));
+"131
+[; ;main_slave1.c: 131:         _delay((unsigned long)((1.5)*(4000000/4000.0)));
 [e = . . _OSCCONbits 0 0 -> -> 1 `i `uc ]
-"141
-[; ;main_slave1.c: 141:     }
+"134
+[; ;main_slave1.c: 134:     }
 [e ( _I2C_Slave_Init (1 -> -> 80 `i `uc ]
-"144
-[; ;main_slave1.c: 144:     {
+"137
+[; ;main_slave1.c: 137:     {
 [e = . . _ADCON1bits 0 4 -> -> 0 `i `uc ]
-"145
-[; ;main_slave1.c: 145:         PORTDbits.RD1 = 1;
+"138
+[; ;main_slave1.c: 138:         PORTDbits.RD1 = 1;
 [e = . . _ADCON1bits 0 1 -> -> 0 `i `uc ]
-"146
-[; ;main_slave1.c: 146:         _delay((unsigned long)((2)*(4000000/4000.0)));
+"139
+[; ;main_slave1.c: 139:         _delay((unsigned long)((2)*(4000000/4000.0)));
 [e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
-"148
-[; ;main_slave1.c: 148:         _delay((unsigned long)((18)*(4000000/4000.0)));
+"141
+[; ;main_slave1.c: 141:         _delay((unsigned long)((18)*(4000000/4000.0)));
 [e = . . _ADCON0bits 0 3 -> -> 1 `i `uc ]
-"149
-[; ;main_slave1.c: 149:     }
+"142
+[; ;main_slave1.c: 142:     }
 [e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
-"150
+"143
 [e = . . _ADCON0bits 0 2 -> -> 0 `i `uc ]
-"151
+"144
 [e ( __delay (1 -> * -> -> 50 `i `d / -> -> 4000000 `l `d .4000000.0 `ul ]
-"155
+"148
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"156
+"149
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"157
+"150
 [e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
-"158
+"151
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"159
+"152
 [e :UE 160 ]
 }
-"162
+"155
 [v _bitb1 `(v ~T0 @X0 1 ef ]
-"163
+"156
 {
 [e :U _bitb1 ]
 [f ]
-"164
+"157
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"165
+"158
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"166
+"159
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"167
+"160
 [e ( __delay (1 -> * -> -> 19 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"168
+"161
 [e :UE 161 ]
 }
-"170
+"163
 [v _bitb2 `(v ~T0 @X0 1 ef ]
-"171
+"164
 {
 [e :U _bitb2 ]
 [f ]
-"172
+"165
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"173
+"166
 [e ( __delay (1 -> * .1.5 / -> -> 4000000 `l `d .4000.0 `ul ]
-"174
+"167
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"175
+"168
 [e ( __delay (1 -> * .18.5 / -> -> 4000000 `l `d .4000.0 `ul ]
-"176
+"169
 [e :UE 162 ]
 }
-"178
+"171
 [v _bitb3 `(v ~T0 @X0 1 ef ]
-"179
+"172
 {
 [e :U _bitb3 ]
 [f ]
-"180
+"173
 [e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
-"181
+"174
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"182
+"175
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"183
+"176
 [e ( __delay (1 -> * -> -> 18 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"184
+"177
 [e :UE 163 ]
 }

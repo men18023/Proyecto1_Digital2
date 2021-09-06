@@ -47,9 +47,9 @@ void bitb3(void);
 void __interrupt() isr(void){
 if (ADCON0bits.CHS == 0)
         {
-            val = ADRESH;
+            val = ADRESH;  //variable para Servo 
 //            PORTC = val;
-            if (val <= 85){
+            if (val <= 85){ //funcion de movimientos del servo
                 bitb3();
                  }
             if (val >= 86){
@@ -66,18 +66,18 @@ if (ADCON0bits.CHS == 0)
         SSPCONbits.CKP = 0;
        
         if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
-            z = SSPBUF;                         // Read the previous value to clear the buffer
+            z = SSPBUF;                     // Read the previous value to clear the buffer
             SSPCONbits.SSPOV = 0;               // Clear the overflow flag
             SSPCONbits.WCOL = 0;                // Clear the collision bit
             SSPCONbits.CKP = 1;                 // Enables SCL (Clock)
         }
 
         if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
-            z = SSPBUF;                         // Lectura del SSBUF para limpiar el buffer y la bandera BF
+            z = SSPBUF;                      // Lectura del SSBUF para limpiar el buffer y la bandera BF
             PIR1bits.SSPIF = 0;                 // Limpia bandera de interrupción recepción/transmisión SSP
             SSPCONbits.CKP = 1;                 // Habilita entrada de pulsos de reloj SCL
             while(!SSPSTATbits.BF);             // Espera a que la recepción se complete
-            dato1 = SSPBUF;                      // Guardar en el PORTD el valor del buffer de recepción
+            dato1 = SSPBUF;                   // Guardar en el PORTD el valor del buffer de recepción
             __delay_us(250);
             
         }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
@@ -97,21 +97,14 @@ void main(void) {
     setup();
     
     while(1){
-//        PORTD = val;
         if (ADCON0bits.GO == 0){
             __delay_ms(50);
             ADCON0bits.GO = 1;
         }
         if ((val >= 86)&&(val <=88)){
-                dato1 = dato1 + 1;
-//                __delay_ms(3000);
+                dato1 = dato1 + 1; //variable para pasar en I2C
                  }
-//        if (val >= 155){
-//                dato1 = dato1 - 1;
-//                __delay_ms(3000);
-//                 }
-         
-    }
+          }
     return;
 }
 //--------------------------------- Funciones ----------------------------------
@@ -132,7 +125,7 @@ void setup(void){
     PORTE = 0x00;
     
     //Configurar reloj interno
-    OSCCONbits.IRCF0 = 0;                       // 4mhz
+    OSCCONbits.IRCF0 = 0;    // 4mhz
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1; 
@@ -141,44 +134,44 @@ void setup(void){
     I2C_Slave_Init(0x50);  
     
     // Configuracion del ADC    
-    ADCON1bits.ADFM = 0;                    // Justificado a la izquierda
-    ADCON1bits.VCFG0 = 0;                   // Vref en VSS y VDD 
+    ADCON1bits.ADFM = 0;           // Justificado a la izquierda
+    ADCON1bits.VCFG0 = 0;          // Vref en VSS y VDD 
     ADCON1bits.VCFG1 = 0;   
     
-    ADCON0bits.ADCS = 0b01;                 // Se configura el oscilador interno FOSC/32
-    ADCON0bits.ADON = 1;                    // Activar el ADC
-    ADCON0bits.CHS = 0;                     // Canal 0
+    ADCON0bits.ADCS = 0b01;         // Se configura el oscilador interno FOSC/32
+    ADCON0bits.ADON = 1;          // Activar el ADC
+    ADCON0bits.CHS = 0;           // Canal 0
     __delay_us(50);
     
     
     //configuracion de interrupciones                       
     INTCONbits.GIE = 1;                         
     INTCONbits.PEIE = 1;   
-    PIE1bits.ADIE = 1;                      // Activar la interrupcion del ADC
-    PIR1bits.ADIF = 0;                      // Bandera del ADC
+    PIE1bits.ADIE = 1;         // Activar la interrupcion del ADC
+    PIR1bits.ADIF = 0;       // Bandera del ADC
 }
 
 //
  void bitb1 (void)
     {
-        PORTDbits.RD1 = 1;                  // Prende el bit
-        __delay_ms(1);                      // Espera un tiempo
-        PORTDbits.RD1 = 0;                  // Apaga el bit
-        __delay_ms(19);                     // Espera un tiempo
+        PORTDbits.RD1 = 1;            // Prende el bit
+        __delay_ms(1);               // Espera un tiempo
+        PORTDbits.RD1 = 0;            // Apaga el bit
+        __delay_ms(19);               // Espera un tiempo
     }
     
  void bitb2 (void)
     {
-        PORTDbits.RD1 = 1;                  // Prende el bit
-        __delay_ms(1.5);                    // Espera un tiempo
-        PORTDbits.RD1 = 0;                  // Apaga el bit
-        __delay_ms(18.5);                   // Espera un tiempo
+        PORTDbits.RD1 = 1;            // Prende el bit
+        __delay_ms(1.5);             // Espera un tiempo
+        PORTDbits.RD1 = 0;         // Apaga el bit
+        __delay_ms(18.5);            // Espera un tiempo
     }
 
  void bitb3 (void)
     {
-        PORTDbits.RD1 = 1;                  // Prende el bit
-        __delay_ms(2);                      // Espera un tiempo
-        PORTDbits.RD1 = 0;                  // Apaga el bit
-        __delay_ms(18);                     // Espera un tiempo
+        PORTDbits.RD1 = 1;          // Prende el bit
+        __delay_ms(2);             // Espera un tiempo
+        PORTDbits.RD1 = 0;          // Apaga el bit
+        __delay_ms(18);            // Espera un tiempo
     }

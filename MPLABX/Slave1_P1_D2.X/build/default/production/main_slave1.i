@@ -2853,21 +2853,14 @@ void main(void) {
     setup();
 
     while(1){
-
         if (ADCON0bits.GO == 0){
             _delay((unsigned long)((50)*(4000000/4000.0)));
             ADCON0bits.GO = 1;
         }
         if ((val >= 86)&&(val <=88)){
                 dato1 = dato1 + 1;
-
                  }
-
-
-
-
-
-    }
+          }
     return;
 }
 

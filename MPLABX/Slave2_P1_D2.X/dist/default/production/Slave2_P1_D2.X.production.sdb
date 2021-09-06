@@ -19,11 +19,11 @@
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
 "93
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
-"44 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+"43 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
 [v _isr isr `II(v  1 e 1 0 ]
-"88
+"86
 [v _main main `(v  1 e 1 0 ]
-"101
+"99
 [v _setup setup `(v  1 e 1 0 ]
 "166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -249,15 +249,15 @@
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
 "37 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
 [v _z z `uc  1 e 1 0 ]
-"88
+"86
 [v _main main `(v  1 e 1 0 ]
 {
-"99
+"97
 } 0
-"101
+"99
 [v _setup setup `(v  1 e 1 0 ]
 {
-"136
+"133
 } 0
 "14 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\ADC.c
 [v _config_ADC config_ADC `(v  1 e 1 0 ]
@@ -276,8 +276,8 @@
 [v I2C_Slave_Init@address address `uc  1 a 1 3 ]
 "105
 } 0
-"44 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
+"43 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Slave2_P1_D2.X\main_slave2.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"86
+"84
 } 0

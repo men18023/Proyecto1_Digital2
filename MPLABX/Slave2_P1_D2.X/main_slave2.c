@@ -1,5 +1,5 @@
 /*
- * File:   main_slave1.c
+ * File:   main_slave2.c
  * Author: Diego Estrada 19264, Jonathan Menéndez 18023.
  *
  * Created on 20 de agosto de 2021, 10:36 AM
@@ -35,7 +35,6 @@
 
 //--------------------------------- Variables ----------------------------------
 uint8_t z;
-//uint8_t dato2;
 
 //-------------------------------- Prototipos ----------------------------------
 void setup(void);
@@ -45,8 +44,7 @@ void __interrupt() isr(void){
     //interrupcion del ADC
     if (ADIF){
         if(ADCON0bits.CHS == 0){
-            PORTD = ADRESH;
-//            dato2 = PORTD;
+            PORTD = ADRESH;  //lectura del sensor de luz al puertoD
         }
         
     }
@@ -118,8 +116,7 @@ void setup(void){
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1; 
-    
-    
+
     
     // Configuracion de ADC
     config_ADC(1);
@@ -127,8 +124,8 @@ void setup(void){
     //configuracion de interrupciones                       
     INTCONbits.GIE = 1;                         
     INTCONbits.PEIE = 1; 
-    PIE1bits.ADIE = 1;                      // Habilita de la int del ADC
-    PIR1bits.ADIF = 0;                      // Limpia la interrupcion del ADC
+    PIE1bits.ADIE = 1;      // Habilita de la int del ADC
+    PIR1bits.ADIF = 0;      // Limpia la interrupcion del ADC
     
     // I2C configuracion esclavo
     I2C_Slave_Init(0x60);   

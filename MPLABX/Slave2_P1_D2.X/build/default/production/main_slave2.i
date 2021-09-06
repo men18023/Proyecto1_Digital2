@@ -2801,7 +2801,6 @@ void config_ADC(char frec);
 uint8_t z;
 
 
-
 void setup(void);
 
 
@@ -2810,7 +2809,6 @@ void __attribute__((picinterrupt(("")))) isr(void){
     if (ADIF){
         if(ADCON0bits.CHS == 0){
             PORTD = ADRESH;
-
         }
 
     }
@@ -2882,7 +2880,6 @@ void setup(void){
     OSCCONbits.IRCF1 = 1;
     OSCCONbits.IRCF2 = 1;
     OSCCONbits.SCS = 1;
-
 
 
 

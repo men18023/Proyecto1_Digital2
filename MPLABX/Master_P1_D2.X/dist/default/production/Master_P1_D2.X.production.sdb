@@ -47,15 +47,15 @@
 [v _LCD_Write_String LCD_Write_String `(v  1 e 1 0 ]
 "147
 [v _LCD_Set_Cursor LCD_Set_Cursor `(v  1 e 1 0 ]
-"49 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+"48 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
 [v _isr isr `II(v  1 e 1 0 ]
-"69
+"68
 [v _main main `(v  1 e 1 0 ]
-"132
+"130
 [v _setup setup `(v  1 e 1 0 ]
-"194
+"192
 [v _Text Text `(v  1 e 1 0 ]
-"227
+"225
 [v _division division `(uc  1 e 1 0 ]
 "166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -305,33 +305,33 @@
 [v _RS RS `uc  1 e 1 0 ]
 [v _i2c_add i2c_add `uc  1 e 1 0 ]
 [v _BackLight_State BackLight_State `uc  1 e 1 0 ]
-"38 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+"37 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
 [v _R1 R1 `uc  1 e 1 0 ]
 [v _R2 R2 `uc  1 e 1 0 ]
-"39
+"38
 [v _temp temp `uc  1 e 1 0 ]
 [v _stat stat `uc  1 e 1 0 ]
 [v _cont cont `uc  1 e 1 0 ]
 [v _pr pr `uc  1 e 1 0 ]
-"40
+"39
 [v _centenas centenas `uc  1 e 1 0 ]
 [v _residuo residuo `uc  1 e 1 0 ]
 [v _decenas decenas `uc  1 e 1 0 ]
 [v _unidades unidades `uc  1 e 1 0 ]
-"69
+"68
 [v _main main `(v  1 e 1 0 ]
 {
-"74
+"73
 [v main@buffer2 buffer2 `[20]uc  1 a 20 42 ]
-"72
+"71
 [v main@buffer buffer `[20]uc  1 a 20 22 ]
-"77
-[v main@val val `uc  1 a 1 64 ]
 "76
-[v main@val1 val1 `uc  1 a 1 63 ]
+[v main@val val `uc  1 a 1 64 ]
 "75
+[v main@val1 val1 `uc  1 a 1 63 ]
+"74
 [v main@val2 val2 `uc  1 a 1 62 ]
-"128
+"126
 } 0
 "505 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -376,28 +376,28 @@
 [v ___lwdiv@dividend dividend `ui  1 p 2 4 ]
 "30
 } 0
-"132 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+"130 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"191
+"189
 } 0
 "16 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\I2C_LCD.c
 [v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
 {
 "24
 } 0
-"194 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+"192 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
 [v _Text Text `(v  1 e 1 0 ]
 {
-"224
+"222
 } 0
-"227
+"225
 [v _division division `(uc  1 e 1 0 ]
 {
 [v division@valor valor `uc  1 a 1 wreg ]
 [v division@valor valor `uc  1 a 1 wreg ]
 [v division@valor valor `uc  1 a 1 9 ]
-"236
+"234
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
@@ -515,8 +515,8 @@
 {
 "29
 } 0
-"49 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
+"48 C:\Users\jonam\OneDrive\Escritorio\OneDrive - Universidad del Valle de Guatemala\Escritorio\7mo SEMESTRE\Digital 2\Proyecto1\Proyecto1_Digital2\MPLABX\Master_P1_D2.X\main_master.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"66
+"65
 } 0
