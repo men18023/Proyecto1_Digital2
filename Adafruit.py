@@ -6,8 +6,8 @@ import time
 ser = serial.Serial('COM3', baudrate = 9600)
 #time.sleep(1)
 
-ADAFRUIT_IO_KEY = "aio_HUGK88sOYbrJZcAB3E5eRCFn0sFY"
-ADAFRUIT_IO_USERNAME = "men18023"
+ADAFRUIT_IO_KEY = "aio_qcdJ75QbVdIq8p2I9gkPV04HEpRY"
+ADAFRUIT_IO_USERNAME = "diego_estrada"
 aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
 
 while 1:
